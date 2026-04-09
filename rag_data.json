@@ -1,0 +1,2258 @@
+[
+  {
+    "id": "Student Information_0",
+    "content": "Dữ liệu từ bảng: Student Information\n- Họ tên: Nguyễn Hưng\n- Mã học sinh: VS108245\n- Giới tính: Nam\n- Trường: Trường Tiểu học Vinschool Timescity T36\n- Hệ: Hệ nâng cao\n- Khối: Khối 5\n- Lớp: 5B06",
+    "metadata": {
+      "sheet": "Student Information",
+      "row": 0
+    }
+  },
+  {
+    "id": "Parent  Guardian Information_0",
+    "content": "Dữ liệu từ bảng: Parent  Guardian Information\n- Họ tên: Lê Quốc Thắng\n- Số điện thoại: 904123456\n- Email: thang.le77@gmail.com\n- Mối quan hệ: Bố",
+    "metadata": {
+      "sheet": "Parent  Guardian Information",
+      "row": 0
+    }
+  },
+  {
+    "id": "Parent  Guardian Information_1",
+    "content": "Dữ liệu từ bảng: Parent  Guardian Information\n- Họ tên: Vũ Thu Hà\n- Số điện thoại: 912987654\n- Email: ha.vuthu@gmail.com\n- Mối quan hệ: Mẹ",
+    "metadata": {
+      "sheet": "Parent  Guardian Information",
+      "row": 1
+    }
+  },
+  {
+    "id": "Teacher Information_0",
+    "content": "Dữ liệu từ bảng: Teacher Information\n- Họ tên: Gareth Morton\n- Môn học / Vai trò: CIE ESL\nCIE Maths\nCIE Science\nGiáo dục Kỹ năng Phẩm chất\nGlobal Perspectives\nSinh hoạt chủ nhiệm\nTiết Đọc sách\nTự học có hướng dẫn\nNghỉ lễ\n- Lớp: 5B06\n- Số điện thoại: 903821456\n- Email: gareth.morton@vinschool.edu.vn",
+    "metadata": {
+      "sheet": "Teacher Information",
+      "row": 0
+    }
+  },
+  {
+    "id": "Teacher Information_1",
+    "content": "Dữ liệu từ bảng: Teacher Information\n- Họ tên: Lại Thị Thu Thủy\n- Môn học / Vai trò: Âm nhạc, Nghỉ học kỳ\n- Lớp: 5B06\n- Số điện thoại: 912445882\n- Email: thuy.ltt@vinschool.edu.vn",
+    "metadata": {
+      "sheet": "Teacher Information",
+      "row": 1
+    }
+  },
+  {
+    "id": "Teacher Information_2",
+    "content": "Dữ liệu từ bảng: Teacher Information\n- Họ tên: Elanza Jurgens\n- Môn học / Vai trò: CIE ICT\n- Lớp: 5B06\n- Số điện thoại: 987332110\n- Email: elanza.j@vinschool.edu.vn",
+    "metadata": {
+      "sheet": "Teacher Information",
+      "row": 2
+    }
+  },
+  {
+    "id": "Teacher Information_3",
+    "content": "Dữ liệu từ bảng: Teacher Information\n- Họ tên: Vũ Trung Hiếu\n- Môn học / Vai trò: Giáo dục thể chất\n- Lớp: 5B06\n- Số điện thoại: 945667123\n- Email: hieu.vt@vinschool.edu.vn",
+    "metadata": {
+      "sheet": "Teacher Information",
+      "row": 3
+    }
+  },
+  {
+    "id": "Teacher Information_4",
+    "content": "Dữ liệu từ bảng: Teacher Information\n- Họ tên: Giám Thị\n- Môn học / Vai trò: Kiểm tra định kì\n- Lớp: 5B06\n- Số điện thoại: 966223344\n- Email: giamthi@vinschool.edu.vn",
+    "metadata": {
+      "sheet": "Teacher Information",
+      "row": 4
+    }
+  },
+  {
+    "id": "Teacher Information_5",
+    "content": "Dữ liệu từ bảng: Teacher Information\n- Họ tên: Lê Thị Kim Anh\n- Môn học / Vai trò: Lịch sử và Địa lý, Tiếng Việt\n- Lớp: 5B06\n- Số điện thoại: 909556677\n- Email: anh.ltk@vinschool.edu.vn",
+    "metadata": {
+      "sheet": "Teacher Information",
+      "row": 5
+    }
+  },
+  {
+    "id": "Teacher Information_6",
+    "content": "Dữ liệu từ bảng: Teacher Information\n- Họ tên: Dương Thị Mỹ Hạnh\n- Môn học / Vai trò: Mỹ thuật\n- Lớp: 5B06\n- Số điện thoại: 933889900\n- Email: hanh.dtm@vinschool.edu.vn",
+    "metadata": {
+      "sheet": "Teacher Information",
+      "row": 6
+    }
+  },
+  {
+    "id": "Teacher Information_7",
+    "content": "Dữ liệu từ bảng: Teacher Information\n- Họ tên: Đinh Thị Ngọc Hồi\n- Môn học / Vai trò: Việt Nam học\n- Lớp: 5B06\n- Số điện thoại: 977112233\n- Email: hoi.dtn@vinschool.edu.vn",
+    "metadata": {
+      "sheet": "Teacher Information",
+      "row": 7
+    }
+  },
+  {
+    "id": "Teacher Information_8",
+    "content": "Dữ liệu từ bảng: Teacher Information\n- Họ tên: Phạm Ngọc Lợi\n- Môn học / Vai trò: CLB Kỹ năng\n- Lớp: 5B06\n- Số điện thoại: 911002233\n- Email: loi.pn@vinschool.edu.vn",
+    "metadata": {
+      "sheet": "Teacher Information",
+      "row": 8
+    }
+  },
+  {
+    "id": "Điểm danh_0",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Ngày: Thứ 2 - 30/03/2026\n- Điểm danh đầu giờ: 8:00 - Đúng giờ\n- Thời gian: 8:00-8:35\n- Môn học: Sinh hoạt chủ nhiệm-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 0
+    }
+  },
+  {
+    "id": "Điểm danh_1",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 8:40-9:15\n- Môn học: Tiếng Việt-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 1
+    }
+  },
+  {
+    "id": "Điểm danh_2",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 9:30-10:05\n- Môn học: CIE Maths-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 2
+    }
+  },
+  {
+    "id": "Điểm danh_3",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 10:10-10:45\n- Môn học: CIE Maths-5B06\n- Trạng thái tiết học: Tiết kép",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 3
+    }
+  },
+  {
+    "id": "Điểm danh_4",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 12:25-13:00\n- Môn học: CIE ESL-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 4
+    }
+  },
+  {
+    "id": "Điểm danh_5",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:05-13:40\n- Môn học: Lịch sử và Địa lý-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 5
+    }
+  },
+  {
+    "id": "Điểm danh_6",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:55-14:30\n- Môn học: Lịch sử và Địa lý-5B06\n- Trạng thái tiết học: Tiết kép",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 6
+    }
+  },
+  {
+    "id": "Điểm danh_7",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 14:35-15:10\n- Môn học: Tự học có hướng dẫn-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 7
+    }
+  },
+  {
+    "id": "Điểm danh_8",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Ngày: Thứ 3 - 31/03/2026\n- Điểm danh đầu giờ: 8:05 - Đi muộn\n- Thời gian: 8:00-8:35\n- Môn học: CIE ESL-5B06\n- Trạng thái tiết học: Đi muộn",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 8
+    }
+  },
+  {
+    "id": "Điểm danh_9",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 8:40-9:15\n- Môn học: Tiếng Việt-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 9
+    }
+  },
+  {
+    "id": "Điểm danh_10",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 9:30-10:05\n- Môn học: CIE ICT-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 10
+    }
+  },
+  {
+    "id": "Điểm danh_11",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 10:10-10:45\n- Môn học: Âm nhạc-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 11
+    }
+  },
+  {
+    "id": "Điểm danh_12",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 12:25-13:00\n- Môn học: CIE Maths-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 12
+    }
+  },
+  {
+    "id": "Điểm danh_13",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:05-13:40\n- Môn học: Việt Nam học-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 13
+    }
+  },
+  {
+    "id": "Điểm danh_14",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:55-14:30\n- Môn học: Tiết Đọc sách-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 14
+    }
+  },
+  {
+    "id": "Điểm danh_15",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 14:35-15:10\n- Môn học: CLB Kỹ năng-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 15
+    }
+  },
+  {
+    "id": "Điểm danh_16",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Ngày: Thứ 4 - 01/04/2026\n- Điểm danh đầu giờ: 8:00 - Đúng giờ\n- Thời gian: 8:00-8:35\n- Môn học: CIE ESL-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 16
+    }
+  },
+  {
+    "id": "Điểm danh_17",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 8:40-9:15\n- Môn học: CIE ESL-5B06\n- Trạng thái tiết học: Tiết kép",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 17
+    }
+  },
+  {
+    "id": "Điểm danh_18",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 9:30-10:05\n- Môn học: CIE Science-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 18
+    }
+  },
+  {
+    "id": "Điểm danh_19",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 10:10-10:45\n- Môn học: CIE Science-5B06\n- Trạng thái tiết học: Tiết kép",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 19
+    }
+  },
+  {
+    "id": "Điểm danh_20",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 12:25-13:00\n- Môn học: CIE Maths-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 20
+    }
+  },
+  {
+    "id": "Điểm danh_21",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:05-13:40\n- Môn học: Tiếng Việt-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 21
+    }
+  },
+  {
+    "id": "Điểm danh_22",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:55-14:30\n- Môn học: Giáo dục thể chất-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 22
+    }
+  },
+  {
+    "id": "Điểm danh_23",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 14:35-15:10\n- Môn học: Giáo dục thể chất-5B06\n- Trạng thái tiết học: Tiết kép",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 23
+    }
+  },
+  {
+    "id": "Điểm danh_24",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Ngày: Thứ 5 - 02/04/2026\n- Điểm danh đầu giờ: 8:00 - Đúng giờ\n- Thời gian: 8:00-8:35\n- Môn học: CIE ESL-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 24
+    }
+  },
+  {
+    "id": "Điểm danh_25",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 8:40-9:15\n- Môn học: Tiếng Việt-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 25
+    }
+  },
+  {
+    "id": "Điểm danh_26",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 9:30-10:05\n- Môn học: Giáo dục thể chất-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 26
+    }
+  },
+  {
+    "id": "Điểm danh_27",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 10:10-10:45\n- Môn học: GD Kỹ năng Phẩm chất-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 27
+    }
+  },
+  {
+    "id": "Điểm danh_28",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 12:25-13:00\n- Môn học: CIE Maths-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 28
+    }
+  },
+  {
+    "id": "Điểm danh_29",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:05-13:40\n- Môn học: Việt Nam học-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 29
+    }
+  },
+  {
+    "id": "Điểm danh_30",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:55-14:30\n- Môn học: CIE ICT-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 30
+    }
+  },
+  {
+    "id": "Điểm danh_31",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 14:35-15:10\n- Môn học: Tự học có hướng dẫn-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 31
+    }
+  },
+  {
+    "id": "Điểm danh_32",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Ngày: Thứ 6 - 03/04/2026\n- Điểm danh đầu giờ: 8:00 - Đúng giờ\n- Thời gian: 8:00-8:35\n- Môn học: Tiếng Việt-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 32
+    }
+  },
+  {
+    "id": "Điểm danh_33",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 8:40-9:15\n- Môn học: CIE ESL-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 33
+    }
+  },
+  {
+    "id": "Điểm danh_34",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 9:30-10:05\n- Môn học: Lịch sử và Địa lý-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 34
+    }
+  },
+  {
+    "id": "Điểm danh_35",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 10:10-10:45\n- Môn học: CIE Science-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 35
+    }
+  },
+  {
+    "id": "Điểm danh_36",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 12:25-13:00\n- Môn học: Global Perspectives-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 36
+    }
+  },
+  {
+    "id": "Điểm danh_37",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:05-13:40\n- Môn học: Tiết Đọc sách-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 37
+    }
+  },
+  {
+    "id": "Điểm danh_38",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:55-14:30\n- Môn học: CLB Kỹ năng-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 38
+    }
+  },
+  {
+    "id": "Điểm danh_39",
+    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 14:35-15:10\n- Môn học: Sinh hoạt chủ nhiệm-5B06\n- Trạng thái tiết học: Đúng giờ",
+    "metadata": {
+      "sheet": "Điểm danh",
+      "row": 39
+    }
+  },
+  {
+    "id": "Bài tập_0",
+    "content": "Dữ liệu từ bảng: Bài tập\n- Tuần: 30/03 - 05/04\n- Hạn nộp dự kiến: 2026-03-30 00:00:00\n- Mã lớp / Môn học: CIE ESL-5B06\n- Tên bài tập / Kiểm tra: Vocabulary Quiz Unit 7\n- Trạng thái: Đã làm\n- Điểm số: 10/10 Điểm",
+    "metadata": {
+      "sheet": "Bài tập",
+      "row": 0
+    }
+  },
+  {
+    "id": "Bài tập_1",
+    "content": "Dữ liệu từ bảng: Bài tập\n- Hạn nộp dự kiến: 2026-03-31 00:00:00\n- Mã lớp / Môn học: 5B06-TIẾNG VIỆT-ANHLTK1-TiH.T36\n- Tên bài tập / Kiểm tra: Phiếu bài tập tuần 28\n- Trạng thái: Đã làm\n- Điểm số: 4/4 Điểm",
+    "metadata": {
+      "sheet": "Bài tập",
+      "row": 1
+    }
+  },
+  {
+    "id": "Bài tập_2",
+    "content": "Dữ liệu từ bảng: Bài tập\n- Hạn nộp dự kiến: 2026-04-01 00:00:00\n- Mã lớp / Môn học: CIE Maths-5B06\n- Tên bài tập / Kiểm tra: Math Homework Ch.5\n- Trạng thái: Đã làm\n- Điểm số: 10/10 Điểm",
+    "metadata": {
+      "sheet": "Bài tập",
+      "row": 2
+    }
+  },
+  {
+    "id": "Bài tập_3",
+    "content": "Dữ liệu từ bảng: Bài tập\n- Hạn nộp dự kiến: 2026-04-02 00:00:00\n- Mã lớp / Môn học: CIE Science-5B06\n- Tên bài tập / Kiểm tra: Science Lab Report\n- Trạng thái: Đã làm\n- Điểm số: -",
+    "metadata": {
+      "sheet": "Bài tập",
+      "row": 3
+    }
+  },
+  {
+    "id": "Bài tập_4",
+    "content": "Dữ liệu từ bảng: Bài tập\n- Hạn nộp dự kiến: 2026-04-03 00:00:00\n- Mã lớp / Môn học: 5B06-LỊCH SỬ ĐỊA LÝ-TiH.T36\n- Tên bài tập / Kiểm tra: Trắc nghiệm Lịch sử tuần 28\n- Trạng thái: Đã làm\n- Điểm số: 5/5 Điểm",
+    "metadata": {
+      "sheet": "Bài tập",
+      "row": 4
+    }
+  },
+  {
+    "id": "Bài tập_5",
+    "content": "Dữ liệu từ bảng: Bài tập\n- Hạn nộp dự kiến: 2026-04-04 00:00:00\n- Mã lớp / Môn học: 5B06-TIẾNG VIỆT-ANHLTK1-TiH.T36\n- Tên bài tập / Kiểm tra: Viết đoạn văn miêu tả\n- Trạng thái: Đã làm\n- Điểm số: 9/10 Điểm",
+    "metadata": {
+      "sheet": "Bài tập",
+      "row": 5
+    }
+  },
+  {
+    "id": "Bài tập_6",
+    "content": "Dữ liệu từ bảng: Bài tập\n- Hạn nộp dự kiến: 2026-04-05 00:00:00\n- Mã lớp / Môn học: CIE ICT\n- Tên bài tập / Kiểm tra: Typing Practice Week 28\n- Trạng thái: Đã làm\n- Điểm số: -",
+    "metadata": {
+      "sheet": "Bài tập",
+      "row": 6
+    }
+  },
+  {
+    "id": "Bài tập_7",
+    "content": "Dữ liệu từ bảng: Bài tập\n- Tuần: 06/04 - 12/04\n- Hạn nộp dự kiến: 2026-04-06 00:00:00\n- Mã lớp / Môn học: CIE Maths-5B06\n- Tên bài tập / Kiểm tra: Fraction Practice Worksheet\n- Trạng thái: Đã làm\n- Điểm số: 10/10 Điểm",
+    "metadata": {
+      "sheet": "Bài tập",
+      "row": 7
+    }
+  },
+  {
+    "id": "Bài tập_8",
+    "content": "Dữ liệu từ bảng: Bài tập\n- Hạn nộp dự kiến: 2026-04-07 00:00:00\n- Mã lớp / Môn học: CIE Science-5B06\n- Tên bài tập / Kiểm tra: Plant Life Cycle Quiz\n- Trạng thái: Đã làm\n- Điểm số: 8/10 Điểm",
+    "metadata": {
+      "sheet": "Bài tập",
+      "row": 8
+    }
+  },
+  {
+    "id": "Bài tập_9",
+    "content": "Dữ liệu từ bảng: Bài tập\n- Hạn nộp dự kiến: 2026-04-08 00:00:00\n- Mã lớp / Môn học: CIE ESL-5B06\n- Tên bài tập / Kiểm tra: Reading Comprehension Task\n- Trạng thái: Đã làm\n- Điểm số: 9/10 Điểm",
+    "metadata": {
+      "sheet": "Bài tập",
+      "row": 9
+    }
+  },
+  {
+    "id": "Bài tập_10",
+    "content": "Dữ liệu từ bảng: Bài tập\n- Hạn nộp dự kiến: 2026-04-09 00:00:00\n- Mã lớp / Môn học: 5B06-TIẾNG VIỆT-ANHLTK1-TiH.T36\n- Tên bài tập / Kiểm tra: Quiz TV Tuần 26\n- Trạng thái: Chưa làm\n- Điểm số: -/4 Điểm",
+    "metadata": {
+      "sheet": "Bài tập",
+      "row": 10
+    }
+  },
+  {
+    "id": "Bài tập_11",
+    "content": "Dữ liệu từ bảng: Bài tập\n- Hạn nộp dự kiến: 2026-04-10 00:00:00\n- Mã lớp / Môn học: 5B06-TIẾNG VIỆT-ANHLTK1-TiH.T36\n- Tên bài tập / Kiểm tra: Quiz tuần 29\n- Trạng thái: Chưa làm\n- Điểm số: -/4 Điểm",
+    "metadata": {
+      "sheet": "Bài tập",
+      "row": 11
+    }
+  },
+  {
+    "id": "Bài tập_12",
+    "content": "Dữ liệu từ bảng: Bài tập\n- Hạn nộp dự kiến: 2026-04-11 00:00:00\n- Mã lớp / Môn học: 5B06-TIẾNG VIỆT-ANHLTK1-TiH.T36\n- Tên bài tập / Kiểm tra: Quiz tuần 30\n- Trạng thái: Chưa làm\n- Điểm số: -/4 Điểm",
+    "metadata": {
+      "sheet": "Bài tập",
+      "row": 12
+    }
+  },
+  {
+    "id": "Bài tập_13",
+    "content": "Dữ liệu từ bảng: Bài tập\n- Hạn nộp dự kiến: 2026-04-12 00:00:00\n- Mã lớp / Môn học: CIE ICT\n- Tên bài tập / Kiểm tra: Unit 5 Project score\n- Trạng thái: Chưa làm\n- Điểm số: -",
+    "metadata": {
+      "sheet": "Bài tập",
+      "row": 13
+    }
+  },
+  {
+    "id": "Thực đơn_0",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Ngày: Thứ 2 - 16/03/2026\n- Bữa ăn: Ăn trưa\n- Tên món ăn: Cơm trắng\n- Năng lượng (kcal): 210.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 0
+    }
+  },
+  {
+    "id": "Thực đơn_1",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Thịt lợn quay lá móc mật\n- Năng lượng (kcal): 315.50 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 1
+    }
+  },
+  {
+    "id": "Thực đơn_2",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Rau cải ngọt luộc\n- Năng lượng (kcal): 25.10 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 2
+    }
+  },
+  {
+    "id": "Thực đơn_3",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Canh bí đỏ thịt băm\n- Năng lượng (kcal): 85.20 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 3
+    }
+  },
+  {
+    "id": "Thực đơn_4",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Dưa hấu\n- Năng lượng (kcal): 45.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 4
+    }
+  },
+  {
+    "id": "Thực đơn_5",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Bữa ăn: Ăn phụ\n- Tên món ăn: Sữa chua Mộc Châu có đường 100g\n- Năng lượng (kcal): 98.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 5
+    }
+  },
+  {
+    "id": "Thực đơn_6",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Bánh quy bơ lạt\n- Năng lượng (kcal): 110.50 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 6
+    }
+  },
+  {
+    "id": "Thực đơn_7",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Ngày: Thứ 3 - 17/03/2026\n- Bữa ăn: Ăn trưa\n- Tên món ăn: Phở bò chín kiểu Nam Định\n- Năng lượng (kcal): 420.30 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 7
+    }
+  },
+  {
+    "id": "Thực đơn_8",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Quẩy giòn\n- Năng lượng (kcal): 85.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 8
+    }
+  },
+  {
+    "id": "Thực đơn_9",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Chuối tây\n- Năng lượng (kcal): 89.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 9
+    }
+  },
+  {
+    "id": "Thực đơn_10",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Bữa ăn: Ăn phụ\n- Tên món ăn: Sữa tươi tiệt trùng TH True Milk 110ml\n- Năng lượng (kcal): 66.11 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 10
+    }
+  },
+  {
+    "id": "Thực đơn_11",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Bánh bông lan trứng muối\n- Năng lượng (kcal): 145.20 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 11
+    }
+  },
+  {
+    "id": "Thực đơn_12",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Ngày: Thứ 4 - 18/03/2026\n- Bữa ăn: Ăn trưa\n- Tên món ăn: Mì Ý sốt bò băm cà chua\n- Năng lượng (kcal): 380.50 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 12
+    }
+  },
+  {
+    "id": "Thực đơn_13",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Súp ngô gà nấm hương\n- Năng lượng (kcal): 115.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 13
+    }
+  },
+  {
+    "id": "Thực đơn_14",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Salad dưa chuột cà chua bi\n- Năng lượng (kcal): 35.40 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 14
+    }
+  },
+  {
+    "id": "Thực đơn_15",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Táo đỏ\n- Năng lượng (kcal): 52.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 15
+    }
+  },
+  {
+    "id": "Thực đơn_16",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Bữa ăn: Ăn phụ\n- Tên món ăn: Sữa chua uống Probi 65ml\n- Năng lượng (kcal): 65.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 16
+    }
+  },
+  {
+    "id": "Thực đơn_17",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Bánh su kem mini\n- Năng lượng (kcal): 120.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 17
+    }
+  },
+  {
+    "id": "Thực đơn_18",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Ngày: Thứ 5 - 19/03/2026\n- Bữa ăn: Ăn trưa\n- Tên món ăn: Cơm rang Dương Châu\n- Năng lượng (kcal): 350.80 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 18
+    }
+  },
+  {
+    "id": "Thực đơn_19",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Đùi gà tẩm bột chiên xù\n- Năng lượng (kcal): 290.40 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 19
+    }
+  },
+  {
+    "id": "Thực đơn_20",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Canh rau ngót nấu giò sống\n- Năng lượng (kcal): 75.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 20
+    }
+  },
+  {
+    "id": "Thực đơn_21",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Thanh long đỏ\n- Năng lượng (kcal): 50.20 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 21
+    }
+  },
+  {
+    "id": "Thực đơn_22",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Bữa ăn: Ăn phụ\n- Tên món ăn: Sữa hạt sen macca\n- Năng lượng (kcal): 110.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 22
+    }
+  },
+  {
+    "id": "Thực đơn_23",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Bánh gạo nướng\n- Năng lượng (kcal): 85.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 23
+    }
+  },
+  {
+    "id": "Thực đơn_24",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Ngày: Thứ 6 - 20/03/2026\n- Bữa ăn: Ăn trưa\n- Tên món ăn: Bún chả Hà Nội\n- Năng lượng (kcal): 410.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 24
+    }
+  },
+  {
+    "id": "Thực đơn_25",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Nem rán truyền thống\n- Năng lượng (kcal): 150.20 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 25
+    }
+  },
+  {
+    "id": "Thực đơn_26",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Đu đủ chín\n- Năng lượng (kcal): 45.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 26
+    }
+  },
+  {
+    "id": "Thực đơn_27",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Bữa ăn: Ăn phụ\n- Tên món ăn: Chè đậu xanh hạt sen\n- Năng lượng (kcal): 165.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 27
+    }
+  },
+  {
+    "id": "Thực đơn_28",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Thanh long trắng\n- Năng lượng (kcal): 45.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 28
+    }
+  },
+  {
+    "id": "Thực đơn_29",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Bữa ăn: Ăn phụ\n- Tên món ăn: Panna cotta dâu tây\n- Năng lượng (kcal): 145.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 29
+    }
+  },
+  {
+    "id": "Thực đơn_30",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Ngày: Thứ 2 - 23/03/2026\n- Bữa ăn: Ăn trưa\n- Tên món ăn: Cơm gạo lứt\n- Năng lượng (kcal): 190.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 30
+    }
+  },
+  {
+    "id": "Thực đơn_31",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Cá diêu hồng phi lê sốt chua ngọt\n- Năng lượng (kcal): 265.40 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 31
+    }
+  },
+  {
+    "id": "Thực đơn_32",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Su su, cà rốt luộc\n- Năng lượng (kcal): 30.50 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 32
+    }
+  },
+  {
+    "id": "Thực đơn_33",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Canh sườn sụn nấu sấu\n- Năng lượng (kcal): 110.20 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 33
+    }
+  },
+  {
+    "id": "Thực đơn_34",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Cam vắt\n- Năng lượng (kcal): 60.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 34
+    }
+  },
+  {
+    "id": "Thực đơn_35",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Bữa ăn: Ăn phụ\n- Tên món ăn: Sữa chua nếp cẩm\n- Năng lượng (kcal): 125.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 35
+    }
+  },
+  {
+    "id": "Thực đơn_36",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Ngày: Thứ 3 - 24/03/2026\n- Bữa ăn: Ăn trưa\n- Tên món ăn: Cơm trắng\n- Năng lượng (kcal): 210.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 36
+    }
+  },
+  {
+    "id": "Thực đơn_37",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Bò lúc lắc khoai tây\n- Năng lượng (kcal): 340.50 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 37
+    }
+  },
+  {
+    "id": "Thực đơn_38",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Rau muống xào tỏi\n- Năng lượng (kcal): 65.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 38
+    }
+  },
+  {
+    "id": "Thực đơn_39",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Canh chua ngao nấu dứa\n- Năng lượng (kcal): 80.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 39
+    }
+  },
+  {
+    "id": "Thực đơn_40",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Nho xanh không hạt\n- Năng lượng (kcal): 55.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 40
+    }
+  },
+  {
+    "id": "Thực đơn_41",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Bữa ăn: Ăn phụ\n- Tên món ăn: Sữa đậu nành Fami\n- Năng lượng (kcal): 90.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 41
+    }
+  },
+  {
+    "id": "Thực đơn_42",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Bánh mì sandwich phô mai\n- Năng lượng (kcal): 160.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 42
+    }
+  },
+  {
+    "id": "Thực đơn_43",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Ngày: Thứ 4 - 25/03/2026\n- Bữa ăn: Ăn trưa\n- Tên món ăn: Xôi xéo mỡ hành\n- Năng lượng (kcal): 320.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 43
+    }
+  },
+  {
+    "id": "Thực đơn_44",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Gà quay tiêu\n- Năng lượng (kcal): 275.50 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 44
+    }
+  },
+  {
+    "id": "Thực đơn_45",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Chả lụa\n- Năng lượng (kcal): 110.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 45
+    }
+  },
+  {
+    "id": "Thực đơn_46",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Dưa chuột chẻ\n- Năng lượng (kcal): 15.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 46
+    }
+  },
+  {
+    "id": "Thực đơn_47",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Quýt đường\n- Năng lượng (kcal): 40.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 47
+    }
+  },
+  {
+    "id": "Thực đơn_48",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Bữa ăn: Ăn phụ\n- Tên món ăn: Bánh flan caramel\n- Năng lượng (kcal): 140.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 48
+    }
+  },
+  {
+    "id": "Thực đơn_49",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Ngày: Thứ 5 - 26/03/2026\n- Bữa ăn: Ăn trưa\n- Tên món ăn: Bún bò Huế\n- Năng lượng (kcal): 450.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 49
+    }
+  },
+  {
+    "id": "Thực đơn_50",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Chè khúc bạch\n- Năng lượng (kcal): 180.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 50
+    }
+  },
+  {
+    "id": "Thực đơn_51",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Bữa ăn: Ăn phụ\n- Tên món ăn: Sữa tươi Vinamilk 110ml\n- Năng lượng (kcal): 65.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 51
+    }
+  },
+  {
+    "id": "Thực đơn_52",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Bánh muffin socola\n- Năng lượng (kcal): 155.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 52
+    }
+  },
+  {
+    "id": "Thực đơn_53",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Ngày: Thứ 6 - 27/03/2026\n- Bữa ăn: Ăn trưa\n- Tên món ăn: Cơm trắng\n- Năng lượng (kcal): 210.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 53
+    }
+  },
+  {
+    "id": "Thực đơn_54",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Trứng cuộn thanh cua kiểu Hàn\n- Năng lượng (kcal): 185.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 54
+    }
+  },
+  {
+    "id": "Thực đơn_55",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Đậu hũ nhồi thịt sốt cà\n- Năng lượng (kcal): 215.20 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 55
+    }
+  },
+  {
+    "id": "Thực đơn_56",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Canh mướp mồng tơi\n- Năng lượng (kcal): 45.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 56
+    }
+  },
+  {
+    "id": "Thực đơn_57",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Bưởi da xanh\n- Năng lượng (kcal): 42.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 57
+    }
+  },
+  {
+    "id": "Thực đơn_58",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Bữa ăn: Ăn phụ\n- Tên món ăn: Chè sương sa hạt lựu\n- Năng lượng (kcal): 150.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 58
+    }
+  },
+  {
+    "id": "Thực đơn_59",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Ngày: Thứ 2 - 30/03/2026\n- Bữa ăn: Ăn trưa\n- Tên món ăn: Cơm trắng\n- Năng lượng (kcal): 210.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 59
+    }
+  },
+  {
+    "id": "Thực đơn_60",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Sườn chua ngọt\n- Năng lượng (kcal): 335.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 60
+    }
+  },
+  {
+    "id": "Thực đơn_61",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Bắp cải xào nấm\n- Năng lượng (kcal): 55.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 61
+    }
+  },
+  {
+    "id": "Thực đơn_62",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Canh cải cúc nấu mọc\n- Năng lượng (kcal): 95.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 62
+    }
+  },
+  {
+    "id": "Thực đơn_63",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Dưa lê\n- Năng lượng (kcal): 48.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 63
+    }
+  },
+  {
+    "id": "Thực đơn_64",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Bữa ăn: Ăn phụ\n- Tên món ăn: Sữa chua nha đam\n- Năng lượng (kcal): 105.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 64
+    }
+  },
+  {
+    "id": "Thực đơn_65",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Bánh dừa nướng\n- Năng lượng (kcal): 85.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 65
+    }
+  },
+  {
+    "id": "Thực đơn_66",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Ngày: Thứ 3 - 31/03/2026\n- Bữa ăn: Ăn trưa\n- Tên món ăn: Miến gà măng khô\n- Năng lượng (kcal): 360.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 66
+    }
+  },
+  {
+    "id": "Thực đơn_67",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Quẩy\n- Năng lượng (kcal): 85.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 67
+    }
+  },
+  {
+    "id": "Thực đơn_68",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Chuối ngự\n- Năng lượng (kcal): 65.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 68
+    }
+  },
+  {
+    "id": "Thực đơn_69",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Bữa ăn: Ăn phụ\n- Tên món ăn: Sữa óc chó TH\n- Năng lượng (kcal): 115.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 69
+    }
+  },
+  {
+    "id": "Thực đơn_70",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Bánh giò\n- Năng lượng (kcal): 220.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 70
+    }
+  },
+  {
+    "id": "Thực đơn_71",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Ngày: Thứ 4 - 01/04/2026\n- Bữa ăn: Ăn trưa\n- Tên món ăn: Cơm cháy kho quẹt\n- Năng lượng (kcal): 310.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 71
+    }
+  },
+  {
+    "id": "Thực đơn_72",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Tôm rang thịt ba chỉ\n- Năng lượng (kcal): 280.50 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 72
+    }
+  },
+  {
+    "id": "Thực đơn_73",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Rau củ quả luộc thập cẩm\n- Năng lượng (kcal): 45.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 73
+    }
+  },
+  {
+    "id": "Thực đơn_74",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Canh khoai mỡ tím nấu tôm\n- Năng lượng (kcal): 105.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 74
+    }
+  },
+  {
+    "id": "Thực đơn_75",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Táo xanh\n- Năng lượng (kcal): 50.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 75
+    }
+  },
+  {
+    "id": "Thực đơn_76",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Bữa ăn: Ăn phụ\n- Tên món ăn: Bánh mì hoa cúc (1 lát)\n- Năng lượng (kcal): 130.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 76
+    }
+  },
+  {
+    "id": "Thực đơn_77",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Sữa tươi ít đường 110ml\n- Năng lượng (kcal): 60.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 77
+    }
+  },
+  {
+    "id": "Thực đơn_78",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Ngày: Thứ 5 - 02/04/2026\n- Bữa ăn: Ăn trưa\n- Tên món ăn: Pizza xúc xích phô mai\n- Năng lượng (kcal): 420.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 78
+    }
+  },
+  {
+    "id": "Thực đơn_79",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Salad Nga\n- Năng lượng (kcal): 125.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 79
+    }
+  },
+  {
+    "id": "Thực đơn_80",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Súp lơ xanh luộc\n- Năng lượng (kcal): 25.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 80
+    }
+  },
+  {
+    "id": "Thực đơn_81",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Nho mỹ\n- Năng lượng (kcal): 45.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 81
+    }
+  },
+  {
+    "id": "Thực đơn_82",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Bữa ăn: Ăn phụ\n- Tên món ăn: Sữa chua trái cây trộn\n- Năng lượng (kcal): 110.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 82
+    }
+  },
+  {
+    "id": "Thực đơn_83",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Ngày: Thứ 6 - 03/04/2026\n- Bữa ăn: Ăn trưa\n- Tên món ăn: Cơm trắng\n- Năng lượng (kcal): 210.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 83
+    }
+  },
+  {
+    "id": "Thực đơn_84",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Cá hồi áp chảo sốt chanh leo\n- Năng lượng (kcal): 315.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 84
+    }
+  },
+  {
+    "id": "Thực đơn_85",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Củ cải xào thịt băm\n- Năng lượng (kcal): 85.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 85
+    }
+  },
+  {
+    "id": "Thực đơn_86",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Canh rong biển\n- Năng lượng (kcal): 30.84 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 86
+    }
+  },
+  {
+    "id": "Thực đơn_87",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Thanh long trắng\n- Năng lượng (kcal): 45.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 87
+    }
+  },
+  {
+    "id": "Thực đơn_88",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Bữa ăn: Ăn phụ\n- Tên món ăn: Panna cotta dâu tây\n- Năng lượng (kcal): 145.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 88
+    }
+  },
+  {
+    "id": "Thực đơn_89",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Ngày: Thứ 2 - 06/04/2026\n- Bữa ăn: Ăn trưa\n- Tên món ăn: Cơm trắng\n- Năng lượng (kcal): 210.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 89
+    }
+  },
+  {
+    "id": "Thực đơn_90",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Bò hầm tiêu xanh\n- Năng lượng (kcal): 345.50 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 90
+    }
+  },
+  {
+    "id": "Thực đơn_91",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Rau cải ngọt xào tỏi\n- Năng lượng (kcal): 45.20 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 91
+    }
+  },
+  {
+    "id": "Thực đơn_92",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Canh bí đao nấu tôm\n- Năng lượng (kcal): 85.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 92
+    }
+  },
+  {
+    "id": "Thực đơn_93",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Dưa hấu\n- Năng lượng (kcal): 45.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 93
+    }
+  },
+  {
+    "id": "Thực đơn_94",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Bữa ăn: Ăn phụ\n- Tên món ăn: Sữa chua Vinamilk nha đam\n- Năng lượng (kcal): 95.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 94
+    }
+  },
+  {
+    "id": "Thực đơn_95",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Bánh quy bơ lạt\n- Năng lượng (kcal): 110.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 95
+    }
+  },
+  {
+    "id": "Thực đơn_96",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Ngày: Thứ 3 - 07/04/2026\n- Bữa ăn: Ăn trưa\n- Tên món ăn: Phở gà xé\n- Năng lượng (kcal): 380.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 96
+    }
+  },
+  {
+    "id": "Thực đơn_97",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Quẩy giòn\n- Năng lượng (kcal): 85.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 97
+    }
+  },
+  {
+    "id": "Thực đơn_98",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Chuối tây\n- Năng lượng (kcal): 89.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 98
+    }
+  },
+  {
+    "id": "Thực đơn_99",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Bữa ăn: Ăn phụ\n- Tên món ăn: Sữa đậu nành nguyên chất\n- Năng lượng (kcal): 90.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 99
+    }
+  },
+  {
+    "id": "Thực đơn_100",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Bánh bông lan nho\n- Năng lượng (kcal): 140.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 100
+    }
+  },
+  {
+    "id": "Thực đơn_101",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Ngày: Thứ 4 - 08/04/2026\n- Bữa ăn: Ăn trưa\n- Tên món ăn: Cơm trộn cá hồi kiểu Nhật\n- Năng lượng (kcal): 338.02 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 101
+    }
+  },
+  {
+    "id": "Thực đơn_102",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Thăn lợn chiên xù kiểu Nhật - Tonlatsu\n- Năng lượng (kcal): 248.26 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 102
+    }
+  },
+  {
+    "id": "Thực đơn_103",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Ngô luộc, lơ xanh luộc\n- Năng lượng (kcal): 22.85 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 103
+    }
+  },
+  {
+    "id": "Thực đơn_104",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Khoai tây chiên giòn\n- Năng lượng (kcal): 44.71 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 104
+    }
+  },
+  {
+    "id": "Thực đơn_105",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Canh rong biển đậu phụ\n- Năng lượng (kcal): 30.84 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 105
+    }
+  },
+  {
+    "id": "Thực đơn_106",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Nho mỹ\n- Năng lượng (kcal): 29.22 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 106
+    }
+  },
+  {
+    "id": "Thực đơn_107",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Bữa ăn: Ăn phụ\n- Tên món ăn: Mousse socola với sữa chua 32-35gr\n- Năng lượng (kcal): 95.58 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 107
+    }
+  },
+  {
+    "id": "Thực đơn_108",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: STTT N.CHẤT TH TRUE MILK 110MLX48\n- Năng lượng (kcal): 66.11 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 108
+    }
+  },
+  {
+    "id": "Thực đơn_109",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Ngày: Thứ 5 - 09/04/2026\n- Bữa ăn: Ăn trưa\n- Tên món ăn: Bún chả Hà Nội\n- Năng lượng (kcal): 410.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 109
+    }
+  },
+  {
+    "id": "Thực đơn_110",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Nem rán truyền thống\n- Năng lượng (kcal): 150.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 110
+    }
+  },
+  {
+    "id": "Thực đơn_111",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Thanh long đỏ\n- Năng lượng (kcal): 50.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 111
+    }
+  },
+  {
+    "id": "Thực đơn_112",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Bữa ăn: Ăn phụ\n- Tên món ăn: Chè đỗ đen cốt dừa\n- Năng lượng (kcal): 150.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 112
+    }
+  },
+  {
+    "id": "Thực đơn_113",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Ngày: Thứ 6 - 10/04/2026\n- Bữa ăn: Ăn trưa\n- Tên món ăn: Cơm rang dưa bò\n- Năng lượng (kcal): 450.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 113
+    }
+  },
+  {
+    "id": "Thực đơn_114",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Đùi gà nướng mật ong\n- Năng lượng (kcal): 275.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 114
+    }
+  },
+  {
+    "id": "Thực đơn_115",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Canh chua ngao nấu dứa\n- Năng lượng (kcal): 80.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 115
+    }
+  },
+  {
+    "id": "Thực đơn_116",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Táo xanh\n- Năng lượng (kcal): 52.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 116
+    }
+  },
+  {
+    "id": "Thực đơn_117",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Bữa ăn: Ăn phụ\n- Tên món ăn: Sữa chua uống Probi\n- Năng lượng (kcal): 65.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 117
+    }
+  },
+  {
+    "id": "Thực đơn_118",
+    "content": "Dữ liệu từ bảng: Thực đơn\n- Tên món ăn: Bánh su kem\n- Năng lượng (kcal): 120.00 kcal",
+    "metadata": {
+      "sheet": "Thực đơn",
+      "row": 118
+    }
+  },
+  {
+    "id": "Học phí_0",
+    "content": "Dữ liệu từ bảng: Học phí\n- Học phí chính khóa\n- 85320000\n- 180120000",
+    "metadata": {
+      "sheet": "Học phí",
+      "row": 0
+    }
+  },
+  {
+    "id": "Học phí_1",
+    "content": "Dữ liệu từ bảng: Học phí\n- Phí BHYT bắt buộc\n- 1000000\n- 1000000",
+    "metadata": {
+      "sheet": "Học phí",
+      "row": 1
+    }
+  },
+  {
+    "id": "Học phí_2",
+    "content": "Dữ liệu từ bảng: Học phí\n- Phí dịch vụ bán trú\n- 8550000\n- 18050000",
+    "metadata": {
+      "sheet": "Học phí",
+      "row": 2
+    }
+  },
+  {
+    "id": "Học phí_3",
+    "content": "Dữ liệu từ bảng: Học phí\n- Phí hoạt động trải nghiệm cả năm\n- 1500000\n- 1500000",
+    "metadata": {
+      "sheet": "Học phí",
+      "row": 3
+    }
+  },
+  {
+    "id": "Học phí_4",
+    "content": "Dữ liệu từ bảng: Học phí\n- Phí học phẩm cả năm\n- 2700000\n- 2700000",
+    "metadata": {
+      "sheet": "Học phí",
+      "row": 4
+    }
+  },
+  {
+    "id": "Học phí_5",
+    "content": "Dữ liệu từ bảng: Học phí\n- Phí phát triển trường cả năm\n- 4200000\n- 4200000",
+    "metadata": {
+      "sheet": "Học phí",
+      "row": 5
+    }
+  },
+  {
+    "id": "Học phí_6",
+    "content": "Dữ liệu từ bảng: Học phí\n- Phí DV cổng TTĐT cả năm\n- 400000\n- 400000",
+    "metadata": {
+      "sheet": "Học phí",
+      "row": 6
+    }
+  },
+  {
+    "id": "Học phí_7",
+    "content": "Dữ liệu từ bảng: Học phí\n- Set ĐPTC THCS Miền Bắc - Nam\n- 2530000\n- 2530000",
+    "metadata": {
+      "sheet": "Học phí",
+      "row": 7
+    }
+  },
+  {
+    "id": "Học phí_8",
+    "content": "Dữ liệu từ bảng: Học phí\n- Bộ sách Hệ nâng cao Khối 6 (tạm thu)\n- 4320000\n- 4320000",
+    "metadata": {
+      "sheet": "Học phí",
+      "row": 8
+    }
+  },
+  {
+    "id": "Học phí_9",
+    "content": "Dữ liệu từ bảng: Học phí\n- Tổng số tiền\n- 110520000\n- 214820000",
+    "metadata": {
+      "sheet": "Học phí",
+      "row": 9
+    }
+  },
+  {
+    "id": "Thời khoá biểu_0",
+    "content": "Dữ liệu từ bảng: Thời khoá biểu\n- Tiết: 1\n- Thời gian: 08:00 - 08:35\n- Thứ 2: Sinh hoạt chủ nhiệm\n\n(Gareth Morton)\n- Thứ 3: CIE ESL\n\n(Gareth Morton)\n- Thứ 4: Tiếng Việt\n\n(Lê Thị Kim Anh)\n- Thứ 5: CIE ESL\n\n(Gareth Morton)\n- Thứ 6: Tiếng Việt\n\n(Lê Thị Kim Anh)",
+    "metadata": {
+      "sheet": "Thời khoá biểu",
+      "row": 0
+    }
+  },
+  {
+    "id": "Thời khoá biểu_1",
+    "content": "Dữ liệu từ bảng: Thời khoá biểu\n- Tiết: 2\n- Thời gian: 08:35 - 09:10\n- Thứ 2: Tiếng Việt\n\n(Lê Thị Kim Anh)\n- Thứ 3: Tiếng Việt\n\n(Lê Thị Kim Anh)\n- Thứ 4: CIE Maths\n\n(Gareth Morton)\n- Thứ 5: Tiếng Việt\n\n(Lê Thị Kim Anh)\n- Thứ 6: CIE ESL\n\n(Gareth Morton)",
+    "metadata": {
+      "sheet": "Thời khoá biểu",
+      "row": 1
+    }
+  },
+  {
+    "id": "Thời khoá biểu_2",
+    "content": "Dữ liệu từ bảng: Thời khoá biểu\n- Tiết: -\n- Thời gian: 09:10 - 09:30\n- Thứ 2: Nghỉ giữa giờ\n- Thứ 3: Nghỉ giữa giờ\n- Thứ 4: Nghỉ giữa giờ\n- Thứ 5: Nghỉ giữa giờ\n- Thứ 6: Nghỉ giữa giờ",
+    "metadata": {
+      "sheet": "Thời khoá biểu",
+      "row": 2
+    }
+  },
+  {
+    "id": "Thời khoá biểu_3",
+    "content": "Dữ liệu từ bảng: Thời khoá biểu\n- Tiết: 3\n- Thời gian: 09:30 - 10:05\n- Thứ 2: CIE Maths\n\n(Gareth Morton)\n- Thứ 3: CIE ICT\n\n(Elanza Jurgens)\n- Thứ 4: Global Perspectives\n\n(Gareth Morton)\n- Thứ 5: Giáo dục thể chất\n\n(Vũ Trung Hiếu)\n- Thứ 6: Lịch sử và Địa lý\n\n(Lê Thị Kim Anh)",
+    "metadata": {
+      "sheet": "Thời khoá biểu",
+      "row": 3
+    }
+  },
+  {
+    "id": "Thời khoá biểu_4",
+    "content": "Dữ liệu từ bảng: Thời khoá biểu\n- Tiết: 4\n- Thời gian: 10:05 - 10:40\n- Thứ 2: Giáo dục thể chất\n\n(Vũ Trung Hiếu)\n- Thứ 3: Âm nhạc\n\n(Lại Thị Thu Thủy)\n- Thứ 4: Mỹ thuật\n\n(Dương Thị Mỹ Hạnh)\n- Thứ 5: GD Kỹ năng Phẩm chất\n\n(Gareth Morton)\n- Thứ 6: CIE Science\n\n(Gareth Morton)",
+    "metadata": {
+      "sheet": "Thời khoá biểu",
+      "row": 4
+    }
+  },
+  {
+    "id": "Thời khoá biểu_5",
+    "content": "Dữ liệu từ bảng: Thời khoá biểu\n- Tiết: -\n- Thời gian: 10:40 - 12:30\n- Thứ 2: Nghỉ trưa\n- Thứ 3: Nghỉ trưa\n- Thứ 4: Nghỉ trưa\n- Thứ 5: Nghỉ trưa\n- Thứ 6: Nghỉ trưa",
+    "metadata": {
+      "sheet": "Thời khoá biểu",
+      "row": 5
+    }
+  },
+  {
+    "id": "Thời khoá biểu_6",
+    "content": "Dữ liệu từ bảng: Thời khoá biểu\n- Tiết: 5\n- Thời gian: 12:30 - 13:05\n- Thứ 2: CIE ESL\n\n(Gareth Morton)\n- Thứ 3: CIE Maths\n\n(Gareth Morton)\n- Thứ 4: CIE ESL\n\n(Gareth Morton)\n- Thứ 5: CIE Maths\n\n(Gareth Morton)\n- Thứ 6: Global Perspectives\n\n(Gareth Morton)",
+    "metadata": {
+      "sheet": "Thời khoá biểu",
+      "row": 6
+    }
+  },
+  {
+    "id": "Thời khoá biểu_7",
+    "content": "Dữ liệu từ bảng: Thời khoá biểu\n- Tiết: 6\n- Thời gian: 13:05 - 13:40\n- Thứ 2: Lịch sử và Địa lý\n\n(Lê Thị Kim Anh)\n- Thứ 3: Việt Nam học\n\n(Đinh Thị Ngọc Hồi)\n- Thứ 4: Lịch sử và Địa lý\n\n(Lê Thị Kim Anh)\n- Thứ 5: Việt Nam học\n\n(Đinh Thị Ngọc Hồi)\n- Thứ 6: Tiết Đọc sách\n\n(Gareth Morton)",
+    "metadata": {
+      "sheet": "Thời khoá biểu",
+      "row": 7
+    }
+  },
+  {
+    "id": "Thời khoá biểu_8",
+    "content": "Dữ liệu từ bảng: Thời khoá biểu\n- Tiết: -\n- Thời gian: 13:40 - 14:00\n- Thứ 2: Nghỉ giữa giờ\n- Thứ 3: Nghỉ giữa giờ\n- Thứ 4: Nghỉ giữa giờ\n- Thứ 5: Nghỉ giữa giờ\n- Thứ 6: Nghỉ giữa giờ",
+    "metadata": {
+      "sheet": "Thời khoá biểu",
+      "row": 8
+    }
+  },
+  {
+    "id": "Thời khoá biểu_9",
+    "content": "Dữ liệu từ bảng: Thời khoá biểu\n- Tiết: 7\n- Thời gian: 14:00 - 14:35\n- Thứ 2: CIE Science\n\n(Gareth Morton)\n- Thứ 3: Tiết Đọc sách\n\n(Gareth Morton)\n- Thứ 4: CIE Science\n\n(Gareth Morton)\n- Thứ 5: CIE ICT\n\n(Elanza Jurgens)\n- Thứ 6: CIE Science\n\n(Gareth Morton)",
+    "metadata": {
+      "sheet": "Thời khoá biểu",
+      "row": 9
+    }
+  },
+  {
+    "id": "Thời khoá biểu_10",
+    "content": "Dữ liệu từ bảng: Thời khoá biểu\n- Tiết: 8\n- Thời gian: 14:35 - 15:10\n- Thứ 2: Tự học có hướng dẫn\n\n(Gareth Morton)\n- Thứ 3: Tiết Đọc sách\n\n(Gareth Morton)\n- Thứ 4: Tự học có hướng dẫn\n\n(Gareth Morton)\n- Thứ 5: Tự học có hướng dẫn\n\n(Gareth Morton)\n- Thứ 6: CIE Science\n\n(Gareth Morton)",
+    "metadata": {
+      "sheet": "Thời khoá biểu",
+      "row": 10
+    }
+  },
+  {
+    "id": "Nhận xét_0",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-04-08 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: Sinh hoạt Chủ nhiệm\n- Nội dung nhận xét: Hưng bắt đầu tuần mới rất năng động. Con chủ động giúp thầy sắp xếp lại tủ sách của lớp và nhắc nhở các bạn giữ trật tự trong giờ chuyển tiết.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 0
+    }
+  },
+  {
+    "id": "Nhận xét_1",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-04-07 00:00:00\n- Giáo viên: Lê Thị Kim Anh\n- Bộ môn: Tiếng Việt\n- Nội dung nhận xét: Cô khen Hưng hôm nay có bài viết văn miêu tả rất giàu hình ảnh và cảm xúc. Con đã biết cách sử dụng các từ láy để làm bài văn sinh động hơn.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 1
+    }
+  },
+  {
+    "id": "Nhận xét_2",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-04-07 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: CIE Maths\n- Nội dung nhận xét: Hưng nắm vững kiến thức về diện tích và chu vi hình tròn. Con giải các bài tập nâng cao trong sách bổ trợ rất nhanh và chính xác.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 2
+    }
+  },
+  {
+    "id": "Nhận xét_3",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-04-06 00:00:00\n- Giáo viên: Dương Thị Mỹ Hạnh\n- Bộ môn: Mỹ thuật\n- Nội dung nhận xét: Con có tư duy màu sắc rất tốt trong bài vẽ về chủ đề bảo vệ môi trường. Cô khuyến khích Hưng thử nghiệm thêm các chất liệu mới.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 3
+    }
+  },
+  {
+    "id": "Nhận xét_4",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-04-06 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: CIE Science\n- Nội dung nhận xét: Trong tiết thực hành hôm nay, Hưng đã quan sát rất tỉ mỉ sự nảy mầm của hạt và ghi chép nhật ký quan sát rất khoa học.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 4
+    }
+  },
+  {
+    "id": "Nhận xét_5",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-04-03 00:00:00\n- Giáo viên: Elanza Jurgens\n- Bộ môn: CIE ICT\n- Nội dung nhận xét: Hưng Đã làm dự án thiết kế thiệp trên phần mềm đồ họa. Con biết cách phối hợp các biểu tượng để thông điệp trở nên rõ ràng.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 5
+    }
+  },
+  {
+    "id": "Nhận xét_6",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-04-03 00:00:00\n- Giáo viên: Vũ Trung Hiếu\n- Bộ môn: GD Thể chất\n- Nội dung nhận xét: Thầy khen Hưng có kỹ thuật dẫn bóng tiến bộ rõ rệt. Con luôn nỗ lực hết mình và có tinh thần thi đấu fair-play với đội bạn.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 6
+    }
+  },
+  {
+    "id": "Nhận xét_7",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-04-02 00:00:00\n- Giáo viên: Đinh Thị Ngọc Hồi\n- Bộ môn: Việt Nam học\n- Nội dung nhận xét: Hưng rất hào hứng trong giờ tìm hiểu về trang phục truyền thống các dân tộc. Con đặt nhiều câu hỏi hay về ý nghĩa của các hoa văn.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 7
+    }
+  },
+  {
+    "id": "Nhận xét_8",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-04-02 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: CIE ESL\n- Nội dung nhận xét: Hưng thể hiện kỹ năng thuyết trình tự tin. Phát âm của con rõ ràng, tuy nhiên cần chú ý hơn đến các âm cuối (ending sounds).",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 8
+    }
+  },
+  {
+    "id": "Nhận xét_9",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-04-01 00:00:00\n- Giáo viên: Lại Thị Thu Thủy\n- Bộ môn: Âm nhạc\n- Nội dung nhận xét: Con có giọng hát vang và sáng. Cô ghi nhận sự tập luyện nghiêm túc của Hưng khi tham gia dàn hợp xướng chuẩn bị cho lễ hội sắp tới.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 9
+    }
+  },
+  {
+    "id": "Nhận xét_10",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-31 00:00:00\n- Giáo viên: Lê Thị Kim Anh\n- Bộ môn: Lịch sử & Địa lý\n- Nội dung nhận xét: Hưng xác định rất nhanh các địa danh trên bản đồ. Con cũng nắm rõ các mốc thời gian quan trọng trong giai đoạn lịch sử đang học.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 10
+    }
+  },
+  {
+    "id": "Nhận xét_11",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-31 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: Global Perspectives\n- Nội dung nhận xét: Con có quan điểm cá nhân sâu sắc khi thảo luận về vấn đề lãng phí thực phẩm. Cô khen kỹ năng tư duy phản biện của con.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 11
+    }
+  },
+  {
+    "id": "Nhận xét_12",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-30 00:00:00\n- Giáo viên: Phạm Ngọc Lợi\n- Bộ môn: CLB Kỹ năng\n- Nội dung nhận xét: Trong giờ sinh hoạt CLB, Hưng đã thể hiện khả năng lãnh đạo nhóm tốt khi phân công công việc cho các bạn cùng làm robot.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 12
+    }
+  },
+  {
+    "id": "Nhận xét_13",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-30 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: Tiết Đọc sách\n- Nội dung nhận xét: Hưng tập trung đọc sách trong suốt tiết học. Con đã tóm tắt lại nội dung câu chuyện rất mạch lạc cho cả lớp cùng nghe.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 13
+    }
+  },
+  {
+    "id": "Nhận xét_14",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-27 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: Tự học\n- Nội dung nhận xét: Con tận dụng tốt thời gian tự học để hoàn thành hết các bài tập về nhà môn Toán và Science ngay tại lớp. Rất đáng khen!",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 14
+    }
+  },
+  {
+    "id": "Nhận xét_15",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-27 00:00:00\n- Giáo viên: Lê Thị Kim Anh\n- Bộ môn: Tiếng Việt\n- Nội dung nhận xét: Bài chính tả của Hưng hôm nay trình bày sạch sẽ, chữ viết đều và không mắc lỗi nào. Con cần duy trì phong độ này nhé.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 15
+    }
+  },
+  {
+    "id": "Nhận xét_16",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-26 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: CIE Maths\n- Nội dung nhận xét: Hưng đã tìm ra cách giải ngắn gọn hơn cho bài toán đố hôm nay. Thầy rất ấn tượng với sự linh hoạt trong tư duy của con.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 16
+    }
+  },
+  {
+    "id": "Nhận xét_17",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-26 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: CIE ESL\n- Nội dung nhận xét: Con đã sử dụng được nhiều từ vựng mới trong bài viết về kỳ nghỉ mơ ước. Cấu trúc câu của con ngày càng đa dạng hơn.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 17
+    }
+  },
+  {
+    "id": "Nhận xét_18",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-25 00:00:00\n- Giáo viên: Vũ Trung Hiếu\n- Bộ môn: GD Thể chất\n- Nội dung nhận xét: Hưng thực hiện động tác khởi động rất chuẩn xác. Con cũng tích cực hỗ trợ thầy thu dọn dụng cụ sau giờ học.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 18
+    }
+  },
+  {
+    "id": "Nhận xét_19",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-25 00:00:00\n- Giáo viên: Dương Thị Mỹ Hạnh\n- Bộ môn: Mỹ thuật\n- Nội dung nhận xét: Cô nhận thấy Hưng rất kiên nhẫn khi hoàn thiện các chi tiết nhỏ trong bài nặn đất sét. Tác phẩm của con rất có hồn.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 19
+    }
+  },
+  {
+    "id": "Nhận xét_20",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-24 00:00:00\n- Giáo viên: Elanza Jurgens\n- Bộ môn: CIE ICT\n- Nội dung nhận xét: Con đã biết cách sử dụng các phím tắt để thao tác nhanh hơn trên máy tính. Kỹ năng tìm kiếm thông tin của con rất tốt.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 20
+    }
+  },
+  {
+    "id": "Nhận xét_21",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-24 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: CIE Science\n- Nội dung nhận xét: Hưng giải thích được cơ chế hoạt động của mạch điện đơn giản một cách dễ hiểu. Con có tố chất tốt ở các môn khoa học.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 21
+    }
+  },
+  {
+    "id": "Nhận xét_22",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-23 00:00:00\n- Giáo viên: Đinh Thị Ngọc Hồi\n- Bộ môn: Việt Nam học\n- Nội dung nhận xét: Con ghi nhớ rất tốt các món ăn đặc sản vùng miền. Hưng còn chia sẻ thêm về những trải nghiệm ẩm thực của gia đình.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 22
+    }
+  },
+  {
+    "id": "Nhận xét_23",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-23 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: Sinh hoạt lớp\n- Nội dung nhận xét: Con luôn chấp hành tốt nội quy trường lớp, đi học đúng giờ và trang phục chỉnh tề. Thầy mong con phát huy tinh thần này.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 23
+    }
+  },
+  {
+    "id": "Nhận xét_24",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-20 00:00:00\n- Giáo viên: Lại Thị Thu Thủy\n- Bộ môn: Âm nhạc\n- Nội dung nhận xét: Hưng bắt nhịp rất chính xác khi chơi nhạc cụ gõ. Con có khả năng làm việc nhóm hòa hợp với các bạn trong tổ.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 24
+    }
+  },
+  {
+    "id": "Nhận xét_25",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-20 00:00:00\n- Giáo viên: Lê Thị Kim Anh\n- Bộ môn: Tiếng Việt\n- Nội dung nhận xét: Cô khen Hưng đã có ý thức giơ tay phát biểu xây dựng bài nhiều hơn trong tuần này. Những câu trả lời của con rất thông minh.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 25
+    }
+  },
+  {
+    "id": "Nhận xét_26",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-19 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: CIE Maths\n- Nội dung nhận xét: Hưng làm bài kiểm tra nhanh giữa giờ đạt kết quả tối đa. Con cẩn thận trong việc tính toán và kiểm tra lại kết quả.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 26
+    }
+  },
+  {
+    "id": "Nhận xét_27",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-19 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: CIE ESL\n- Nội dung nhận xét: Kỹ năng nghe của Hưng tiến bộ vượt bậc. Con trả lời đúng hết các câu hỏi liên quan đến đoạn hội thoại ngắn.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 27
+    }
+  },
+  {
+    "id": "Nhận xét_28",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-18 00:00:00\n- Giáo viên: Lê Thị Kim Anh\n- Bộ môn: Lịch sử & Địa lý\n- Nội dung nhận xét: Con đã tìm hiểu thêm nhiều kiến thức bên ngoài sách giáo khoa về các vị vua thời Lý. Cô rất khuyến khích tinh thần tự học này.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 28
+    }
+  },
+  {
+    "id": "Nhận xét_29",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-18 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: Global Perspectives\n- Nội dung nhận xét: Hưng lắng nghe ý kiến của các bạn một cách tôn trọng. Con đã biết cách điều chỉnh lập luận của mình để thuyết phục hơn.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 29
+    }
+  },
+  {
+    "id": "Nhận xét_30",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-17 00:00:00\n- Giáo viên: Phạm Ngọc Lợi\n- Bộ môn: CLB Kỹ năng\n- Nội dung nhận xét: Thầy ghi nhận sự khéo léo của Hưng trong bài thực hành thắt nút dây. Con hoàn thành bài tập nhanh nhất lớp.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 30
+    }
+  },
+  {
+    "id": "Nhận xét_31",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-17 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: Tiết Đọc sách\n- Nội dung nhận xét: Hưng rất say mê với những cuốn sách về khoa học vũ trụ. Con thường xuyên trao đổi với thầy về những điều mới đọc được.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 31
+    }
+  },
+  {
+    "id": "Nhận xét_32",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-16 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: Tự học\n- Nội dung nhận xét: Con Đã làm tốt các phiếu bài tập ôn tập cuối tuần. Hưng cũng chủ động hướng dẫn cho bạn ngồi cạnh cùng học.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 32
+    }
+  },
+  {
+    "id": "Nhận xét_33",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-16 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: Sinh hoạt lớp\n- Nội dung nhận xét: Cô ghi nhận sự tiến bộ của Hưng trong việc tự quản lý đồ dùng cá nhân. Bàn học của con hôm nay rất ngăn nắp.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 33
+    }
+  },
+  {
+    "id": "Nhận xét_34",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-13 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: CIE Science\n- Nội dung nhận xét: Hưng đặt câu hỏi rất thú vị về sự chuyển thể của các chất. Con có óc tò mò và ham học hỏi rất đáng quý.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 34
+    }
+  },
+  {
+    "id": "Nhận xét_35",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-13 00:00:00\n- Giáo viên: Lê Thị Kim Anh\n- Bộ môn: Tiếng Việt\n- Nội dung nhận xét: Cô hài lòng về bài làm văn kể chuyện của con. Cốt truyện sáng tạo và có mở đầu, kết thúc rất ấn tượng.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 35
+    }
+  },
+  {
+    "id": "Nhận xét_36",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-12 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: CIE Maths\n- Nội dung nhận xét: Con đã hiểu rõ cách quy đồng mẫu số các phân số. Bài tập về nhà của con trình bày rất dễ nhìn và khoa học.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 36
+    }
+  },
+  {
+    "id": "Nhận xét_37",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-12 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: CIE ESL\n- Nội dung nhận xét: Hưng rất tích cực tham gia các trò chơi từ vựng trên lớp. Con có trí nhớ tốt và khả năng phản xạ ngôn ngữ nhanh.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 37
+    }
+  },
+  {
+    "id": "Nhận xét_38",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-11 00:00:00\n- Giáo viên: Vũ Trung Hiếu\n- Bộ môn: GD Thể chất\n- Nội dung nhận xét: Thầy khen Hưng có sức bền tốt trong bài chạy cự ly ngắn. Con cũng rất nghiêm túc thực hiện các bài tập giãn cơ.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 38
+    }
+  },
+  {
+    "id": "Nhận xét_39",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-11 00:00:00\n- Giáo viên: Dương Thị Mỹ Hạnh\n- Bộ môn: Mỹ thuật\n- Nội dung nhận xét: Bài vẽ trang trí đường diềm của Hưng có bố cục cân đối và họa tiết sáng tạo. Con đã biết cách phối hợp các gam màu nóng.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 39
+    }
+  },
+  {
+    "id": "Nhận xét_40",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-10 00:00:00\n- Giáo viên: Elanza Jurgens\n- Bộ môn: CIE ICT\n- Nội dung nhận xét: Con Đã làm bài thực hành tạo bảng biểu. Hưng sử dụng thành thạo các công cụ định dạng và chèn biểu đồ đơn giản.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 40
+    }
+  },
+  {
+    "id": "Nhận xét_41",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-10 00:00:00\n- Giáo viên: Đinh Thị Ngọc Hồi\n- Bộ môn: Việt Nam học\n- Nội dung nhận xét: Hưng có bài thuyết trình ngắn về ý nghĩa của ngày Tết cổ truyền rất hay. Con chuẩn bị hình ảnh minh họa rất chu đáo.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 41
+    }
+  },
+  {
+    "id": "Nhận xét_42",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-09 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: Sinh hoạt lớp\n- Nội dung nhận xét: Cô khen Hưng đã tích cực tham gia chuẩn bị các tiết mục văn nghệ chào mừng ngày 8/3 của lớp. Con rất nhiệt tình.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 42
+    }
+  },
+  {
+    "id": "Nhận xét_43",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-06 00:00:00\n- Giáo viên: Lại Thị Thu Thủy\n- Bộ môn: Âm nhạc\n- Nội dung nhận xét: Hưng thuộc lời bài hát rất nhanh. Con hát tự tin và có phong thái biểu diễn rất tự nhiên trước đám đông.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 43
+    }
+  },
+  {
+    "id": "Nhận xét_44",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-06 00:00:00\n- Giáo viên: Lê Thị Kim Anh\n- Bộ môn: Tiếng Việt\n- Nội dung nhận xét: Cô nhận thấy vốn từ ngữ của Hưng ngày càng phong phú. Con đã biết sử dụng các từ đồng nghĩa để tránh lặp từ trong bài viết.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 44
+    }
+  },
+  {
+    "id": "Nhận xét_45",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-05 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: CIE Maths\n- Nội dung nhận xét: Hưng nắm chắc cách đổi các đơn vị đo độ dài và khối lượng. Con làm bài tập thực hành trên lớp rất tốt.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 45
+    }
+  },
+  {
+    "id": "Nhận xét_46",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-05 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: CIE ESL\n- Nội dung nhận xét: Con tham gia thảo luận nhóm sôi nổi bằng tiếng Anh. Hưng đã tự tin hơn khi đưa ra những ý kiến phản biện.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 46
+    }
+  },
+  {
+    "id": "Nhận xét_47",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-04 00:00:00\n- Giáo viên: Lê Thị Kim Anh\n- Bộ môn: Lịch sử & Địa lý\n- Nội dung nhận xét: Hưng có khả năng tổng hợp kiến thức thông qua sơ đồ tư duy rất tốt. Bài vẽ sơ đồ của con rất đầy đủ và dễ hiểu.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 47
+    }
+  },
+  {
+    "id": "Nhận xét_48",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-04 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: Global Perspectives\n- Nội dung nhận xét: Con thể hiện sự đồng cảm tốt khi thảo luận về các vấn đề cộng đồng. Cô khen thái độ tích cực và cầu thị của con.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 48
+    }
+  },
+  {
+    "id": "Nhận xét_49",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-03 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: Tự học\n- Nội dung nhận xét: Hưng đã có kế hoạch học tập rõ ràng cho các môn học trong tuần. Con đã biết cách ưu tiên hoàn thành những việc quan trọng trước.",
+    "metadata": {
+      "sheet": "Nhận xét",
+      "row": 49
+    }
+  },
+  {
+    "id": "Kết quả học tập_0",
+    "content": "Dữ liệu từ bảng: Kết quả học tập\n- Môn học: Tiếng Việt\n- Cuối Kỳ 1: 9.0\n- Giữa Kỳ 2: 2026-02-09 00:00:00\n- Đánh giá chung / Nhận xét nổi bật: Nắm vững kiến thức ngữ pháp, hành văn mạch lạc, giàu cảm xúc.",
+    "metadata": {
+      "sheet": "Kết quả học tập",
+      "row": 0
+    }
+  },
+  {
+    "id": "Kết quả học tập_1",
+    "content": "Dữ liệu từ bảng: Kết quả học tập\n- Môn học: Lịch sử và Địa lý\n- Cuối Kỳ 1: 9.0\n- Giữa Kỳ 2: 2026-05-09 00:00:00\n- Đánh giá chung / Nhận xét nổi bật: Kỹ năng đọc bản đồ tốt, ghi nhớ các mốc sự kiện lịch sử chính xác.",
+    "metadata": {
+      "sheet": "Kết quả học tập",
+      "row": 1
+    }
+  },
+  {
+    "id": "Kết quả học tập_2",
+    "content": "Dữ liệu từ bảng: Kết quả học tập\n- Môn học: CIE Maths\n- Cuối Kỳ 1: 95% (A*)\n- Giữa Kỳ 2: 98% (A*)\n- Đánh giá chung / Nhận xét nổi bật: Tư duy logic xuất sắc, giải quyết tốt các bài toán đố phức tạp.",
+    "metadata": {
+      "sheet": "Kết quả học tập",
+      "row": 2
+    }
+  },
+  {
+    "id": "Kết quả học tập_3",
+    "content": "Dữ liệu từ bảng: Kết quả học tập\n- Môn học: CIE Science\n- Cuối Kỳ 1: 92% (A*)\n- Giữa Kỳ 2: 94% (A*)\n- Đánh giá chung / Nhận xét nổi bật: Quan sát tỉ mỉ trong các giờ thực hành, hiểu rõ các khái niệm khoa học.",
+    "metadata": {
+      "sheet": "Kết quả học tập",
+      "row": 3
+    }
+  },
+  {
+    "id": "Kết quả học tập_4",
+    "content": "Dữ liệu từ bảng: Kết quả học tập\n- Môn học: CIE ESL\n- Cuối Kỳ 1: 85% (A)\n- Giữa Kỳ 2: 88% (A)\n- Đánh giá chung / Nhận xét nổi bật: Kỹ năng Nghe - Đọc hiểu tiến bộ vượt bậc, tự tin hơn khi nói.",
+    "metadata": {
+      "sheet": "Kết quả học tập",
+      "row": 4
+    }
+  },
+  {
+    "id": "Kết quả học tập_5",
+    "content": "Dữ liệu từ bảng: Kết quả học tập\n- Môn học: CIE ICT\n- Cuối Kỳ 1: 94% (A*)\n- Giữa Kỳ 2: 95% (A*)\n- Đánh giá chung / Nhận xét nổi bật: Thao tác máy tính nhanh, hoàn thành xuất sắc các dự án thiết kế slide.",
+    "metadata": {
+      "sheet": "Kết quả học tập",
+      "row": 5
+    }
+  },
+  {
+    "id": "Kết quả học tập_6",
+    "content": "Dữ liệu từ bảng: Kết quả học tập\n- Môn học: Việt Nam học\n- Cuối Kỳ 1: HTT\n- Giữa Kỳ 2: HTT\n- Đánh giá chung / Nhận xét nổi bật: Tích cực tìm hiểu văn hóa, có bài thuyết trình sáng tạo về ngày Tết.",
+    "metadata": {
+      "sheet": "Kết quả học tập",
+      "row": 6
+    }
+  },
+  {
+    "id": "Kết quả học tập_7",
+    "content": "Dữ liệu từ bảng: Kết quả học tập\n- Môn học: Global Perspectives\n- Cuối Kỳ 1: Grade A\n- Giữa Kỳ 2: Grade A*\n- Đánh giá chung / Nhận xét nổi bật: Kỹ năng làm việc nhóm hòa hợp, tư duy phản biện ngày càng sắc bén.",
+    "metadata": {
+      "sheet": "Kết quả học tập",
+      "row": 7
+    }
+  },
+  {
+    "id": "Kết quả học tập_8",
+    "content": "Dữ liệu từ bảng: Kết quả học tập\n- Môn học: Giáo dục thể chất\n- Cuối Kỳ 1: HTT\n- Giữa Kỳ 2: HTT\n- Đánh giá chung / Nhận xét nổi bật: Thể lực tốt, nắm bắt nhanh các kỹ thuật bóng rổ và điền kinh.",
+    "metadata": {
+      "sheet": "Kết quả học tập",
+      "row": 8
+    }
+  },
+  {
+    "id": "Kết quả học tập_9",
+    "content": "Dữ liệu từ bảng: Kết quả học tập\n- Môn học: Mỹ thuật\n- Cuối Kỳ 1: HTT\n- Giữa Kỳ 2: HTT\n- Đánh giá chung / Nhận xét nổi bật: Trí tưởng tượng phong phú, phối màu hài hòa, có ý thức dọn dẹp họa cụ.",
+    "metadata": {
+      "sheet": "Kết quả học tập",
+      "row": 9
+    }
+  },
+  {
+    "id": "Kết quả học tập_10",
+    "content": "Dữ liệu từ bảng: Kết quả học tập\n- Môn học: Âm nhạc\n- Cuối Kỳ 1: HT\n- Giữa Kỳ 2: HTT\n- Đánh giá chung / Nhận xét nổi bật: Thuộc lời bài hát nhanh, bắt nhịp tốt khi gõ đệm. Tự tin hơn khi hát.",
+    "metadata": {
+      "sheet": "Kết quả học tập",
+      "row": 10
+    }
+  },
+  {
+    "id": "Kết quả học tập_11",
+    "content": "Dữ liệu từ bảng: Kết quả học tập\n- Môn học: GD Kỹ năng Phẩm chất\n- Cuối Kỳ 1: HTT\n- Giữa Kỳ 2: HTT\n- Đánh giá chung / Nhận xét nổi bật: Chấp hành tốt nội quy, biết quan tâm và hỗ trợ bạn bè trong lớp.",
+    "metadata": {
+      "sheet": "Kết quả học tập",
+      "row": 11
+    }
+  },
+  {
+    "id": "Kết quả học tập_12",
+    "content": "Dữ liệu từ bảng: Kết quả học tập\n- Môn học: CLB Kỹ năng\n- Cuối Kỳ 1: HTT\n- Giữa Kỳ 2: HTT\n- Đánh giá chung / Nhận xét nổi bật: Thể hiện được vai trò trưởng nhóm trong các hoạt động lắp ráp, tạo hình.",
+    "metadata": {
+      "sheet": "Kết quả học tập",
+      "row": 12
+    }
+  },
+  {
+    "id": "Thông báo_0",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Khảo sát\n- Tiêu đề: Khảo sát mức độ hài lòng & nhu cầu sử dụng Vinschool One\n- Nội dung tóm tắt: Nhằm nâng cao chất lượng phối hợp dạy – học và dịch vụ số cho học sinh. Khảo sát kéo dài 5-7 phút phục vụ mục đích cải tiến dịch vụ.\n- Đối tượng nhận: PHHS Tiểu học – THCS – THPT\n- Ngày sự kiện: N/A\n- Hạn chót (Deadline): Không ghi rõ\n- Trạng thái: Thực hiện khảo sát",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 0
+    }
+  },
+  {
+    "id": "Thông báo_1",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Hoạt động ngoại khóa\n- Tiêu đề: Khảo sát ý kiến PHHS về việc HS tham gia hoạt động ngoại khóa \"Bảo tàng đường Hồ Chí Minh\"\n- Nội dung tóm tắt: Nhằm mang đến trải nghiệm học tập môn Lịch sử - Địa lí, giúp các con tìm hiểu chặng đường lịch sử hào hùng qua hiện vật và câu chuyện lịch sử.\n- Đối tượng nhận: PHHS Khối 5 (Vinschool Times City)\n- Ngày sự kiện: 08/04/2026\n- Hạn chót (Deadline): Trước 08/04/2026\n- Trạng thái: Xem câu trả lời",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 1
+    }
+  },
+  {
+    "id": "Thông báo_2",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Trải nghiệm học tập\n- Tiêu đề: Khảo sát PHHS về việc tham gia hoạt động trải nghiệm xem phim khối 5\n- Nội dung tóm tắt: Trải nghiệm thực tế môn ESL (Unit 8: Entertainment). Học sinh xem phim \"Super Mario Galaxy\" để tìm hiểu lịch sử rạp chiếu phim và trò chơi điện tử.\n- Đối tượng nhận: PHHS Khối 5 (Vinschool Times City)\n- Ngày sự kiện: 10/04/2026\n- Hạn chót (Deadline): 09/04/2026\n- Trạng thái: Cập nhật khảo sát",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 2
+    }
+  },
+  {
+    "id": "Thông báo_3",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Học vụ\n- Tiêu đề: Thông báo lịch thi Giữa học kỳ 2\n- Nội dung tóm tắt: Lịch thi chi tiết các môn Toán, Tiếng Việt, Tiếng Anh và các môn chuyên biệt. PH vui lòng nhắc con ôn tập theo đề cương.\n- Đối tượng nhận: Toàn học sinh\n- Ngày sự kiện: 19/02/2026\n- Hạn chót (Deadline): 02/03 - 06/03\n- Trạng thái: Xem chi tiết",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 3
+    }
+  },
+  {
+    "id": "Thông báo_4",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Sự kiện\n- Tiêu đề: Ngày hội Thể thao Vinschool (Sports Day)\n- Nội dung tóm tắt: Sự kiện thể thao thường niên nhằm rèn luyện sức khỏe và tinh thần đồng đội. Yêu cầu HS mặc đồng phục thể thao và mang theo nước uống.\n- Đối tượng nhận: Khối Tiểu học\n- Ngày sự kiện: 25/02/2026\n- Hạn chót (Deadline): 07/03/2026\n- Trạng thái: Đăng ký tham gia",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 4
+    }
+  },
+  {
+    "id": "Thông báo_5",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Y tế\n- Tiêu đề: Khám sức khỏe định kỳ đợt 2\n- Nội dung tóm tắt: Nhà trường phối hợp với bệnh viện Vinmec tổ chức khám sức khỏe tổng quát (mắt, răng miệng, chiều cao, cân nặng) cho học sinh.\n- Đối tượng nhận: Toàn học sinh\n- Ngày sự kiện: 02/03/2026\n- Hạn chót (Deadline): 10/03 - 12/03\n- Trạng thái: Xem kết quả",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 5
+    }
+  },
+  {
+    "id": "Thông báo_6",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Sự kiện\n- Tiêu đề: Chào mừng ngày Quốc tế Phụ nữ 8/3\n- Nội dung tóm tắt: Hoạt động làm thiệp và quà handmade dành tặng mẹ và cô giáo trong giờ trải nghiệm sáng tạo.\n- Đối tượng nhận: Khối Tiểu học\n- Ngày sự kiện: 05/03/2026\n- Hạn chót (Deadline): 08/03/2026\n- Trạng thái: Đã đóng",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 6
+    }
+  },
+  {
+    "id": "Thông báo_7",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Hội thảo\n- Tiêu đề: Hội thảo: Định hướng tư duy AI cho trẻ\n- Nội dung tóm tắt: Buổi chia sẻ từ các chuyên gia về cách tiếp cận công nghệ và trí tuệ nhân tạo an toàn, hiệu quả cho học sinh phổ thông.\n- Đối tượng nhận: PHHS toàn trường\n- Ngày sự kiện: 09/03/2026\n- Hạn chót (Deadline): 15/03/2026\n- Trạng thái: Đăng ký ngay",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 7
+    }
+  },
+  {
+    "id": "Thông báo_8",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Học vụ\n- Tiêu đề: Thông báo họp Phụ huynh giữa học kỳ 2\n- Nội dung tóm tắt: Họp tập trung để trao đổi về tình hình học tập, rèn luyện và định hướng các hoạt động trong giai đoạn cuối năm học.\n- Đối tượng nhận: PHHS toàn trường\n- Ngày sự kiện: 12/03/2026\n- Hạn chót (Deadline): 21/03/2026\n- Trạng thái: Xác nhận tham dự",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 8
+    }
+  },
+  {
+    "id": "Thông báo_9",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Tài chính\n- Tiêu đề: Thông báo học phí và các khoản phí tháng 4/2026\n- Nội dung tóm tắt: Nhà trường gửi thông báo thu học phí, tiền ăn và phí xe đưa đón tháng 4. PH vui lòng thanh toán đúng hạn.\n- Đối tượng nhận: PHHS toàn trường\n- Ngày sự kiện: 18/03/2026\n- Hạn chót (Deadline): Hạn 31/03\n- Trạng thái: Thanh toán ngay",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 9
+    }
+  },
+  {
+    "id": "Thông báo_10",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Ngoại khóa\n- Tiêu đề: Đăng ký câu lạc bộ ngoại khóa sau giờ học\n- Nội dung tóm tắt: Mở cổng đăng ký các CLB: Bóng rổ, Lập trình Python, Vẽ sáng tạo và Nhảy hiện đại cho học kỳ mới.\n- Đối tượng nhận: Khối Tiểu học\n- Ngày sự kiện: 23/03/2026\n- Hạn chót (Deadline): 01/04 - 30/05\n- Trạng thái: Đăng ký",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 10
+    }
+  },
+  {
+    "id": "Thông báo_11",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Sự kiện\n- Tiêu đề: Ngày hội Đọc sách (Book Fair 2026)\n- Nội dung tóm tắt: Hoạt động trao đổi sách, kể chuyện theo nhân vật và gian hàng sách ưu đãi từ các nhà xuất bản lớn.\n- Đối tượng nhận: Toàn học sinh\n- Ngày sự kiện: 26/03/2026\n- Hạn chót (Deadline): 04/04/2026\n- Trạng thái: Xem lịch trình",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 11
+    }
+  },
+  {
+    "id": "Thông báo_12",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Đời sống\n- Tiêu đề: Cập nhật thực đơn tháng 4/2026\n- Nội dung tóm tắt: Danh sách thực đơn bữa sáng, bữa trưa và bữa xế đã được kiểm duyệt bởi chuyên gia dinh dưỡng.\n- Đối tượng nhận: PHHS toàn trường\n- Ngày sự kiện: 30/03/2026\n- Hạn chót (Deadline): 01/04 - 30/04\n- Trạng thái: Xem thực đơn",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 12
+    }
+  }
+]

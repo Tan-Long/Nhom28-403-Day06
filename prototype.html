@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<title>VinSchool One</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230F2E96'/%3E%3Ctext x='16' y='22' text-anchor='middle' fill='white' font-size='16' font-family='system-ui'%3EV%3C/text%3E%3C/svg%3E">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  background: #b0bcd0;
+  display: flex; justify-content: center; align-items: flex-start;
+  min-height: 100vh; padding: 20px 0;
+}
+.app {
+  width: 390px; height: 844px; background: #f5f6fa;
+  position: relative; display: flex; flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  border-radius: 44px;
+}
+/* ── Status Bar ── */
+.status-bar {
+  background: #0F2E96; color: white;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 22px 6px; font-size: 13px; font-weight: 600;
+  flex-shrink: 0;
+}
+/* ── Main App Header ── */
+.app-header {
+  background: linear-gradient(160deg,#0F2E96 0%,#1B4FD8 100%);
+  color: white; padding: 8px 16px 10px;
+  display: flex; align-items: center; gap: 10px; flex-shrink: 0;
+}
+.hdr-logo {
+  width: 34px; height: 34px; border-radius: 50%; background: white;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 8px; font-weight: 900; color: #0F2E96; text-align: center; line-height: 1.1;
+  flex-shrink: 0;
+}
+.hdr-info { flex: 1; }
+.hdr-name { font-size: 14px; font-weight: 700; }
+.hdr-id   { font-size: 11px; opacity: .8; margin-top: 1px; }
+.hdr-avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: rgba(255,255,255,.2); border: 2px solid rgba(255,255,255,.5);
+  display: flex; align-items: center; justify-content: center; font-size: 18px;
+}
+/* ── Sub-screen header ── */
+.sub-header {
+  background: linear-gradient(160deg,#0F2E96 0%,#1B4FD8 100%);
+  color: white; padding: 10px 16px;
+  display: flex; align-items: center; gap: 8px; flex-shrink: 0;
+}
+.sub-back { font-size: 22px; cursor: pointer; padding: 0 4px; line-height: 1; }
+.sub-title { flex: 1; text-align: center; font-size: 15px; font-weight: 700; margin-right: 30px; }
+/* Màn chi tiết thông báo: bar trên cố định khi cuộn nội dung dài */
+#page-notif-detail .notif-detail-sticky-head {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  flex-shrink: 0;
+  box-shadow: 0 2px 10px rgba(15, 46, 150, 0.12);
+}
+/* ── Screen wrap ── */
+.screen-wrap { flex: 1; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; }
+.screen-wrap::-webkit-scrollbar { display: none; }
+/* ── Bottom nav ── */
+.bottom-nav {
+  background: white; border-top: 1px solid #e5e7eb;
+  display: flex; padding: 8px 0 18px; flex-shrink: 0;
+}
+.nav-item {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; gap: 3px; cursor: pointer; padding: 4px 0;
+}
+.nav-icon  { font-size: 20px; line-height: 1; }
+.nav-label { font-size: 10px; color: #9ca3af; }
+.nav-item.active .nav-label { color: #1B4FD8; font-weight: 600; }
+/* ── Pages ── */
+.page {
+  display: none !important;
+  flex-direction: column;
+  pointer-events: none;
+  visibility: hidden;
+}
+.page.active {
+  display: flex !important;
+  pointer-events: auto;
+  visibility: visible;
+}
+/* ── Generic card ── */
+.card {
+  background: white; border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.08); margin: 8px 14px; overflow: hidden;
+}
+/* ── Divider ── */
+.divider { height: 8px; background: #f3f4f6; flex-shrink: 0; }
+
+/* ════════════ HOME ════════════ */
+.smart-banner {
+  background: linear-gradient(135deg,#0F2E96,#2563EB);
+  margin: 10px 14px; border-radius: 12px; padding: 14px 16px;
+  color: white; position: relative; overflow: hidden;
+}
+.smart-banner::after {
+  content:''; position:absolute; right:-16px; top:-16px;
+  width:80px; height:80px; background:rgba(255,255,255,.08); border-radius:50%;
+}
+.smart-banner .lbl { font-size:10px; font-weight:700; letter-spacing:.5px; opacity:.8; }
+.smart-banner .ttl { font-size:14px; font-weight:700; margin:3px 0; }
+.smart-banner .dsc { font-size:12px; opacity:.85; line-height:1.4; }
+
+.notif-row { background:white; padding:12px 14px; border-bottom:1px solid #f9fafb; display:flex; gap:10px; cursor:pointer; }
+.notif-ico  { width:40px; height:40px; border-radius:50%; background:#eff6ff; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; }
+.notif-body { flex:1; min-width:0; }
+.notif-title { font-size:12.5px; font-weight:600; color:#111827; line-height:1.3; }
+.notif-desc  { font-size:12px; color:#6b7280; margin-top:2px; line-height:1.35; }
+.notif-date  { font-size:11px; color:#9ca3af; margin-top:4px; }
+.notif-dot   { width:8px; height:8px; border-radius:50%; background:#3b82f6; flex-shrink:0; margin-top:6px; }
+
+/* ════════════ STUDENT HUB ════════════ */
+.hub-top {
+  background:linear-gradient(160deg,#0F2E96,#1B4FD8); padding:12px 16px;
+  display:flex; gap:10px;
+}
+.hub-top-btn {
+  flex:1; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.3);
+  border-radius:10px; padding:10px 8px; text-align:center;
+  color:white; font-size:11.5px; font-weight:600; cursor:pointer; line-height:1.3;
+}
+.hub-section { padding:14px; }
+.hub-section-title { font-size:13px; font-weight:700; color:#374151; margin-bottom:12px; }
+.hub-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+.hub-item { display:flex; flex-direction:column; align-items:center; gap:5px; cursor:pointer; }
+.hub-item:active { opacity:.7; }
+.hub-icon { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:22px; }
+.hub-label { font-size:10.5px; color:#374151; text-align:center; line-height:1.25; font-weight:500; }
+
+/* ════════════ SCHEDULE ════════════ */
+.week-strip {
+  background:linear-gradient(160deg,#0F2E96,#1B4FD8); color:white;
+  padding:10px 14px 14px;
+}
+.week-strip .month-row { display:flex; align-items:center; justify-content:center; gap:12px; font-size:14px; font-weight:700; margin-bottom:10px; }
+.week-strip .days { display:flex; }
+.day-cell { flex:1; text-align:center; padding:2px; cursor:pointer; }
+.day-cell .dn { font-size:10px; opacity:.7; }
+.day-cell .dd {
+  width:28px; height:28px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:13px; font-weight:600; margin:2px auto 0;
+}
+.day-cell.today .dd { background:white; color:#0F2E96; }
+.day-cell.selected:not(.today) .dd { background:#e0e7ff; color:#1e3a8a; font-weight:700; }
+.day-cell.selected.today .dd { background:white; color:#0F2E96; box-shadow:0 0 0 2px #1B4FD8; }
+
+.per-tabs { display:flex; background:white; border-bottom:1px solid #e5e7eb; }
+.per-tab { flex:1; text-align:center; padding:10px; font-size:12.5px; font-weight:600; color:#6b7280; cursor:pointer; border-bottom:2px solid transparent; }
+.per-tab.active { color:#1B4FD8; border-bottom-color:#1B4FD8; }
+
+.period-card {
+  background:white; border-left:4px solid #1B4FD8;
+  padding:10px 12px; margin:6px 12px; border-radius:0 10px 10px 0;
+  box-shadow:0 1px 3px rgba(0,0,0,.07);
+}
+.period-card .top { display:flex; align-items:center; gap:6px; }
+.per-num {
+  width:20px; height:20px; border-radius:50%; background:#1B4FD8; color:white;
+  font-size:10px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;
+}
+.per-subj { font-size:13px; font-weight:700; color:#111827; flex:1; }
+.per-time { font-size:11px; color:#6b7280; }
+.per-details { padding-left:26px; margin-top:3px; }
+.per-room, .per-teacher { font-size:11.5px; color:#6b7280; }
+.break-row { text-align:center; font-size:11px; color:#9ca3af; padding:6px; font-style:italic; }
+
+/* ════════════ HOMEWORK ════════════ */
+.hw-tabs { display:flex; background:white; border-bottom:1px solid #e5e7eb; }
+.hw-tab { flex:1; text-align:center; padding:11px; font-size:13px; font-weight:600; color:#6b7280; cursor:pointer; border-bottom:2px solid transparent; }
+.hw-tab.active { color:#1B4FD8; border-bottom-color:#1B4FD8; }
+.hw-week-nav {
+  display:flex; align-items:center; justify-content:center; gap:16px;
+  padding:9px; background:white; border-bottom:1px solid #f3f4f6;
+  font-size:13px; font-weight:600; color:#374151;
+}
+.hw-week-nav .arr { font-size:18px; color:#6b7280; cursor:pointer; }
+.subj-tag {
+  display:inline-block; padding:2px 9px; border-radius:10px;
+  font-size:10.5px; font-weight:700; background:#fef3c7; color:#92400e; margin-bottom:5px;
+}
+.subj-tag.blue { background:#dbeafe; color:#1e40af; }
+.subj-tag.green { background:#d1fae5; color:#065f46; }
+.hw-item { background:white; padding:11px 14px; border-bottom:1px solid #f3f4f6; }
+.hw-name { font-size:13.5px; font-weight:600; color:#111827; }
+.hw-meta { display:flex; justify-content:space-between; margin-top:5px; }
+.hw-status { font-size:11.5px; color:#6b7280; display:flex; align-items:center; gap:4px; }
+.hw-score  { font-size:11.5px; color:#6b7280; font-weight:600; }
+.sdot { width:8px; height:8px; border-radius:50%; display:inline-block; }
+.sdot.done { background:#22c55e; } .sdot.pending { background:#f59e0b; } .sdot.undone { background:#ef4444; }
+
+/* ════════════ ATTENDANCE ════════════ */
+.att-date-bar {
+  background:white; display:flex; align-items:center; gap:10px;
+  padding:11px 14px; border-bottom:1px solid #f3f4f6; font-size:13px; color:#374151; font-weight:500;
+}
+.att-summary {
+  background:white; display:flex; gap:10px; padding:14px;
+  margin:10px 14px; border-radius:12px; box-shadow:0 1px 4px rgba(0,0,0,.08);
+}
+.att-stat { flex:1; text-align:center; }
+.att-num {
+  width:36px; height:36px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:16px; font-weight:700; margin:0 auto 4px;
+}
+.att-lbl { font-size:10px; color:#6b7280; }
+.on-time { background:#d1fae5; color:#065f46; }
+.late-cl { background:#fef3c7; color:#92400e; }
+.abs-ok  { background:#dbeafe; color:#1e40af; }
+.abs-no  { background:#fee2e2; color:#991b1b; }
+
+.att-day { background:white; margin:5px 14px; border-radius:10px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.07); }
+.att-day-hdr {
+  padding:11px 14px; display:flex; align-items:center; justify-content:space-between;
+  cursor:pointer; font-size:13px; font-weight:600; color:#374151;
+}
+.att-badge { font-size:10.5px; padding:2px 8px; border-radius:8px; font-weight:500; }
+.att-badge.ok { background:#d1fae5; color:#065f46; }
+.att-badge.lt { background:#fef3c7; color:#92400e; }
+.att-row {
+  display:flex; justify-content:space-between; padding:7px 14px;
+  font-size:11.5px; color:#6b7280; border-bottom:1px solid #f9fafb;
+}
+.att-row:last-child { border-bottom:none; }
+.att-ok { color:#22c55e; font-weight:600; }
+.att-lt { color:#f59e0b; font-weight:600; }
+
+/* ════════════ COMMENTS ════════════ */
+.cmt-date-bar {
+  background:white; display:flex; align-items:center; gap:10px;
+  padding:11px 14px; border-bottom:1px solid #f3f4f6; font-size:13px; font-weight:600; color:#374151;
+}
+.cmt-card { background:white; margin:7px 14px; border-radius:12px; padding:13px; box-shadow:0 1px 4px rgba(0,0,0,.08); }
+.cmt-hdr { display:flex; align-items:flex-start; gap:10px; margin-bottom:8px; }
+.cmt-avatar {
+  width:38px; height:38px; border-radius:50%;
+  background:#dbeafe; display:flex; align-items:center; justify-content:center; font-size:17px; flex-shrink:0;
+}
+.cmt-tname { font-size:12.5px; font-weight:700; color:#111827; }
+.cmt-sub   { font-size:11px; color:#6b7280; }
+.cmt-date  { font-size:11px; color:#9ca3af; margin-left:auto; white-space:nowrap; }
+.cmt-text  { font-size:12.5px; color:#374151; line-height:1.5; }
+.cmt-more  { font-size:12px; color:#3b82f6; margin-top:5px; cursor:pointer; }
+.cmt-action { display:flex; gap:16px; margin-top:9px; padding-top:9px; border-top:1px solid #f3f4f6; }
+.cmt-action span { font-size:12px; color:#6b7280; cursor:pointer; }
+
+/* ════════════ MENU ════════════ */
+.meal-section { padding:10px 14px 4px; }
+.meal-lbl {
+  display:inline-flex; align-items:center; gap:6px;
+  padding:4px 12px; border-radius:16px; font-size:12.5px; font-weight:700; margin-bottom:8px;
+}
+.meal-lbl.lunch { background:#fef3c7; color:#92400e; }
+.meal-lbl.snack { background:#fef9c3; color:#713f12; }
+.meal-item {
+  background:white; padding:9px 12px; border-radius:9px;
+  display:flex; justify-content:space-between; align-items:center;
+  margin-bottom:5px; box-shadow:0 1px 2px rgba(0,0,0,.06);
+}
+.meal-name { font-size:12.5px; color:#374151; }
+.meal-cal  { font-size:12px; color:#6b7280; font-weight:600; }
+
+/* ════════════ TUITION ════════════ */
+.tuition-year-nav {
+  background:white; padding:11px 14px;
+  display:flex; align-items:center; justify-content:center; gap:10px;
+  border-bottom:1px solid #f3f4f6;
+}
+.year-badge { background:#f9fafb; border:1px solid #e5e7eb; border-radius:18px; padding:6px 18px; font-size:13px; font-weight:600; color:#374151; }
+.tuition-card-wrap { background:white; margin:12px 14px; border-radius:12px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,.08); }
+.tuition-card-top { padding:14px; display:flex; justify-content:space-between; align-items:center; }
+.tuition-pay-btn { background:#1B4FD8; color:white; border:none; border-radius:8px; padding:8px 18px; font-size:12.5px; font-weight:700; cursor:pointer; }
+.tuition-deadline { background:#fef3c7; padding:9px 14px; display:flex; align-items:center; gap:8px; font-size:12.5px; color:#92400e; font-weight:500; }
+
+.tu-tabs { display:flex; padding:10px 14px; gap:10px; background:white; border-bottom:1px solid #f3f4f6; }
+.tu-tab {
+  flex:1; text-align:center; padding:7px; border:2px solid #e5e7eb; border-radius:18px;
+  font-size:13px; font-weight:600; color:#6b7280; cursor:pointer;
+}
+.tu-tab.active { border-color:#1B4FD8; color:#1B4FD8; }
+.tu-stu { background:white; padding:12px 14px; border-bottom:1px solid #f3f4f6; }
+.tu-stu .sn { font-size:14px; font-weight:700; }
+.tu-stu .si { font-size:12px; color:#6b7280; }
+.fee-row { background:white; padding:10px 14px; display:flex; justify-content:space-between; border-bottom:1px solid #f9fafb; }
+.fee-name { font-size:12.5px; color:#374151; flex:1; padding-right:8px; }
+.fee-amt  { font-size:12.5px; font-weight:600; color:#ef4444; white-space:nowrap; }
+.fee-total { background:#f9fafb; padding:12px 14px; display:flex; justify-content:space-between; font-size:14px; font-weight:700; }
+.fee-discount { background:white; padding:8px 14px; display:flex; justify-content:space-between; font-size:12px; color:#374151; border-bottom:1px solid #f9fafb; }
+.fee-disc-amt { color:#ef4444; font-weight:600; }
+
+/* ════════════ RESULTS ════════════ */
+.result-row { background:white; padding:12px 14px; border-bottom:1px solid #f3f4f6; }
+.result-subj { font-size:13.5px; font-weight:700; color:#111827; margin-bottom:5px; }
+.result-grades { display:flex; flex-wrap:wrap; gap:6px; }
+.gb { padding:3px 9px; border-radius:7px; font-size:11.5px; font-weight:700; }
+.gb-a   { background:#d1fae5; color:#065f46; }
+.gb-b   { background:#dbeafe; color:#1e40af; }
+.gb-htt { background:#ede9fe; color:#5b21b6; }
+.gb-ht  { background:#fef3c7; color:#92400e; }
+.result-cmt { font-size:11.5px; color:#6b7280; margin-top:4px; line-height:1.4; }
+
+/* ════════════ CONTACTS ════════════ */
+.contact-row { background:white; padding:11px 14px; border-bottom:1px solid #f3f4f6; display:flex; align-items:center; gap:11px; }
+.contact-ava { width:42px; height:42px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:17px; flex-shrink:0; }
+.contact-info { flex:1; }
+.contact-name  { font-size:13.5px; font-weight:600; color:#111827; }
+.contact-roles { font-size:11.5px; color:#6b7280; margin-top:2px; }
+.contact-btns  { display:flex; gap:6px; }
+.cta-btn { width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:15px; border:none; cursor:pointer; }
+.cta-btn.call { background:#d1fae5; }
+.cta-btn.chat { background:#dbeafe; }
+.cta-btn.mail { background:#fef3c7; }
+
+/* ════════════ ACCOUNT ════════════ */
+.acc-hdr { background:linear-gradient(160deg,#0F2E96,#1B4FD8); padding:24px 14px 20px; text-align:center; color:white; }
+.acc-ava { width:68px; height:68px; border-radius:50%; background:rgba(255,255,255,.2); border:3px solid rgba(255,255,255,.5); display:flex; align-items:center; justify-content:center; font-size:34px; margin:0 auto 10px; }
+.acc-name { font-size:17px; font-weight:700; }
+.acc-menu-item { background:white; padding:13px 16px; display:flex; align-items:center; gap:11px; border-bottom:1px solid #f3f4f6; cursor:pointer; }
+.acc-menu-ico { width:34px; height:34px; border-radius:9px; display:flex; align-items:center; justify-content:center; font-size:17px; flex-shrink:0; }
+.acc-menu-txt { flex:1; font-size:13.5px; color:#374151; font-weight:500; }
+.acc-menu-arr { color:#d1d5db; font-size:14px; }
+
+/* ════════════ CHAT ════════════ */
+.chat-search { background:white; padding:9px 14px; border-bottom:1px solid #f3f4f6; }
+.chat-search input { width:100%; background:#f3f4f6; border:none; border-radius:18px; padding:7px 14px; font-size:13px; outline:none; }
+.chat-section-lbl { padding:10px 14px 5px; font-size:11px; font-weight:700; color:#6b7280; letter-spacing:.4px; }
+.chat-row { background:white; padding:11px 14px; display:flex; align-items:center; gap:11px; border-bottom:1px solid #f3f4f6; cursor:pointer; }
+.chat-ava { width:42px; height:42px; border-radius:11px; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; color:white; flex-shrink:0; }
+.chat-name    { font-size:13.5px; font-weight:600; color:#111827; }
+.chat-preview { font-size:12px; color:#9ca3af; margin-top:2px; }
+
+/* ════════════ AI COMPONENTS ════════════ */
+/* Search bar on home */
+.ai-search-bar {
+  margin:10px 14px 0; background:white; border-radius:24px;
+  display:flex; align-items:center; gap:8px; padding:8px 10px 8px 14px;
+  box-shadow:0 2px 8px rgba(27,79,216,.15);
+  border:1.5px solid #dbeafe;
+}
+.ai-search-bar .ai-ico { font-size:18px; flex-shrink:0; }
+.home-ai-chat-input {
+  flex:1; min-width:0;
+  border:none; background:transparent;
+  font-size:13px; color:#111827; outline:none;
+}
+.home-ai-chat-input::placeholder { color:#9ca3af; }
+.home-ai-send {
+  width:34px; height:34px; border-radius:50%; flex-shrink:0;
+  border:none; cursor:pointer;
+  background:linear-gradient(135deg,#4f46e5,#1B4FD8);
+  color:white; font-size:20px; line-height:1;
+  display:flex; align-items:center; justify-content:center;
+  padding:0 0 1px 2px;
+}
+.home-ai-send:active { opacity:.92; }
+
+/* AI badge / label */
+.ai-badge {
+  display:inline-flex; align-items:center; gap:4px;
+  background:linear-gradient(135deg,#6366f1,#1B4FD8);
+  color:white; font-size:10px; font-weight:700;
+  padding:2px 8px; border-radius:10px; letter-spacing:.3px;
+}
+
+/* AI sub-header variant */
+.ai-sub-header {
+  background:linear-gradient(135deg,#4f46e5,#1B4FD8);
+  color:white; padding:10px 16px;
+  display:flex; align-items:center; gap:8px; flex-shrink:0;
+}
+
+/* AI Search screen */
+.ai-search-input-wrap {
+  background:linear-gradient(135deg,#4f46e5,#1B4FD8);
+  padding:10px 14px 16px;
+}
+.ai-search-input-box {
+  background:white; border-radius:24px;
+  display:flex; align-items:center; gap:8px; padding:10px 14px;
+}
+.ai-search-input-box input {
+  flex:1; border:none; outline:none; font-size:14px; color:#111827;
+  background:transparent;
+}
+.ai-search-input-box .send-btn {
+  width:30px; height:30px; border-radius:50%;
+  background:linear-gradient(135deg,#4f46e5,#1B4FD8);
+  color:white; border:none; font-size:16px; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+}
+.ai-search-chips-row {
+  display:flex; flex-direction:row; flex-wrap:nowrap;
+  gap:8px; overflow-x:auto;
+  padding:0 0 12px 0; margin:0 -2px 0 0;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.ai-search-chips-row::-webkit-scrollbar { display:none; }
+.ai-search-chip {
+  flex-shrink:0;
+  padding:7px 14px; border-radius:20px;
+  font-size:12px; font-weight:600;
+  border:1px solid rgba(255,255,255,.4);
+  background:rgba(255,255,255,.14);
+  color:white; cursor:pointer;
+  white-space:nowrap;
+  font-family:inherit;
+}
+.ai-search-chip:hover { background:rgba(255,255,255,.22); }
+.ai-search-chip:active { background:rgba(255,255,255,.28); }
+
+/* Báo cáo: modal */
+.report-modal-overlay {
+  position:fixed; inset:0; z-index:9999;
+  background:rgba(15,23,42,.5);
+  display:none; align-items:flex-end; justify-content:center;
+  padding:0; box-sizing:border-box;
+}
+.report-modal-overlay.is-open { display:flex; }
+.report-modal {
+  width:100%; max-width:420px;
+  background:#fff; border-radius:18px 18px 0 0;
+  padding:18px 16px 22px;
+  padding-bottom:calc(22px + env(safe-area-inset-bottom, 0px));
+  max-height:88vh; overflow-y:auto;
+  box-shadow:0 -8px 40px rgba(0,0,0,.18);
+  animation:reportSheetUp .22s ease-out;
+}
+@keyframes reportSheetUp {
+  from { transform:translateY(100%); opacity:.8; }
+  to { transform:translateY(0); opacity:1; }
+}
+.report-modal h2 {
+  margin:0 0 6px; font-size:17px; font-weight:800; color:#111827;
+}
+.report-modal-hint { margin:0 0 14px; font-size:12.5px; color:#6b7280; line-height:1.45; }
+.report-reason-list { display:flex; flex-direction:column; gap:8px; margin-bottom:14px; }
+.report-reason-list label {
+  display:flex; align-items:flex-start; gap:10px;
+  font-size:13px; color:#374151; line-height:1.35; cursor:pointer;
+  padding:10px 12px; border-radius:12px; border:1.5px solid #e5e7eb;
+  background:#fafafa;
+}
+.report-reason-list label:has(input:checked) {
+  border-color:#6366f1; background:#eef2ff;
+}
+.report-reason-list input { margin-top:3px; accent-color:#4f46e5; }
+.report-detail-lbl { display:block; font-size:12px; font-weight:700; color:#374151; margin-bottom:6px; }
+#reportModalDetail {
+  width:100%; box-sizing:border-box;
+  border:1.5px solid #e5e7eb; border-radius:12px;
+  padding:10px 12px; font-size:13px; font-family:inherit;
+  resize:vertical; min-height:72px; margin-bottom:16px;
+}
+.report-modal-actions { display:flex; gap:10px; }
+.report-modal-actions button {
+  flex:1; padding:12px; border-radius:12px; font-size:14px; font-weight:700;
+  cursor:pointer; font-family:inherit; border:none;
+}
+.report-modal-actions .report-btn-cancel {
+  background:#f3f4f6; color:#374151;
+}
+.report-modal-actions .report-btn-submit {
+  background:linear-gradient(135deg,#4f46e5,#1B4FD8); color:white;
+}
+
+/* AI result card */
+.ai-result-card {
+  background:white; margin:8px 14px; border-radius:12px;
+  box-shadow:0 2px 8px rgba(0,0,0,.09); overflow:hidden;
+}
+.ai-result-header {
+  padding:10px 14px; border-bottom:1px solid #f3f4f6;
+  display:flex; align-items:center; gap:8px;
+}
+.ai-result-title { font-size:13px; font-weight:700; color:#111827; flex:1; }
+.ai-result-body { padding:10px 14px; }
+.ai-result-row {
+  display:flex; align-items:flex-start; gap:8px;
+  padding:7px 0; border-bottom:1px solid #f9fafb; font-size:12.5px;
+}
+.ai-result-row:last-child { border-bottom:none; }
+.ai-result-row .ri { flex-shrink:0; font-size:14px; }
+.ai-result-row .rt { flex:1; color:#374151; line-height:1.4; }
+.ai-result-row .rb { color:#9ca3af; font-size:11.5px; white-space:nowrap; }
+.ai-deeplink-btn {
+  display:block; width:100%; margin-top:10px;
+  background:linear-gradient(135deg,#4f46e5,#1B4FD8);
+  color:white; border:none; border-radius:10px;
+  padding:10px; font-size:13px; font-weight:700; cursor:pointer; text-align:center;
+}
+.ai-source-badge {
+  display:inline-flex; align-items:center; gap:4px;
+  font-size:10px; color:#6b7280; background:#f9fafb;
+  border:1px solid #e5e7eb; border-radius:8px; padding:2px 8px; margin-top:8px;
+}
+
+/* AI Chat screen */
+.ai-chat-wrap { flex:1; overflow-y:auto; padding:12px 14px 8px; display:flex; flex-direction:column; gap:12px; }
+.ai-chat-wrap::-webkit-scrollbar { display:none; }
+.bubble-user {
+  align-self:flex-end; max-width:75%;
+  background:linear-gradient(135deg,#4f46e5,#1B4FD8);
+  color:white; padding:10px 14px; border-radius:18px 18px 4px 18px;
+  font-size:13px; line-height:1.4;
+}
+.bubble-ai-wrap { align-self:flex-start; max-width:90%; display:flex; gap:8px; align-items:flex-start; }
+.bubble-ai-avatar {
+  width:30px; height:30px; border-radius:50%; flex-shrink:0;
+  background:linear-gradient(135deg,#4f46e5,#1B4FD8);
+  color:white; display:flex; align-items:center; justify-content:center; font-size:14px;
+}
+.bubble-ai-stack { flex:1; min-width:0; display:flex; flex-direction:column; gap:2px; }
+.bubble-ai {
+  background:white; border-radius:4px 18px 18px 18px;
+  box-shadow:0 2px 6px rgba(0,0,0,.09); padding:10px 14px;
+  font-size:12.5px; color:#374151; line-height:1.5;
+}
+.ai-msg-actions {
+  display:flex; align-items:center; gap:2px;
+  padding:0 0 0 2px; margin-top:2px;
+}
+.ai-msg-actions button {
+  border:none; background:transparent;
+  width:34px; height:34px; border-radius:10px;
+  cursor:pointer; font-size:16px; line-height:1;
+  color:#9ca3af;
+  display:flex; align-items:center; justify-content:center;
+  transition:background .15s,color .15s;
+}
+.ai-msg-actions button:hover { background:#f3f4f6; color:#4b5563; }
+.ai-msg-actions button.ai-act-like.active { color:#16a34a; background:#dcfce7; }
+.ai-msg-actions button.ai-act-dislike.active { color:#dc2626; background:#fee2e2; }
+.ai-msg-actions button.copied { color:#2563eb; }
+.ai-msg-actions .ai-act-report {
+  width:34px; height:34px; padding:0; margin-left:4px;
+  border:none; border-radius:10px; background:transparent;
+  cursor:pointer; display:flex; align-items:center; justify-content:center;
+  flex-shrink:0; color:inherit;
+}
+.ai-msg-actions .ai-act-report:hover { background:#fef2f2; }
+.ai-msg-actions .ai-act-report:disabled { opacity:.45; cursor:default; }
+.ai-report-flag-ico { display:block; }
+.bubble-ai .ai-card-mini {
+  background:#f9fafb; border-radius:8px; padding:10px; margin-top:8px; border:1px solid #e5e7eb;
+}
+.bubble-ai .ai-card-row { display:flex; gap:6px; padding:4px 0; font-size:12px; }
+.bubble-ai .ai-card-row .urgency { color:#ef4444; font-weight:700; font-size:11px; }
+.typing-dots { display:flex; gap:4px; align-items:center; padding:4px 0; }
+.typing-dots span { width:8px; height:8px; border-radius:50%; background:#c4b5fd; animation:bounce .8s infinite; }
+.typing-dots span:nth-child(2) { animation-delay:.15s; }
+.typing-dots span:nth-child(3) { animation-delay:.30s; }
+@keyframes bounce { 0%,80%,100%{transform:translateY(0)} 40%{transform:translateY(-6px)} }
+
+/* Gợi ý câu hỏi trong màn chat (phụ huynh) */
+.ai-chat-parent-tips {
+  align-self:stretch; margin-top:4px;
+}
+.ai-chat-parent-tips-hd {
+  font-size:11px; font-weight:700; color:#9ca3af; letter-spacing:.35px;
+  margin-bottom:8px; padding:0 2px;
+}
+.ai-chat-parent-tips-chips {
+  display:flex; flex-wrap:wrap; gap:8px;
+}
+.ai-chat-parent-chip {
+  padding:8px 12px; border-radius:16px;
+  font-size:12px; font-weight:600; line-height:1.35;
+  border:1.5px solid #c7d2fe; color:#4338ca;
+  background:#f5f3ff; cursor:pointer; font-family:inherit;
+  text-align:left; max-width:100%;
+}
+.ai-chat-parent-chip:hover { background:#ede9fe; }
+.ai-chat-parent-chip:active { background:#e0e7ff; }
+
+/* Gợi ý tiếp theo (hàng ngang, trên ô nhập) */
+.ai-chat-followup-bar {
+  flex-shrink:0;
+  background:#f9fafb;
+  border-top:1px solid #e5e7eb;
+  padding:6px 0 4px;
+}
+.ai-chat-followup-lbl {
+  font-size:10px; font-weight:700; color:#9ca3af;
+  letter-spacing:.35px;
+  padding:0 14px 6px;
+}
+.ai-chat-followup-row {
+  display:flex; flex-direction:row; flex-wrap:nowrap;
+  gap:8px; overflow-x:auto;
+  padding:0 14px 6px;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.ai-chat-followup-row::-webkit-scrollbar { display:none; }
+.ai-chat-followup-chip {
+  flex-shrink:0; max-width:min(280px,85vw);
+  padding:8px 12px; border-radius:18px;
+  font-size:11.5px; font-weight:600; line-height:1.35;
+  border:1.5px solid #a5b4fc; color:#3730a3;
+  background:white; cursor:pointer; font-family:inherit;
+  text-align:left;
+  box-shadow:0 1px 2px rgba(99,102,241,.08);
+}
+.ai-chat-followup-chip:hover { background:#eef2ff; border-color:#818cf8; }
+.ai-chat-followup-chip:active { background:#e0e7ff; }
+
+/* Chat input bar */
+.ai-chat-input-bar {
+  background:white; border-top:1px solid #e5e7eb;
+  padding:10px 14px; display:flex; gap:8px; align-items:center; flex-shrink:0;
+}
+.ai-chat-input-bar input {
+  flex:1; background:#f3f4f6; border:none; border-radius:20px;
+  padding:9px 14px; font-size:13px; outline:none;
+}
+.ai-chat-send {
+  width:36px; height:36px; border-radius:50%;
+  background:linear-gradient(135deg,#4f46e5,#1B4FD8);
+  color:white; border:none; font-size:18px; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+}
+
+/* Smart Daily Brief */
+.brief-card {
+  margin:10px 14px; border-radius:14px; overflow:hidden;
+  box-shadow:0 2px 10px rgba(99,102,241,.2); cursor:pointer;
+}
+.brief-header {
+  background:linear-gradient(135deg,#4f46e5,#1B4FD8);
+  padding:12px 14px; color:white;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.brief-header .brief-title { font-size:13px; font-weight:700; }
+.brief-header .brief-date  { font-size:11px; opacity:.85; }
+.brief-body { background:white; padding:4px 0; }
+.brief-row {
+  display:flex; align-items:flex-start; gap:10px;
+  padding:10px 14px; border-bottom:1px solid #f9fafb;
+}
+.brief-row:last-child { border-bottom:none; }
+.brief-row .br-ico { font-size:20px; flex-shrink:0; margin-top:1px; }
+.brief-row .br-text { flex:1; }
+.brief-row .br-main { font-size:13px; font-weight:600; color:#111827; }
+.brief-row .br-sub  { font-size:12px; color:#6b7280; margin-top:2px; line-height:1.3; }
+.brief-row .br-link { font-size:11.5px; color:#4f46e5; font-weight:600; cursor:pointer; margin-top:4px; }
+
+/* Brief detail page */
+.brief-detail-hdr {
+  background:linear-gradient(135deg,#4f46e5,#1B4FD8); color:white;
+  padding:18px 14px 20px;
+}
+.brief-event-card {
+  background:white; margin:8px 14px; border-radius:12px;
+  box-shadow:0 1px 4px rgba(0,0,0,.08); overflow:hidden;
+}
+.brief-event-top {
+  padding:12px 14px; display:flex; align-items:center; gap:10px;
+  border-bottom:1px solid #f3f4f6;
+}
+.brief-event-ico { font-size:24px; flex-shrink:0; }
+.brief-event-label { font-size:12px; font-weight:700; color:#4f46e5; }
+.brief-event-title { font-size:14px; font-weight:700; color:#111827; margin-top:2px; }
+.brief-event-body { padding:10px 14px; }
+.brief-event-detail { font-size:12.5px; color:#374151; line-height:1.5; }
+.brief-deeplink {
+  display:block; margin:10px 14px 0; background:#eff6ff;
+  border:1.5px solid #dbeafe; border-radius:10px;
+  padding:9px 14px; font-size:12.5px; font-weight:600; color:#1e40af;
+  cursor:pointer; text-align:center;
+}
+
+/* Actionable notification */
+.action-notif {
+  background:white; padding:12px 14px; border-bottom:1px solid #f9fafb;
+}
+.action-notif-header { display:flex; gap:10px; align-items:flex-start; margin-bottom:8px; }
+.action-notif-ico { width:40px; height:40px; border-radius:50%; background:linear-gradient(135deg,#4f46e5,#1B4FD8); display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; }
+.action-notif-title { font-size:12.5px; font-weight:700; color:#111827; line-height:1.3; }
+.action-notif-date  { font-size:11px; color:#9ca3af; margin-top:2px; }
+.action-bullets { padding-left:4px; display:flex; flex-direction:column; gap:6px; }
+.action-bullet { display:flex; gap:8px; align-items:flex-start; font-size:12px; color:#374151; line-height:1.4; }
+.action-bullet .abico { font-size:14px; flex-shrink:0; margin-top:-1px; }
+.action-notif-footer { display:flex; gap:8px; margin-top:10px; }
+.action-btn-primary {
+  flex:1; background:linear-gradient(135deg,#4f46e5,#1B4FD8);
+  color:white; border:none; border-radius:8px; padding:8px; font-size:12px; font-weight:700; cursor:pointer;
+}
+.action-btn-secondary {
+  background:white; border:1.5px solid #e5e7eb; border-radius:8px; padding:8px 12px; font-size:12px; color:#6b7280; cursor:pointer;
+}
+</style>
+</head>
+<body>
+<div class="app">
+
+<!-- STATUS BAR -->
+<div class="status-bar">
+  <span style="font-size:15px;font-weight:700">09:09</span>
+  <span style="font-size:12px">▪▪▪ ≋ 86%</span>
+</div>
+
+<!-- MAIN HEADER -->
+<div class="app-header" id="appHeader">
+  <div class="hdr-logo">VIN<br>SCHOOL</div>
+  <div class="hdr-info">
+    <div class="hdr-name">Nguyễn Hưng</div>
+    <div class="hdr-id">VS108245 ▾</div>
+  </div>
+  <div class="hdr-avatar">👦</div>
+</div>
+
+<!-- SCREEN WRAP -->
+<div class="screen-wrap" id="screenWrap">
+
+<!-- ══════════════════════ HOME ══════════════════════ -->
+<div class="page active" id="page-home">
+  <!-- AI: nhập trên Home, chỉ khi gửi mới sang màn chat -->
+  <div class="ai-search-bar">
+    <span class="ai-ico">🤖</span>
+    <input type="text" id="homeAiChatInput" class="home-ai-chat-input" placeholder="Hỏi Vin-Assistant..." autocomplete="off" enterkeyhint="send"
+      onkeydown="if(event.key==='Enter'){ event.preventDefault(); submitHomeAiQuestion(); }">
+    <button type="button" class="home-ai-send" onclick="submitHomeAiQuestion()" title="Gửi" aria-label="Gửi câu hỏi">›</button>
+  </div>
+  <div class="smart-banner" style="cursor:pointer;" onclick="goTo('page-ai-brief')">
+    <div class="lbl">✨ SMART DAILY BRIEF · THỨ 5, 09/04/2026</div>
+    <div class="ttl">Hưng có 3 bài tập chưa làm · Bữa trưa: Bò kho tàu</div>
+    <div class="dsc">Thầy Gareth khen Hưng năng động đầu tuần. Nhấn để xem bản tin đầy đủ →</div>
+  </div>
+  <div class="card" style="margin-top:0;border-radius:0;box-shadow:none;">
+    <div id="home-feed-root"></div>
+  </div>
+</div>
+
+<!-- ══════════════════════ STUDENT HUB ══════════════════════ -->
+<div class="page" id="page-student">
+  <div class="hub-top">
+    <div class="hub-top-btn" onclick="goTo('page-results')">Kết quả học tập<br>rèn luyện</div>
+    <div class="hub-top-btn" onclick="goTo('page-student-info')">Thông tin<br>sức khỏe</div>
+  </div>
+  <div class="hub-section">
+    <div class="hub-section-title">Hoạt động hằng ngày</div>
+    <div class="hub-grid">
+      <div class="hub-item" onclick="goTo('page-schedule')">
+        <div class="hub-icon" style="background:#fef3c7">📅</div>
+        <div class="hub-label">Lịch học<br>Sự kiện</div>
+      </div>
+      <div class="hub-item" onclick="goTo('page-homework')">
+        <div class="hub-icon" style="background:#dbeafe">📋</div>
+        <div class="hub-label">Bài tập<br>Kiểm tra</div>
+      </div>
+      <div class="hub-item" onclick="goTo('page-attendance')">
+        <div class="hub-icon" style="background:#ede9fe">🧑‍🏫</div>
+        <div class="hub-label">Chuyên cần</div>
+      </div>
+      <div class="hub-item" onclick="goTo('page-attendance')">
+        <div class="hub-icon" style="background:#fef3c7">🙋</div>
+        <div class="hub-label">Xin nghỉ</div>
+      </div>
+      <div class="hub-item" onclick="goTo('page-comments')">
+        <div class="hub-icon" style="background:#d1fae5">💬</div>
+        <div class="hub-label">Nhận xét</div>
+      </div>
+      <div class="hub-item">
+        <div class="hub-icon" style="background:#fef3c7">⭐</div>
+        <div class="hub-label">Ngoại khóa</div>
+      </div>
+      <div class="hub-item">
+        <div class="hub-icon" style="background:#fee2e2">💊</div>
+        <div class="hub-label">Dặn thuốc</div>
+      </div>
+      <div class="hub-item" onclick="goTo('page-menu')">
+        <div class="hub-icon" style="background:#dbeafe">🍱</div>
+        <div class="hub-label">Thực đơn</div>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="hub-section">
+    <div class="hub-section-title">Dịch vụ học đường</div>
+    <div class="hub-grid">
+      <div class="hub-item"><div class="hub-icon" style="background:#eff6ff">🏫</div><div class="hub-label">SWB</div></div>
+      <div class="hub-item"><div class="hub-icon" style="background:#fef3c7">⏰</div><div class="hub-label">Thời hạn<br>Hoàn phí</div></div>
+      <div class="hub-item" onclick="goTo('page-tuition')"><div class="hub-icon" style="background:#d1fae5">💰</div><div class="hub-label">Học phí</div></div>
+      <div class="hub-item"><div class="hub-icon" style="background:#dbeafe">📊</div><div class="hub-label">Khảo sát</div></div>
+      <div class="hub-item"><div class="hub-icon" style="background:#fef3c7">🚌</div><div class="hub-label">Xe buýt</div></div>
+      <div class="hub-item"><div class="hub-icon" style="background:#ede9fe">👕</div><div class="hub-label">Đồng phục</div></div>
+      <div class="hub-item"><div class="hub-icon" style="background:#fee2e2">📨</div><div class="hub-label">Gửi yêu cầu hỗ trợ</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════ SCHEDULE ══════════════════════ -->
+<div class="page" id="page-schedule">
+  <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title">Lịch học - Sự kiện</span></div>
+  <div class="week-strip">
+    <div class="month-row"><span style="cursor:pointer;user-select:none;padding:4px 8px;" id="schedule-week-prev" onclick="protoShiftWeek(-1)" role="button">‹</span> &nbsp; <span id="schedule-month-label">Tháng 4 2026</span> &nbsp; <span style="cursor:pointer;user-select:none;padding:4px 8px;" id="schedule-week-next" onclick="protoShiftWeek(1)" role="button">›</span></div>
+    <div class="days" id="schedule-week-days"></div>
+  </div>
+  <div class="per-tabs">
+    <div class="per-tab active">📅 Lịch học</div>
+    <div class="per-tab">📌 Sự kiện</div>
+  </div>
+  <div id="schedule-periods-root" style="padding:4px 0 12px;"></div>
+</div>
+
+<!-- ══════════════════════ HOMEWORK ══════════════════════ -->
+<div class="page" id="page-homework">
+  <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title">Bài tập - Kiểm tra</span></div>
+  <div class="hw-tabs">
+    <div class="hw-tab active" id="hwtab-todo" onclick="switchHwTab('todo')">To do</div>
+    <div class="hw-tab" id="hwtab-all" onclick="switchHwTab('all')">Bài tập</div>
+  </div>
+  <div class="hw-week-nav">
+    <span class="arr">‹</span>
+    <span id="hwWeekLabel">06/04 – 12/04</span>
+    <span class="arr">›</span>
+  </div>
+  <!-- TO DO -->
+  <div id="hw-todo"></div>
+  <!-- ALL -->
+  <div id="hw-all" style="display:none"></div>
+</div>
+
+<!-- ══════════════════════ ATTENDANCE ══════════════════════ -->
+<div class="page" id="page-attendance">
+  <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title">Chuyên cần</span></div>
+  <div class="att-date-bar" id="att-date-bar">📅 09/04/2026 – 09/04/2026</div>
+  <div class="att-summary">
+    <div class="att-stat"><div class="att-num on-time" id="att-stat-ontime">0</div><div class="att-lbl">Đúng giờ</div></div>
+    <div class="att-stat"><div class="att-num late-cl" id="att-stat-late">0</div><div class="att-lbl">Đến muộn</div></div>
+    <div class="att-stat"><div class="att-num abs-ok" id="att-stat-absok">0</div><div class="att-lbl">Vắng có phép</div></div>
+    <div class="att-stat"><div class="att-num abs-no" id="att-stat-absno">0</div><div class="att-lbl">Vắng không phép</div></div>
+  </div>
+  <div id="attendance-root"></div>
+</div>
+
+<!-- ══════════════════════ COMMENTS ══════════════════════ -->
+<div class="page" id="page-comments">
+  <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title">Nhận xét</span></div>
+  <div class="cmt-date-bar" id="cmt-date-bar">📅 09/04/2026</div>
+  <div id="comments-root" style="padding:6px 0 16px;"></div>
+</div>
+
+<!-- ══════════════════════ MENU ══════════════════════ -->
+<div class="page" id="page-menu">
+  <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title">Thực đơn</span></div>
+  <div class="week-strip">
+    <div class="month-row"><span style="cursor:pointer;user-select:none;padding:4px 8px;" id="menu-week-prev" onclick="protoShiftWeek(-1)">‹</span> &nbsp; <span id="menu-month-label">Tháng 4 2026</span> &nbsp; <span style="cursor:pointer;user-select:none;padding:4px 8px;" id="menu-week-next" onclick="protoShiftWeek(1)">›</span></div>
+    <div class="days" id="menu-week-days"></div>
+  </div>
+  <div id="menu-root"></div>
+</div>
+
+<!-- ══════════════════════ TUITION ══════════════════════ -->
+<div class="page" id="page-tuition">
+  <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title">Học phí</span></div>
+  <div class="tuition-year-nav">
+    <span style="color:#6b7280;cursor:pointer;font-size:18px;">‹</span>
+    <div class="year-badge">Học phí năm học 2026-2027</div>
+    <span style="color:#6b7280;cursor:pointer;font-size:18px;">›</span>
+  </div>
+  <div class="tuition-card-wrap">
+    <div class="tuition-card-top">
+      <span style="font-size:14px;font-weight:600;color:#111827;">Học phí năm học 2026-2027</span>
+      <button class="tuition-pay-btn" onclick="goTo('page-tuition-detail')">NỘP PHÍ</button>
+    </div>
+    <div class="tuition-deadline">⏰ Hạn nộp 01/07/2026</div>
+  </div>
+</div>
+
+<!-- ══════════════════════ TUITION DETAIL ══════════════════════ -->
+<div class="page" id="page-tuition-detail">
+  <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title">Chi tiết học phí</span></div>
+  <div class="tu-stu"><div class="sn">Họ và tên: Nguyễn Hưng</div><div class="si">Mã học sinh: VS108245</div></div>
+  <div style="background:#fef3c7;padding:9px 14px;display:flex;align-items:center;gap:8px;font-size:12.5px;color:#92400e;font-weight:500;">⏰ Hạn nộp 01/07/2026</div>
+  <div class="tu-tabs">
+    <div class="tu-tab active" id="tutab-hk1" onclick="switchTuition('hk1')">Học kỳ I</div>
+    <div class="tu-tab" id="tutab-cn" onclick="switchTuition('cn')">Cả năm</div>
+  </div>
+  <div id="tu-hk1">
+    <div class="fee-row"><span class="fee-name">Học phí chính khóa</span><span class="fee-amt">85.320.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí BHYT bắt buộc</span><span class="fee-amt">1.000.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí dịch vụ bán trú</span><span class="fee-amt">8.550.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí hoạt động trải nghiệm cả năm</span><span class="fee-amt">1.500.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí học phẩm cả năm</span><span class="fee-amt">2.700.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí phát triển trường cả năm</span><span class="fee-amt">4.200.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí DV cổng TTĐT cả năm</span><span class="fee-amt">400.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">✅ Set ĐPTC THCS Miền Bắc - Nam</span><span class="fee-amt">2.530.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">✅ Bộ sách Hệ nâng cao Khối 6 (tạm thu)</span><span class="fee-amt">4.320.000đ</span></div>
+    <div class="fee-total"><span>Số tiền</span><span>110.520.000đ</span></div>
+    <div class="fee-discount"><span>Ưu đãi dịch vụ bán trú nộp theo năm</span><span class="fee-disc-amt">- 0đ</span></div>
+    <div class="fee-discount"><span>Ưu đãi học phí nộp theo năm</span><span class="fee-disc-amt">- 0đ</span></div>
+    <div class="fee-discount"><span>Ưu đãi VINCLUB - Phí hoạt động trải nghiệm</span><span class="fee-disc-amt">- 45.000đ</span></div>
+    <div class="fee-discount"><span>Ưu đãi VINCLUB - Phí học phẩm</span><span class="fee-disc-amt">- 81.000đ</span></div>
+  </div>
+  <div id="tu-cn" style="display:none">
+    <div class="fee-row"><span class="fee-name">Học phí chính khóa</span><span class="fee-amt">180.120.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí BHYT bắt buộc</span><span class="fee-amt">1.000.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí dịch vụ bán trú</span><span class="fee-amt">18.050.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí hoạt động trải nghiệm cả năm</span><span class="fee-amt">1.500.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí học phẩm cả năm</span><span class="fee-amt">2.700.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí phát triển trường cả năm</span><span class="fee-amt">4.200.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí DV cổng TTĐT cả năm</span><span class="fee-amt">400.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">✅ Set ĐPTC THCS Miền Bắc - Nam</span><span class="fee-amt">2.530.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">✅ Bộ sách Hệ nâng cao Khối 6 (tạm thu)</span><span class="fee-amt">4.320.000đ</span></div>
+    <div class="fee-total"><span>Số tiền</span><span>214.820.000đ</span></div>
+    <div class="fee-discount"><span>Ưu đãi dịch vụ bán trú nộp theo năm</span><span class="fee-disc-amt">- 875.425đ</span></div>
+    <div class="fee-discount"><span>Ưu đãi học phí nộp theo năm</span><span class="fee-disc-amt">- 8.735.820đ</span></div>
+    <div class="fee-discount"><span>Ưu đãi VINCLUB - Phí hoạt động trải nghiệm</span><span class="fee-disc-amt">- 45.000đ</span></div>
+    <div class="fee-discount"><span>Ưu đãi VINCLUB - Phí học phẩm</span><span class="fee-disc-amt">- 81.000đ</span></div>
+  </div>
+</div>
+
+<!-- ══════════════════════ RESULTS ══════════════════════ -->
+<div class="page" id="page-results">
+  <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title">Kết quả học tập</span></div>
+  <div style="background:white;padding:10px 14px;border-bottom:1px solid #f3f4f6;font-size:12px;color:#6b7280;">Năm học 2025-2026 · Lớp 5B06</div>
+  <div class="result-row"><div class="result-subj">Tiếng Việt</div><div class="result-grades"><span class="gb gb-a">CK1: 9.0</span><span class="gb gb-a">GK2: 9.2</span></div><div class="result-cmt">Nắm vững kiến thức ngữ pháp, hành văn mạch lạc, giàu cảm xúc.</div></div>
+  <div class="result-row"><div class="result-subj">Lịch sử và Địa lý</div><div class="result-grades"><span class="gb gb-a">CK1: 9.0</span><span class="gb gb-a">GK2: 9.5</span></div><div class="result-cmt">Kỹ năng đọc bản đồ tốt, ghi nhớ các mốc sự kiện lịch sử chính xác.</div></div>
+  <div class="result-row"><div class="result-subj">CIE Maths</div><div class="result-grades"><span class="gb gb-a">CK1: 95% (A*)</span><span class="gb gb-a">GK2: 98% (A*)</span></div><div class="result-cmt">Tư duy logic xuất sắc, giải quyết tốt các bài toán đố phức tạp.</div></div>
+  <div class="result-row"><div class="result-subj">CIE Science</div><div class="result-grades"><span class="gb gb-a">CK1: 92% (A*)</span><span class="gb gb-a">GK2: 94% (A*)</span></div><div class="result-cmt">Quan sát tỉ mỉ trong các giờ thực hành, hiểu rõ các khái niệm khoa học.</div></div>
+  <div class="result-row"><div class="result-subj">CIE ESL</div><div class="result-grades"><span class="gb gb-b">CK1: 85% (A)</span><span class="gb gb-b">GK2: 88% (A)</span></div><div class="result-cmt">Kỹ năng Nghe - Đọc hiểu tiến bộ vượt bậc, tự tin hơn khi nói.</div></div>
+  <div class="result-row"><div class="result-subj">CIE ICT</div><div class="result-grades"><span class="gb gb-a">CK1: 94% (A*)</span><span class="gb gb-a">GK2: 95% (A*)</span></div><div class="result-cmt">Thao tác máy tính nhanh, hoàn thành xuất sắc các dự án thiết kế slide.</div></div>
+  <div class="result-row"><div class="result-subj">Việt Nam học</div><div class="result-grades"><span class="gb gb-htt">CK1: HTT</span><span class="gb gb-htt">GK2: HTT</span></div><div class="result-cmt">Tích cực tìm hiểu văn hóa, có bài thuyết trình sáng tạo về ngày Tết.</div></div>
+  <div class="result-row"><div class="result-subj">Global Perspectives</div><div class="result-grades"><span class="gb gb-b">CK1: Grade A</span><span class="gb gb-a">GK2: Grade A*</span></div><div class="result-cmt">Kỹ năng làm việc nhóm hòa hợp, tư duy phản biện ngày càng sắc bén.</div></div>
+  <div class="result-row"><div class="result-subj">Giáo dục thể chất</div><div class="result-grades"><span class="gb gb-htt">CK1: HTT</span><span class="gb gb-htt">GK2: HTT</span></div><div class="result-cmt">Thể lực tốt, nắm bắt nhanh các kỹ thuật bóng rổ và điền kinh.</div></div>
+  <div class="result-row"><div class="result-subj">Mỹ thuật</div><div class="result-grades"><span class="gb gb-htt">CK1: HTT</span><span class="gb gb-htt">GK2: HTT</span></div><div class="result-cmt">Trí tưởng tượng phong phú, phối màu hài hòa, có ý thức dọn dẹp họa cụ.</div></div>
+  <div class="result-row"><div class="result-subj">Âm nhạc</div><div class="result-grades"><span class="gb gb-ht">CK1: HT</span><span class="gb gb-htt">GK2: HTT</span></div><div class="result-cmt">Thuộc lời bài hát nhanh, bắt nhịp tốt khi gõ đệm. Tự tin hơn khi hát.</div></div>
+  <div class="result-row"><div class="result-subj">GD Kỹ năng Phẩm chất</div><div class="result-grades"><span class="gb gb-htt">CK1: HTT</span><span class="gb gb-htt">GK2: HTT</span></div><div class="result-cmt">Chấp hành tốt nội quy, biết quan tâm và hỗ trợ bạn bè trong lớp.</div></div>
+  <div class="result-row"><div class="result-subj">CLB Kỹ năng</div><div class="result-grades"><span class="gb gb-htt">CK1: HTT</span><span class="gb gb-htt">GK2: HTT</span></div><div class="result-cmt">Thể hiện được vai trò trưởng nhóm trong các hoạt động lắp ráp, tạo hình.</div></div>
+</div>
+
+<!-- ══════════════════════ STUDENT INFO ══════════════════════ -->
+<div class="page" id="page-student-info">
+  <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title">Thông tin học sinh</span></div>
+  <div class="card">
+    <div style="padding:16px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <div style="width:56px;height:56px;border-radius:50%;background:#dbeafe;display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0;">👦</div>
+        <div>
+          <div style="font-size:15px;font-weight:700;">Nguyễn Hưng <span style="color:#22c55e;font-size:13px;">✓</span></div>
+          <div style="font-size:12px;color:#6b7280;margin-top:2px;">Mã học sinh: VS108245</div>
+        </div>
+      </div>
+      <div style="border-top:1px solid #f3f4f6;padding:10px 0;display:flex;justify-content:space-between;"><span style="font-size:13px;color:#6b7280;">Trường</span><span style="font-size:13px;color:#374151;font-weight:500;text-align:right;max-width:210px;">Trường Tiểu học Vinschool Timescity T36</span></div>
+      <div style="border-top:1px solid #f3f4f6;padding:10px 0;display:flex;justify-content:space-between;"><span style="font-size:13px;color:#6b7280;">Lớp</span><span style="font-size:13px;color:#374151;font-weight:500;">5B06</span></div>
+      <div style="border-top:1px solid #f3f4f6;padding:10px 0;display:flex;justify-content:space-between;"><span style="font-size:13px;color:#6b7280;">Hệ</span><span style="font-size:13px;color:#374151;font-weight:500;">Hệ nâng cao</span></div>
+      <div style="border-top:1px solid #f3f4f6;padding:10px 0;display:flex;justify-content:space-between;"><span style="font-size:13px;color:#6b7280;">Khối</span><span style="font-size:13px;color:#374151;font-weight:500;">Khối 5</span></div>
+      <div style="border-top:1px solid #f3f4f6;padding:10px 0;display:flex;justify-content:space-between;"><span style="font-size:13px;color:#6b7280;">Địa chỉ nơi ở</span><span style="font-size:13px;color:#374151;">...</span></div>
+      <div style="border-top:1px solid #f3f4f6;padding-top:12px;text-align:center;">
+        <span style="color:#1B4FD8;font-size:13px;font-weight:600;cursor:pointer;" onclick="goTo('page-parent-info')">Thông tin phụ huynh / giám hộ</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════ PARENT INFO ══════════════════════ -->
+<div class="page" id="page-parent-info">
+  <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title">Thông tin phụ h...</span></div>
+  <div class="card">
+    <div style="padding:16px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;"><div style="width:56px;height:56px;border-radius:50%;background:#d1fae5;display:flex;align-items:center;justify-content:center;font-size:26px;">👨</div><div style="font-size:15px;font-weight:700;">Nguyễn Quốc Thắng</div></div>
+      <div style="border-top:1px solid #f3f4f6;padding:10px 0;display:flex;justify-content:space-between;"><span style="font-size:13px;color:#6b7280;">Số điện thoại</span><span style="font-size:13px;font-weight:500;">0904123456</span></div>
+      <div style="border-top:1px solid #f3f4f6;padding:10px 0;display:flex;justify-content:space-between;"><span style="font-size:13px;color:#6b7280;">Email</span><span style="font-size:13px;font-weight:500;">thang.le77@gmail.com</span></div>
+      <div style="border-top:1px solid #f3f4f6;padding:10px 0;display:flex;justify-content:space-between;"><span style="font-size:13px;color:#6b7280;">Mối quan hệ với học sinh</span><span style="font-size:13px;font-weight:500;">Bố</span></div>
+    </div>
+  </div>
+  <div class="card">
+    <div style="padding:16px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;"><div style="width:56px;height:56px;border-radius:50%;background:#fce7f3;display:flex;align-items:center;justify-content:center;font-size:26px;">👩</div><div style="font-size:15px;font-weight:700;">Vũ Thu Hà</div></div>
+      <div style="border-top:1px solid #f3f4f6;padding:10px 0;display:flex;justify-content:space-between;"><span style="font-size:13px;color:#6b7280;">Số điện thoại</span><span style="font-size:13px;font-weight:500;">0912987654</span></div>
+      <div style="border-top:1px solid #f3f4f6;padding:10px 0;display:flex;justify-content:space-between;"><span style="font-size:13px;color:#6b7280;">Email</span><span style="font-size:13px;font-weight:500;">ha.vuthu@gmail.com</span></div>
+      <div style="border-top:1px solid #f3f4f6;padding:10px 0;display:flex;justify-content:space-between;"><span style="font-size:13px;color:#6b7280;">Mối quan hệ với học sinh</span><span style="font-size:13px;font-weight:500;">Mẹ</span></div>
+    </div>
+  </div>
+  <div style="padding:14px;">
+    <button style="width:100%;padding:13px;background:#1B4FD8;color:white;border:none;border-radius:12px;font-size:14px;font-weight:700;cursor:pointer;">THÊM NGƯỜI GIÁM HỘ</button>
+  </div>
+</div>
+
+<!-- ══════════════════════ CONTACTS ══════════════════════ -->
+<div class="page" id="page-contacts">
+  <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title">Danh bạ</span></div>
+  <div style="background:white;padding:9px 14px;border-bottom:1px solid #f3f4f6;"><input type="text" placeholder="🔍 Tìm kiếm" style="width:100%;background:#f3f4f6;border:none;border-radius:18px;padding:7px 14px;font-size:13px;outline:none;"></div>
+  <div style="background:white;margin-top:8px;">
+    <div class="contact-row">
+      <div class="contact-ava" style="background:#dbeafe;color:#1e40af;font-size:11px;font-weight:800;border-radius:10px;">5B06</div>
+      <div class="contact-info"><div class="contact-name">Gareth Morton</div><div class="contact-roles">CIE ESL · CIE Maths · CIE Science<br><span style="color:#3b82f6;">Giáo viên chủ nhiệm - 5B06</span></div></div>
+      <div class="contact-btns"><button class="cta-btn call">📞</button><button class="cta-btn chat">💬</button><button class="cta-btn mail">✉️</button></div>
+    </div>
+    <div class="contact-row">
+      <div class="contact-ava" style="background:#d1fae5;border-radius:10px;">🎵</div>
+      <div class="contact-info"><div class="contact-name">Lại Thị Thu Thủy</div><div class="contact-roles">Âm nhạc - 5B06</div></div>
+      <div class="contact-btns"><button class="cta-btn call">📞</button><button class="cta-btn chat">💬</button><button class="cta-btn mail">✉️</button></div>
+    </div>
+    <div class="contact-row">
+      <div class="contact-ava" style="background:#fef3c7;border-radius:10px;">💻</div>
+      <div class="contact-info"><div class="contact-name">Elanza Jurgens</div><div class="contact-roles">CIE ICT - 5B06</div></div>
+      <div class="contact-btns"><button class="cta-btn call">📞</button><button class="cta-btn chat">💬</button><button class="cta-btn mail">✉️</button></div>
+    </div>
+    <div class="contact-row">
+      <div class="contact-ava" style="background:#ede9fe;border-radius:10px;">⚽</div>
+      <div class="contact-info"><div class="contact-name">Vũ Trung Hiếu</div><div class="contact-roles">Giáo dục thể chất - 5B06</div></div>
+      <div class="contact-btns"><button class="cta-btn call">📞</button><button class="cta-btn chat">💬</button><button class="cta-btn mail">✉️</button></div>
+    </div>
+    <div class="contact-row">
+      <div class="contact-ava" style="background:#fee2e2;border-radius:10px;">📋</div>
+      <div class="contact-info"><div class="contact-name">Giám Thị</div><div class="contact-roles">Kiểm tra định kì - 5B06</div></div>
+      <div class="contact-btns"><button class="cta-btn call">📞</button><button class="cta-btn chat">💬</button><button class="cta-btn mail">✉️</button></div>
+    </div>
+    <div class="contact-row">
+      <div class="contact-ava" style="background:#fef3c7;border-radius:10px;">👩‍🏫</div>
+      <div class="contact-info"><div class="contact-name">Lê Thị Kim Anh</div><div class="contact-roles">Lịch sử và Địa lý · Tiếng Việt - 5B06</div></div>
+      <div class="contact-btns"><button class="cta-btn call">📞</button><button class="cta-btn chat">💬</button><button class="cta-btn mail">✉️</button></div>
+    </div>
+    <div class="contact-row">
+      <div class="contact-ava" style="background:#fce7f3;border-radius:10px;">🎨</div>
+      <div class="contact-info"><div class="contact-name">Dương Thị Mỹ Hạnh</div><div class="contact-roles">Mỹ thuật - 5B06</div></div>
+      <div class="contact-btns"><button class="cta-btn call">📞</button><button class="cta-btn chat">💬</button><button class="cta-btn mail">✉️</button></div>
+    </div>
+    <div class="contact-row">
+      <div class="contact-ava" style="background:#f3f4f6;border-radius:10px;">🇻🇳</div>
+      <div class="contact-info"><div class="contact-name">Đinh Thị Ngọc Hồi</div><div class="contact-roles">Việt Nam học - 5B06</div></div>
+      <div class="contact-btns"><button class="cta-btn call">📞</button><button class="cta-btn chat">💬</button><button class="cta-btn mail">✉️</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════ NOTIFICATIONS TAB ══════════════════════ -->
+<div class="page" id="page-notifications">
+  <div style="display:flex;background:white;border-bottom:1px solid #e5e7eb;">
+    <div style="padding:11px 20px;font-size:13px;font-weight:600;color:#1B4FD8;border-bottom:2px solid #1B4FD8;">Tất cả</div>
+    <div style="padding:11px 20px;font-size:13px;font-weight:600;color:#6b7280;">Chưa đọc</div>
+  </div>
+
+  <!-- Bản tin + thông báo: nội dung từ rag_data.json (bảng Thông báo) — prototype-data.js -->
+  <div id="notif-brief-root"></div>
+  <div id="notif-actionable-root"></div>
+  <div id="notif-regular-list" style="background:white;"></div>
+</div>
+
+<!-- ══════════════════════ NOTIFICATION DETAIL (full text) ══════════════════════ -->
+<div class="page" id="page-notif-detail">
+  <div class="notif-detail-sticky-head">
+    <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title" id="notif-detail-subtitle">Thông báo</span></div>
+    <div id="notif-detail-meta" style="padding:10px 16px;border-bottom:1px solid #e5e7eb;background:#fafafa;font-size:12px;color:#4b5563;line-height:1.45;"></div>
+  </div>
+  <div id="notif-detail-body" style="padding:16px 16px 28px;background:white;font-size:14px;line-height:1.55;color:#111827;"></div>
+</div>
+
+<!-- ══════════════════════ CHAT TAB ══════════════════════ -->
+<div class="page" id="page-chat">
+  <div class="chat-search"><input placeholder="Tìm kiếm" type="text"></div>
+  <div class="chat-section-lbl">TRỢ LÝ AI</div>
+  <div style="background:white;border-bottom:1px solid #f3f4f6;">
+    <div class="chat-row" onclick="goTo('page-ai-chat')" style="background:linear-gradient(135deg,rgba(99,102,241,.06),rgba(27,79,216,.06));border-left:3px solid #6366f1;">
+      <div class="chat-ava" style="background:linear-gradient(135deg,#4f46e5,#1B4FD8);border-radius:50%;font-size:18px;">🤖</div>
+      <div style="flex:1;">
+        <div style="display:flex;align-items:center;gap:6px;">
+          <span class="chat-name">Vin-Assistant</span>
+          <span class="ai-badge" style="font-size:9px;padding:1px 6px;">AI ✨</span>
+        </div>
+        <div class="chat-preview">Hỏi về bài tập, thực đơn, lịch học…</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;">
+        <span style="font-size:10px;color:#9ca3af;">Mở để chat</span>
+      </div>
+    </div>
+  </div>
+  <div class="chat-section-lbl">NHÓM LỚP</div>
+  <div style="background:white;">
+    <div class="chat-row"><div class="chat-ava" style="background:#1B4FD8;">5B06</div><div><div class="chat-name">Lớp 5B06</div><div class="chat-preview">Gareth Morton: Cả lớp nhớ nộp bài tập trước 17h hôm nay!</div></div></div>
+    <div class="chat-row"><div class="chat-ava" style="background:#22c55e;">5B06</div><div><div class="chat-name">Hội phụ huynh lớp 5B06</div><div class="chat-preview">Phụ huynh A: Thứ 6 họp lớp lúc 18h30 nhé mọi người ơi</div></div></div>
+  </div>
+  <div class="chat-section-lbl">GIÁO VIÊN</div>
+  <div style="background:white;">
+    <div class="chat-row"><div class="chat-ava" style="background:#f59e0b;font-size:12px;font-weight:800;">GM</div><div><div class="chat-name">Gareth Morton</div><div class="chat-preview">Hưng hoàn thành bài rất tốt hôm nay!</div></div></div>
+    <div class="chat-row"><div class="chat-ava" style="background:#ec4899;font-size:12px;font-weight:800;">LKA</div><div><div class="chat-name">Lê Thị Kim Anh</div><div class="chat-preview">Nhớ mang vở Tiếng Việt ngày mai nhé Hưng</div></div></div>
+    <div class="chat-row"><div class="chat-ava" style="background:#8b5cf6;font-size:12px;font-weight:800;">EJ</div><div><div class="chat-name">Elanza Jurgens</div><div class="chat-preview">Project deadline is this Friday, please submit on time!</div></div></div>
+  </div>
+</div>
+
+<!-- ══════════════════════ ACCOUNT TAB ══════════════════════ -->
+<div class="page" id="page-account">
+  <div class="acc-hdr"><div class="acc-ava">👩</div><div class="acc-name">Vũ Thu Hà</div></div>
+  <div style="background:white;margin-top:10px;">
+    <div class="acc-menu-item" onclick="goTo('page-student-info')"><div class="acc-menu-ico" style="background:#dbeafe;">👤</div><div class="acc-menu-txt">Thông tin học sinh/ Phụ huynh/ Giám hộ</div><div class="acc-menu-arr">›</div></div>
+    <div class="acc-menu-item"><div class="acc-menu-ico" style="background:#d1fae5;">💳</div><div class="acc-menu-txt">Tài khoản ngân hàng PHHS</div><div class="acc-menu-arr">›</div></div>
+    <div class="acc-menu-item"><div class="acc-menu-ico" style="background:#fef3c7;">📖</div><div class="acc-menu-txt">Hướng dẫn sử dụng</div><div class="acc-menu-arr">›</div></div>
+    <div class="acc-menu-item"><div class="acc-menu-ico" style="background:#ede9fe;">🛟</div><div class="acc-menu-txt">Hỗ trợ</div><div class="acc-menu-arr">›</div></div>
+    <div class="acc-menu-item" onclick="goTo('page-contacts')"><div class="acc-menu-ico" style="background:#fee2e2;">👥</div><div class="acc-menu-txt">Danh bạ</div><div class="acc-menu-arr">›</div></div>
+    <div class="acc-menu-item"><div class="acc-menu-ico" style="background:#f3f4f6;">🌐</div><div class="acc-menu-txt">Ngôn ngữ</div><div class="acc-menu-arr">›</div></div>
+    <div class="acc-menu-item"><div class="acc-menu-ico" style="background:#fee2e2;">🗑️</div><div class="acc-menu-txt">Xoá tài khoản</div><div class="acc-menu-arr">›</div></div>
+    <div class="acc-menu-item"><div class="acc-menu-ico" style="background:#f3f4f6;">🚪</div><div class="acc-menu-txt">Đăng xuất</div><div class="acc-menu-arr">›</div></div>
+  </div>
+  <div style="text-align:center;padding:20px;font-size:12px;color:#9ca3af;">Phiên bản 5.20.0014</div>
+</div>
+
+
+<!-- ══════════════════════ AI SEARCH ══════════════════════ -->
+<div class="page" id="page-ai-search">
+  <div class="ai-search-input-wrap">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+      <span class="sub-back" onclick="goBack()" style="color:white;font-size:22px;cursor:pointer;">←</span>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <span style="font-size:18px;">🤖</span>
+        <span style="color:white;font-size:15px;font-weight:700;">Vin-Assistant</span>
+      </div>
+    </div>
+    <div class="ai-search-chips-row" role="list" aria-label="Gợi ý nhanh">
+      <button type="button" class="ai-search-chip" onclick="aiSearchPick('Tuần này Hưng có bài tập nào chưa làm?')">📋 Bài tập chưa làm?</button>
+      <button type="button" class="ai-search-chip" onclick="aiSearchPick('Hôm nay con ăn gì ở trường?')">🍱 Thực đơn hôm nay?</button>
+      <button type="button" class="ai-search-chip" onclick="aiSearchPick('Lịch học hôm nay của Hưng?')">📅 Lịch học hôm nay?</button>
+      <button type="button" class="ai-search-chip" onclick="aiSearchPick('Nhận xét mới nhất của giáo viên về Hưng?')">💬 Nhận xét gần nhất?</button>
+      <button type="button" class="ai-search-chip" onclick="aiSearchPick('Học phí còn thiếu không?')">💰 Học phí</button>
+      <button type="button" class="ai-search-chip" onclick="aiSearchPick('Điểm các môn của Hưng?')">📊 Điểm số</button>
+    </div>
+    <div class="ai-search-input-box">
+      <span style="font-size:16px;">🔍</span>
+      <input id="aiSearchInput" placeholder="Hỏi bất cứ điều gì về Hưng..." value="Tuần này Hưng có bài tập nào chưa làm?">
+      <button class="send-btn" onclick="goTo('page-ai-chat')">›</button>
+    </div>
+  </div>
+
+  <div id="ai-search-results-root"></div>
+</div>
+
+<!-- ══════════════════════ AI CHAT ══════════════════════ -->
+<div class="page" id="page-ai-chat" style="height:100%;min-height:0;">
+  <div class="ai-sub-header">
+    <span class="sub-back" onclick="goBack()">←</span>
+    <span style="font-size:16px;">🤖</span>
+    <div style="flex:1;">
+      <div style="font-size:14px;font-weight:700;">Vin-Assistant</div>
+      <div style="font-size:10px;opacity:.8;">Trả lời dựa trên dữ liệu của Hưng</div>
+    </div>
+    <span class="ai-badge">AI ✨</span>
+  </div>
+
+  <div class="ai-chat-wrap" id="aiChatWrap">
+    <!-- Lời chào + gợi ý khi mở chat (gợi ý ẩn sau tin nhắn đầu tiên) -->
+    <div id="aiChatWelcomeBlock">
+      <div class="bubble-ai-wrap">
+        <div class="bubble-ai-avatar">🤖</div>
+        <div class="bubble-ai-stack">
+          <div class="bubble-ai">
+            Xin chào anh/chị! Mình là <strong>Vin-Assistant</strong> — có thể giúp anh/chị tra cứu nhanh thông tin về <strong>Nguyễn Hưng</strong> trong app (bài tập, thực đơn, lịch học, điểm số, học phí, nhận xét giáo viên…). Hãy gõ câu hỏi bên dưới hoặc chọn một gợi ý.
+            <div class="ai-source-badge" style="margin-top:8px;">📊 Dữ liệu theo học sinh đang chọn</div>
+          </div>
+          <div class="ai-msg-actions" role="toolbar" aria-label="Phản hồi tin nhắn AI">
+            <button type="button" class="ai-act-like" onclick="toggleAiLike(this)" title="Hữu ích" aria-label="Hữu ích">👍</button>
+            <button type="button" class="ai-act-dislike" onclick="toggleAiDislike(this)" title="Không hữu ích" aria-label="Không hữu ích">👎</button>
+            <button type="button" class="ai-act-retry" onclick="retryAiMessage(this)" title="Thử lại" aria-label="Thử lại">↻</button>
+            <button type="button" class="ai-act-copy" onclick="copyAiMessage(this)" title="Sao chép" aria-label="Sao chép">⎘</button>
+            <button type="button" class="ai-act-report" onclick="openReportModal(this)" title="Báo cáo nội dung" aria-label="Báo cáo"><svg class="ai-report-flag-ico" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#dc2626" d="M4 21V3h2v1h12l-2 3.5L18 11H6v10H4zm2-9h9.3l-1.1-2 1.1-2H6v4z"/></svg></button>
+          </div>
+        </div>
+      </div>
+      <div class="ai-chat-parent-tips" id="aiChatParentTips">
+        <div class="ai-chat-parent-tips-hd">GỢI Ý CÂU HỎI PHỤ HUYNH THƯỜNG GẶP</div>
+        <div class="ai-chat-parent-tips-chips">
+          <button type="button" class="ai-chat-parent-chip" onclick="sendParentTip('Tuần này Hưng còn bài tập nào chưa làm?')">📋 Tuần này còn bài tập nào chưa làm?</button>
+          <button type="button" class="ai-chat-parent-chip" onclick="sendParentTip('Hôm nay con ăn gì ở trường?')">🍱 Hôm nay con ăn gì ở trường?</button>
+          <button type="button" class="ai-chat-parent-chip" onclick="sendParentTip('Hôm nay Hưng có tiết thể dục không, lịch thế nào?')">📅 Lịch hôm nay &amp; tiết thể dục?</button>
+          <button type="button" class="ai-chat-parent-chip" onclick="sendParentTip('Điểm các môn gần nhất của Hưng?')">📊 Điểm các môn gần nhất?</button>
+          <button type="button" class="ai-chat-parent-chip" onclick="sendParentTip('Học phí kỳ này đã đủ chưa, còn thiếu không?')">💰 Học phí còn thiếu không?</button>
+          <button type="button" class="ai-chat-parent-chip" onclick="sendParentTip('Nhận xét mới nhất của giáo viên về Hưng?')">💬 Nhận xét mới của cô thầy?</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Typing indicator placeholder -->
+    <div class="bubble-ai-wrap" id="typingIndicator" style="display:none;">
+      <div class="bubble-ai-avatar">🤖</div>
+      <div class="bubble-ai"><div class="typing-dots"><span></span><span></span><span></span></div></div>
+    </div>
+  </div>
+
+  <!-- Gợi ý câu hỏi tiếp theo (sau lượt hội thoại đầu; cập nhật theo câu vừa gửi) -->
+  <div id="aiChatFollowUpBar" class="ai-chat-followup-bar" style="display:none;" aria-label="Gợi ý câu hỏi tiếp theo">
+    <div class="ai-chat-followup-lbl">GỢI Ý TIẾP THEO</div>
+    <div class="ai-chat-followup-row" id="aiChatFollowUpRow" role="list"></div>
+  </div>
+
+  <!-- Input bar -->
+  <div class="ai-chat-input-bar">
+    <input id="chatInput" placeholder="Hỏi thêm về Hưng..." type="text"
+      onkeydown="if(event.key==='Enter')sendMsg(this.value)">
+    <button class="ai-chat-send" onclick="sendMsg(document.getElementById('chatInput').value)">›</button>
+  </div>
+</div>
+
+<!-- ══════════════════════ AI BRIEF ══════════════════════ -->
+<div class="page" id="page-ai-brief">
+  <div class="ai-sub-header" style="flex-direction:column;align-items:flex-start;padding:14px 16px 16px;">
+    <div style="display:flex;align-items:center;gap:8px;width:100%;margin-bottom:8px;">
+      <span class="sub-back" onclick="goBack()">←</span>
+      <span style="font-size:15px;font-weight:700;flex:1;">Bản tin hàng ngày</span>
+      <span class="ai-badge">AI ✨</span>
+    </div>
+    <div style="font-size:18px;font-weight:800;">Thứ 5, 09/04/2026</div>
+    <div style="font-size:12px;opacity:.8;margin-top:2px;">Tổng hợp 5 sự kiện nổi bật trong ngày của Nguyễn Hưng</div>
+  </div>
+
+  <div style="padding:8px 0 20px;">
+    <!-- Event 1: Homework alert -->
+    <div class="brief-event-card">
+      <div class="brief-event-top">
+        <div class="brief-event-ico">📋</div>
+        <div>
+          <div class="brief-event-label">BÀI TẬP CHƯA NỘP</div>
+          <div class="brief-event-title">3 bài Tiếng Việt hạn nộp sắp tới</div>
+        </div>
+      </div>
+      <div class="brief-event-body">
+        <div class="brief-event-detail">
+          Hưng còn <strong>4 bài tập chưa hoàn thành</strong> tuần này. Quan trọng nhất: <strong>Quiz TV Tuần 26</strong> hạn nộp hôm nay (09/04). Phụ huynh nhắc con làm sớm!
+        </div>
+        <button class="brief-deeplink" onclick="goTo('page-homework')">📋 Mở Bài tập - Kiểm tra →</button>
+      </div>
+    </div>
+
+    <!-- Event 2: Attendance -->
+    <div class="brief-event-card">
+      <div class="brief-event-top">
+        <div class="brief-event-ico">✅</div>
+        <div>
+          <div class="brief-event-label">CHUYÊN CẦN</div>
+          <div class="brief-event-title">Đi học đúng giờ — 8:00 sáng</div>
+        </div>
+      </div>
+      <div class="brief-event-body">
+        <div class="brief-event-detail">
+          Giáo viên chủ nhiệm điểm danh lúc <strong>08:00</strong>. Hưng đến <strong>đúng giờ</strong>. Tuần này không có tiết vắng nào.
+        </div>
+        <button class="brief-deeplink" onclick="goTo('page-attendance')">🧑‍🏫 Xem chuyên cần →</button>
+      </div>
+    </div>
+
+    <!-- Event 3: Menu -->
+    <div class="brief-event-card">
+      <div class="brief-event-top">
+        <div class="brief-event-ico">🍱</div>
+        <div>
+          <div class="brief-event-label">THỰC ĐƠN TRƯA NAY</div>
+          <div class="brief-event-title">Bò kho tàu + Cơm trắng</div>
+        </div>
+      </div>
+      <div class="brief-event-body">
+        <div class="brief-event-detail">
+          Bữa trưa hôm nay gồm: <strong>Thịt bò chỉ kho tàu</strong>, Đậu phụ chiên trứng muối, Bắp cải xào, Cơm trắng, Thanh long trắng (~579 kcal). Ăn phụ: Gà chiên kiểu KFC.
+        </div>
+        <button class="brief-deeplink" onclick="goTo('page-menu')">🍱 Xem thực đơn đầy đủ →</button>
+      </div>
+    </div>
+
+    <!-- Event 4: Teacher comment -->
+    <div class="brief-event-card">
+      <div class="brief-event-top">
+        <div class="brief-event-ico">💬</div>
+        <div>
+          <div class="brief-event-label">NHẬN XÉT MỚI NHẤT</div>
+          <div class="brief-event-title">Thầy Gareth khen Hưng năng động</div>
+        </div>
+      </div>
+      <div class="brief-event-body">
+        <div class="brief-event-detail">
+          <em>"Hưng bắt đầu tuần mới rất năng động. Con chủ động giúp thầy sắp xếp lại tủ sách của lớp và nhắc nhở các bạn giữ trật tự trong giờ chuyển tiết."</em>
+          <div style="font-size:11.5px;color:#6b7280;margin-top:4px;">— Gareth Morton · Sinh hoạt Chủ nhiệm · 08/04</div>
+        </div>
+        <button class="brief-deeplink" onclick="goTo('page-comments')">💬 Xem tất cả nhận xét →</button>
+      </div>
+    </div>
+
+    <!-- Event 5: Schedule highlight -->
+    <div class="brief-event-card">
+      <div class="brief-event-top">
+        <div class="brief-event-ico">📅</div>
+        <div>
+          <div class="brief-event-label">LỊCH HỌC HÔM NAY</div>
+          <div class="brief-event-title">8 tiết · Có Thể dục (nhớ giày!)</div>
+        </div>
+      </div>
+      <div class="brief-event-body">
+        <div class="brief-event-detail">
+          Tiết 3 (09:30–10:05): <strong>Giáo dục thể chất</strong> — GV: Vũ Trung Hiếu. <span style="color:#f59e0b;font-weight:600;">⚠️ Nhớ mang giày thể thao!</span> Buổi chiều có CIE ICT lúc 14:00.
+        </div>
+        <button class="brief-deeplink" onclick="goTo('page-schedule')">📅 Xem lịch học đầy đủ →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /screen-wrap -->
+
+<!-- BOTTOM NAV -->
+<div class="bottom-nav">
+  <div class="nav-item active" id="nav-home" onclick="switchTab('home')"><span class="nav-icon">🏠</span><span class="nav-label">Trang chủ</span></div>
+  <div class="nav-item" id="nav-student" onclick="switchTab('student')"><span class="nav-icon">🎓</span><span class="nav-label">Học sinh</span></div>
+  <div class="nav-item" id="nav-chat" onclick="switchTab('chat')"><span class="nav-icon">💬</span><span class="nav-label">Chat</span></div>
+  <div class="nav-item" id="nav-notifications" onclick="switchTab('notifications')"><span class="nav-icon">🔔</span><span class="nav-label">Thông báo</span></div>
+  <div class="nav-item" id="nav-account" onclick="switchTab('account')"><span class="nav-icon">👤</span><span class="nav-label">Tài khoản</span></div>
+</div>
+
+</div><!-- /app -->
+
+<div id="reportModalOverlay" class="report-modal-overlay" onclick="if(event.target===this)closeReportModal()" role="presentation">
+  <div class="report-modal" role="dialog" aria-modal="true" aria-labelledby="reportModalTitle" onclick="event.stopPropagation()">
+    <h2 id="reportModalTitle">Báo cáo nội dung</h2>
+    <p class="report-modal-hint">Chọn lý do báo cáo. Phản hồi của bạn giúp cải thiện Vin-Assistant an toàn và chính xác hơn.</p>
+    <form id="reportModalForm" onsubmit="return submitReportModal(event)">
+      <div class="report-reason-list">
+        <label><input type="radio" name="reportReason" value="inaccurate" required> Thông tin sai hoặc không chính xác</label>
+        <label><input type="radio" name="reportReason" value="harmful"> Nội dung xúc phạm, thiếu thân thiện hoặc không phù hợp</label>
+        <label><input type="radio" name="reportReason" value="spam"> Spam, quảng cáo hoặc lừa đảo</label>
+        <label><input type="radio" name="reportReason" value="privacy"> Vi phạm quyền riêng tư / an toàn trẻ em</label>
+        <label><input type="radio" name="reportReason" value="irrelevant"> Không liên quan câu hỏi của tôi</label>
+        <label><input type="radio" name="reportReason" value="other"> Lý do khác</label>
+      </div>
+      <label class="report-detail-lbl" for="reportModalDetail">Mô tả thêm (tuỳ chọn)</label>
+      <textarea id="reportModalDetail" placeholder="Ghi thêm chi tiết nếu cần…" maxlength="500"></textarea>
+      <div class="report-modal-actions">
+        <button type="button" class="report-btn-cancel" onclick="closeReportModal()">Huỷ</button>
+        <button type="submit" class="report-btn-submit">Gửi báo cáo</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="prototype-data.js"></script>
+<script>
+const MAIN = ['page-home','page-student','page-chat','page-notifications','page-account'];
+const TAB_MAP = { home:'page-home', student:'page-student', chat:'page-chat', notifications:'page-notifications', account:'page-account' };
+let cur = 'page-home', hist = [];
+let __reportTriggerBtn = null;
+let __aiChatExchangeCount = 0;
+let __aiFollowUpPoolRotate = 0;
+let __lastUserQueryForFollowUp = '';
+
+const REPORT_FLAG_BTN_HTML =
+  '<button type="button" class="ai-act-report" onclick="openReportModal(this)" title="Báo cáo nội dung" aria-label="Báo cáo">' +
+  '<svg class="ai-report-flag-ico" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">' +
+  '<path fill="#dc2626" d="M4 21V3h2v1h12l-2 3.5L18 11H6v10H4zm2-9h9.3l-1.1-2 1.1-2H6v4z"/></svg></button>';
+
+function aiSearchPick(q) {
+  const inp = document.getElementById('aiSearchInput');
+  if (inp) inp.value = q;
+  goTo('page-ai-chat');
+  sendMsg(q);
+}
+
+function sendParentTip(q) {
+  const inp = document.getElementById('chatInput');
+  if (inp) inp.value = q;
+  sendMsg(q);
+}
+
+function sendFollowUpTip(q) {
+  sendParentTip(q);
+}
+
+function hideAiChatParentTips() {
+  const tips = document.getElementById('aiChatParentTips');
+  if (tips) tips.style.display = 'none';
+}
+
+function pickFollowUpQueries(lastUserText) {
+  const t = (lastUserText || '').toLowerCase();
+  if (/bài tập|homework|nộp|deadline|chưa làm/i.test(t)) {
+    return [
+      'Hạn nộp từng bài cụ thể là ngày nào?',
+      'Môn nào cần ưu tiên làm trước?',
+      'Thực đơn trưa hôm nay là gì?',
+      'Ngày mai có kiểm tra không?'
+    ];
+  }
+  if (/ăn|thực đơn|menu|trưa|bữa/i.test(t)) {
+    return [
+      'Tuần này còn bài tập nào chưa làm?',
+      'Chiều nay có hoạt động ngoại khóa không?',
+      'Điểm các môn gần nhất?',
+      'Hôm nay có tiết thể dục không?'
+    ];
+  }
+  if (/lịch|tiết|thể dục|mấy giờ|thời khoá/i.test(t)) {
+    return [
+      'Giờ tan học hôm nay là mấy giờ?',
+      'Sáng mai có cần mang đồ gì đặc biệt?',
+      'Tuần này còn bài tập nào chưa làm?',
+      'Hôm nay ăn trưa gì ở trường?'
+    ];
+  }
+  if (/học phí|phí|tiền|thanh toán|đóng/i.test(t)) {
+    return [
+      'Chi tiết từng khoản phí?',
+      'Hạn đóng tiếp theo khi nào?',
+      'Điểm danh chuyên cần tuần này?',
+      'Có thông báo nợ phí không?'
+    ];
+  }
+  if (/điểm|điểm số|môn học/i.test(t)) {
+    return [
+      'Môn nào cần củng cố thêm?',
+      'Bài tập môn đó còn gì chưa làm?',
+      'Nhận xét gần nhất của giáo viên?',
+      'Lịch kiểm tra sắp tới?'
+    ];
+  }
+  if (/nhận xét|thầy|cô|giáo viên|dặn/i.test(t)) {
+    return [
+      'Bài tập liên quan môn đó còn hạn nào?',
+      'Điểm môn đó thế nào?',
+      'Có họp phụ huynh sắp tới không?',
+      'Lịch học hôm nay?'
+    ];
+  }
+  const pools = [
+    ['Tuần này còn bài tập nào chưa làm?', 'Hôm nay ăn gì ở trường?', 'Lịch học hôm nay thế nào?', 'Có nhận xét mới từ giáo viên không?', 'Học phí kỳ này đã đủ chưa?'],
+    ['Điểm các môn gần nhất?', 'Hưng có hoạt động CLB nào hôm nay?', 'Thông báo nhà trường mới nhất?', 'Chuyên cần tuần này ra sao?', 'Sự kiện hay ngày nghỉ sắp tới?'],
+    ['Bài kiểm tra sắp tới môn nào?', 'Cần mang đồ gì ngày mai?', 'Đón con có đổi giờ không?', 'Phí dịch vụ bán trú còn gì cần đóng?', 'Đăng ký ngoại khóa còn hạn không?']
+  ];
+  const idx = __aiFollowUpPoolRotate % pools.length;
+  __aiFollowUpPoolRotate += 1;
+  return pools[idx];
+}
+
+function renderAiChatFollowUp(lastUserText) {
+  __lastUserQueryForFollowUp = lastUserText || '';
+  const bar = document.getElementById('aiChatFollowUpBar');
+  const row = document.getElementById('aiChatFollowUpRow');
+  if (!bar || !row) return;
+  const qs = pickFollowUpQueries(lastUserText);
+  row.innerHTML = '';
+  qs.forEach((q) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'ai-chat-followup-chip';
+    b.setAttribute('role', 'listitem');
+    const label = q.length > 48 ? q.slice(0, 46) + '…' : q;
+    b.textContent = label;
+    b.title = q;
+    b.onclick = () => sendFollowUpTip(q);
+    row.appendChild(b);
+  });
+  bar.style.display = 'block';
+}
+
+function openReportModal(btn) {
+  __reportTriggerBtn = btn;
+  const form = document.getElementById('reportModalForm');
+  if (form) form.reset();
+  const ov = document.getElementById('reportModalOverlay');
+  if (ov) {
+    ov.classList.add('is-open');
+    ov.setAttribute('aria-hidden', 'false');
+  }
+}
+
+function closeReportModal() {
+  const ov = document.getElementById('reportModalOverlay');
+  if (ov) {
+    ov.classList.remove('is-open');
+    ov.setAttribute('aria-hidden', 'true');
+  }
+  __reportTriggerBtn = null;
+}
+
+function submitReportModal(ev) {
+  ev.preventDefault();
+  const form = ev.target;
+  const fd = new FormData(form);
+  const reason = fd.get('reportReason');
+  if (!reason) {
+    window.alert('Vui lòng chọn một lý do báo cáo.');
+    return false;
+  }
+  const detailEl = document.getElementById('reportModalDetail');
+  const detail = detailEl ? (detailEl.value || '').trim() : '';
+  if (reason === 'other' && detail.length < 8) {
+    window.alert('Với lý do «Lý do khác», vui lòng mô tả thêm ít nhất 8 ký tự.');
+    return false;
+  }
+  const trigger = __reportTriggerBtn;
+  const stack = trigger && trigger.closest('.bubble-ai-stack');
+  const bubble = stack ? stack.querySelector('.bubble-ai') : null;
+  const preview = bubble ? (bubble.innerText || '').trim().slice(0, 160) : '';
+  console.log('[Vin-Assistant report prototype]', { reason, detail, preview });
+  window.alert(
+    'Cảm ơn bạn đã gửi báo cáo. Đội ngũ sẽ xem xét nội dung này.\n\n(Prototype — chưa gửi lên máy chủ.)'
+  );
+  if (trigger) {
+    trigger.disabled = true;
+    trigger.style.opacity = '0.45';
+    trigger.title = 'Đã gửi báo cáo';
+  }
+  closeReportModal();
+  return false;
+}
+
+/** Thanh công cụ dưới bubble AI — gọi khi app chèn tin trả lời từ API (đặt ngay sau `.bubble-ai`). */
+function aiMsgActionsHtml() {
+  return '<div class="ai-msg-actions" role="toolbar" aria-label="Phản hồi tin nhắn AI">' +
+    '<button type="button" class="ai-act-like" onclick="toggleAiLike(this)" title="Hữu ích" aria-label="Hữu ích">👍</button>' +
+    '<button type="button" class="ai-act-dislike" onclick="toggleAiDislike(this)" title="Không hữu ích" aria-label="Không hữu ích">👎</button>' +
+    '<button type="button" class="ai-act-retry" onclick="retryAiMessage(this)" title="Thử lại" aria-label="Thử lại">↻</button>' +
+    '<button type="button" class="ai-act-copy" onclick="copyAiMessage(this)" title="Sao chép" aria-label="Sao chép">⎘</button>' +
+    REPORT_FLAG_BTN_HTML +
+    '</div>';
+}
+window.aiMsgActionsHtml = aiMsgActionsHtml;
+
+function escapeHtmlProto(s) {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function appendVinAssistantReplyBubble(innerHtml) {
+  var wrap = document.getElementById('aiChatWrap');
+  var typing = document.getElementById('typingIndicator');
+  if (!wrap) return;
+  var ab = document.createElement('div');
+  ab.className = 'bubble-ai-wrap';
+  ab.innerHTML =
+    '<div class="bubble-ai-avatar">🤖</div><div class="bubble-ai-stack"><div class="bubble-ai">' +
+    innerHtml +
+    '</div>' +
+    aiMsgActionsHtml() +
+    '</div>';
+  wrap.insertBefore(ab, typing);
+  wrap.scrollTop = wrap.scrollHeight;
+}
+
+function toggleAiLike(btn) {
+  btn.classList.toggle('active');
+  const row = btn.closest('.ai-msg-actions');
+  if (btn.classList.contains('active') && row) {
+    const d = row.querySelector('.ai-act-dislike');
+    if (d) d.classList.remove('active');
+  }
+}
+
+function toggleAiDislike(btn) {
+  btn.classList.toggle('active');
+  const row = btn.closest('.ai-msg-actions');
+  if (btn.classList.contains('active') && row) {
+    const l = row.querySelector('.ai-act-like');
+    if (l) l.classList.remove('active');
+  }
+}
+
+function copyAiMessage(btn) {
+  const stack = btn.closest('.bubble-ai-stack');
+  if (!stack) return;
+  const bubble = stack.querySelector('.bubble-ai');
+  if (!bubble) return;
+  const text = (bubble.innerText || '').trim();
+  const done = () => {
+    btn.classList.add('copied');
+    const prev = btn.textContent;
+    btn.textContent = '✓';
+    setTimeout(() => {
+      btn.textContent = prev;
+      btn.classList.remove('copied');
+    }, 1400);
+  };
+  const fallbackCopy = () => {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done).catch(() => { fallbackCopy(); done(); });
+  } else {
+    fallbackCopy();
+    done();
+  }
+}
+
+function retryAiMessage(btn) {
+  const aiWrap = btn.closest('.bubble-ai-wrap');
+  if (!aiWrap) return;
+  const wrap = document.getElementById('aiChatWrap');
+  const typing = document.getElementById('typingIndicator');
+  let prev = aiWrap.previousElementSibling;
+  while (prev && !prev.classList.contains('bubble-user')) prev = prev.previousElementSibling;
+  const q = prev && prev.textContent ? prev.textContent.trim() : '';
+  /* Không xoá bubble nếu không có tin người dùng phía trước (vd. lời chào mở đầu) */
+  if (!q) return;
+  aiWrap.remove();
+  if (!wrap) return;
+  if (typing) typing.style.display = 'flex';
+  wrap.scrollTop = wrap.scrollHeight;
+  setTimeout(() => {
+    if (typing) typing.style.display = 'none';
+    appendVinAssistantReplyBubble(
+      'Đang xử lý lại theo câu hỏi của anh/chị. Khi tích hợp đầy đủ, nội dung sẽ lấy từ backend / RAG.' +
+        '<div class="ai-source-badge" style="margin-top:8px;">🔁 Theo: ' +
+        escapeHtmlProto(q.length > 100 ? q.slice(0, 100) + '…' : q) +
+        '</div>'
+    );
+    renderAiChatFollowUp(q);
+  }, 900);
+}
+
+// AI chat: simulate sending a message
+function sendMsg(text) {
+  if (!text || !text.trim()) return;
+  hideAiChatParentTips();
+  __aiChatExchangeCount += 1;
+  const trimmed = text.trim();
+  const wrap = document.getElementById('aiChatWrap');
+  const typing = document.getElementById('typingIndicator');
+  // Add user bubble
+  const ub = document.createElement('div');
+  ub.className = 'bubble-user';
+  ub.textContent = trimmed;
+  wrap.insertBefore(ub, typing);
+  document.getElementById('chatInput').value = '';
+  // Show typing, then AI fallback reply
+  if (typing) typing.style.display = 'flex';
+  wrap.scrollTop = wrap.scrollHeight;
+  setTimeout(() => {
+    if (typing) typing.style.display = 'none';
+    appendVinAssistantReplyBubble(
+      'Mình đã nhận câu hỏi. <strong>Bản prototype HTML</strong> chưa nối API: câu trả lời thật (RAG / Gemini / dữ liệu app) sẽ hiển thị ở đây sau khi tích hợp.' +
+        '<div class="ai-source-badge" style="margin-top:8px;">💬 Đã nhận: ' +
+        escapeHtmlProto(trimmed.length > 120 ? trimmed.slice(0, 120) + '…' : trimmed) +
+        '</div>'
+    );
+    renderAiChatFollowUp(trimmed);
+  }, 1200);
+}
+
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.getElementById('screenWrap').scrollTop = 0;
+  document.getElementById('appHeader').style.display = MAIN.includes(id) ? 'flex' : 'none';
+  if (id === 'page-ai-chat' && __aiChatExchangeCount > 0) {
+    renderAiChatFollowUp(__lastUserQueryForFollowUp);
+  }
+}
+function switchTab(tab) {
+  const id = TAB_MAP[tab]; hist = []; cur = id; showPage(id);
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('nav-' + tab).classList.add('active');
+}
+function goTo(id) { hist.push(cur); cur = id; showPage(id); }
+
+/** Gõ trên trang chủ → chỉ khi gửi mới chuyển sang Vin-Assistant chat */
+function submitHomeAiQuestion() {
+  var homeInp = document.getElementById('homeAiChatInput');
+  if (!homeInp) return;
+  var text = (homeInp.value || '').trim();
+  if (!text) return;
+  homeInp.value = '';
+  goTo('page-ai-chat');
+  sendMsg(text);
+  requestAnimationFrame(function () {
+    var ci = document.getElementById('chatInput');
+    if (ci) ci.focus();
+  });
+}
+function goBack() { if (hist.length) { cur = hist.pop(); showPage(cur); } }
+
+function switchHwTab(t) {
+  document.getElementById('hwtab-todo').className = 'hw-tab' + (t==='todo'?' active':'');
+  document.getElementById('hwtab-all').className  = 'hw-tab' + (t==='all'?' active':'');
+  document.getElementById('hw-todo').style.display = t==='todo' ? 'block':'none';
+  document.getElementById('hw-all').style.display  = t==='all'  ? 'block':'none';
+}
+function switchTuition(t) {
+  ['hk1','cn'].forEach(k => {
+    const active = k === t;
+    document.getElementById('tutab-'+k).className = 'tu-tab' + (active?' active':'');
+    document.getElementById('tu-'+k).style.display = active ? 'block':'none';
+  });
+}
+function toggleAtt(id) {
+  const el = document.getElementById(id);
+  const arr = document.getElementById('arr-'+id);
+  if (!el) return;
+  const open = el.style.display !== 'none';
+  el.style.display = open ? 'none' : 'block';
+  if (arr) arr.textContent = open ? '∨' : '∧';
+}
+showPage('page-home');
+if (typeof initPrototypeFromRag === 'function') initPrototypeFromRag();
+</script>
+</body>
+</html>
