@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>VinSchool One</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  background: #b0bcd0;
+  display: flex; justify-content: center; align-items: flex-start;
+  min-height: 100vh; padding: 20px 0;
+}
+.app {
+  width: 390px; height: 844px; background: #f5f6fa;
+  position: relative; display: flex; flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  border-radius: 44px;
+}
+/* ── Status Bar ── */
+.status-bar {
+  background: #0F2E96; color: white;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 22px 6px; font-size: 13px; font-weight: 600;
+  flex-shrink: 0;
+}
+/* ── Main App Header ── */
+.app-header {
+  background: linear-gradient(160deg,#0F2E96 0%,#1B4FD8 100%);
+  color: white; padding: 8px 16px 10px;
+  display: flex; align-items: center; gap: 10px; flex-shrink: 0;
+}
+.hdr-logo {
+  width: 34px; height: 34px; border-radius: 50%; background: white;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 8px; font-weight: 900; color: #0F2E96; text-align: center; line-height: 1.1;
+  flex-shrink: 0;
+}
+.hdr-info { flex: 1; }
+.hdr-name { font-size: 14px; font-weight: 700; }
+.hdr-id   { font-size: 11px; opacity: .8; margin-top: 1px; }
+.hdr-avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: rgba(255,255,255,.2); border: 2px solid rgba(255,255,255,.5);
+  display: flex; align-items: center; justify-content: center; font-size: 18px;
+}
+/* ── Sub-screen header ── */
+.sub-header {
+  background: linear-gradient(160deg,#0F2E96 0%,#1B4FD8 100%);
+  color: white; padding: 10px 16px;
+  display: flex; align-items: center; gap: 8px; flex-shrink: 0;
+}
+.sub-back { font-size: 22px; cursor: pointer; padding: 0 4px; line-height: 1; }
+.sub-title { flex: 1; text-align: center; font-size: 15px; font-weight: 700; margin-right: 30px; }
+/* ── Screen wrap ── */
+.screen-wrap { flex: 1; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; }
+.screen-wrap::-webkit-scrollbar { display: none; }
+/* ── Bottom nav ── */
+.bottom-nav {
+  background: white; border-top: 1px solid #e5e7eb;
+  display: flex; padding: 8px 0 18px; flex-shrink: 0;
+}
+.nav-item {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; gap: 3px; cursor: pointer; padding: 4px 0;
+}
+.nav-icon  { font-size: 20px; line-height: 1; }
+.nav-label { font-size: 10px; color: #9ca3af; }
+.nav-item.active .nav-label { color: #1B4FD8; font-weight: 600; }
+/* ── Pages ── */
+.page { display: none; flex-direction: column; }
+.page.active { display: flex; }
+/* ── Generic card ── */
+.card {
+  background: white; border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.08); margin: 8px 14px; overflow: hidden;
+}
+/* ── Divider ── */
+.divider { height: 8px; background: #f3f4f6; flex-shrink: 0; }
+
+/* ════════════ HOME ════════════ */
+.smart-banner {
+  background: linear-gradient(135deg,#0F2E96,#2563EB);
+  margin: 10px 14px; border-radius: 12px; padding: 14px 16px;
+  color: white; position: relative; overflow: hidden;
+}
+.smart-banner::after {
+  content:''; position:absolute; right:-16px; top:-16px;
+  width:80px; height:80px; background:rgba(255,255,255,.08); border-radius:50%;
+}
+.smart-banner .lbl { font-size:10px; font-weight:700; letter-spacing:.5px; opacity:.8; }
+.smart-banner .ttl { font-size:14px; font-weight:700; margin:3px 0; }
+.smart-banner .dsc { font-size:12px; opacity:.85; line-height:1.4; }
+
+.notif-row { background:white; padding:12px 14px; border-bottom:1px solid #f9fafb; display:flex; gap:10px; cursor:pointer; }
+.notif-ico  { width:40px; height:40px; border-radius:50%; background:#eff6ff; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; }
+.notif-body { flex:1; min-width:0; }
+.notif-title { font-size:12.5px; font-weight:600; color:#111827; line-height:1.3; }
+.notif-desc  { font-size:12px; color:#6b7280; margin-top:2px; line-height:1.35; }
+.notif-date  { font-size:11px; color:#9ca3af; margin-top:4px; }
+.notif-dot   { width:8px; height:8px; border-radius:50%; background:#3b82f6; flex-shrink:0; margin-top:6px; }
+
+/* ════════════ STUDENT HUB ════════════ */
+.hub-top {
+  background:linear-gradient(160deg,#0F2E96,#1B4FD8); padding:12px 16px;
+  display:flex; gap:10px;
+}
+.hub-top-btn {
+  flex:1; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.3);
+  border-radius:10px; padding:10px 8px; text-align:center;
+  color:white; font-size:11.5px; font-weight:600; cursor:pointer; line-height:1.3;
+}
+.hub-section { padding:14px; }
+.hub-section-title { font-size:13px; font-weight:700; color:#374151; margin-bottom:12px; }
+.hub-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+.hub-item { display:flex; flex-direction:column; align-items:center; gap:5px; cursor:pointer; }
+.hub-item:active { opacity:.7; }
+.hub-icon { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:22px; }
+.hub-label { font-size:10.5px; color:#374151; text-align:center; line-height:1.25; font-weight:500; }
+
+/* ════════════ SCHEDULE ════════════ */
+.week-strip {
+  background:linear-gradient(160deg,#0F2E96,#1B4FD8); color:white;
+  padding:10px 14px 14px;
+}
+.week-strip .month-row { display:flex; align-items:center; justify-content:center; gap:12px; font-size:14px; font-weight:700; margin-bottom:10px; }
+.week-strip .days { display:flex; }
+.day-cell { flex:1; text-align:center; padding:2px; cursor:pointer; }
+.day-cell .dn { font-size:10px; opacity:.7; }
+.day-cell .dd {
+  width:28px; height:28px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:13px; font-weight:600; margin:2px auto 0;
+}
+.day-cell.today .dd { background:white; color:#0F2E96; }
+
+.per-tabs { display:flex; background:white; border-bottom:1px solid #e5e7eb; }
+.per-tab { flex:1; text-align:center; padding:10px; font-size:12.5px; font-weight:600; color:#6b7280; cursor:pointer; border-bottom:2px solid transparent; }
+.per-tab.active { color:#1B4FD8; border-bottom-color:#1B4FD8; }
+
+.period-card {
+  background:white; border-left:4px solid #1B4FD8;
+  padding:10px 12px; margin:6px 12px; border-radius:0 10px 10px 0;
+  box-shadow:0 1px 3px rgba(0,0,0,.07);
+}
+.period-card .top { display:flex; align-items:center; gap:6px; }
+.per-num {
+  width:20px; height:20px; border-radius:50%; background:#1B4FD8; color:white;
+  font-size:10px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;
+}
+.per-subj { font-size:13px; font-weight:700; color:#111827; flex:1; }
+.per-time { font-size:11px; color:#6b7280; }
+.per-details { padding-left:26px; margin-top:3px; }
+.per-room, .per-teacher { font-size:11.5px; color:#6b7280; }
+.break-row { text-align:center; font-size:11px; color:#9ca3af; padding:6px; font-style:italic; }
+
+/* ════════════ HOMEWORK ════════════ */
+.hw-tabs { display:flex; background:white; border-bottom:1px solid #e5e7eb; }
+.hw-tab { flex:1; text-align:center; padding:11px; font-size:13px; font-weight:600; color:#6b7280; cursor:pointer; border-bottom:2px solid transparent; }
+.hw-tab.active { color:#1B4FD8; border-bottom-color:#1B4FD8; }
+.hw-week-nav {
+  display:flex; align-items:center; justify-content:center; gap:16px;
+  padding:9px; background:white; border-bottom:1px solid #f3f4f6;
+  font-size:13px; font-weight:600; color:#374151;
+}
+.hw-week-nav .arr { font-size:18px; color:#6b7280; cursor:pointer; }
+.subj-tag {
+  display:inline-block; padding:2px 9px; border-radius:10px;
+  font-size:10.5px; font-weight:700; background:#fef3c7; color:#92400e; margin-bottom:5px;
+}
+.subj-tag.blue { background:#dbeafe; color:#1e40af; }
+.subj-tag.green { background:#d1fae5; color:#065f46; }
+.hw-item { background:white; padding:11px 14px; border-bottom:1px solid #f3f4f6; }
+.hw-name { font-size:13.5px; font-weight:600; color:#111827; }
+.hw-meta { display:flex; justify-content:space-between; margin-top:5px; }
+.hw-status { font-size:11.5px; color:#6b7280; display:flex; align-items:center; gap:4px; }
+.hw-score  { font-size:11.5px; color:#6b7280; font-weight:600; }
+.sdot { width:8px; height:8px; border-radius:50%; display:inline-block; }
+.sdot.done { background:#22c55e; } .sdot.pending { background:#f59e0b; } .sdot.undone { background:#ef4444; }
+
+/* ════════════ ATTENDANCE ════════════ */
+.att-date-bar {
+  background:white; display:flex; align-items:center; gap:10px;
+  padding:11px 14px; border-bottom:1px solid #f3f4f6; font-size:13px; color:#374151; font-weight:500;
+}
+.att-summary {
+  background:white; display:flex; gap:10px; padding:14px;
+  margin:10px 14px; border-radius:12px; box-shadow:0 1px 4px rgba(0,0,0,.08);
+}
+.att-stat { flex:1; text-align:center; }
+.att-num {
+  width:36px; height:36px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:16px; font-weight:700; margin:0 auto 4px;
+}
+.att-lbl { font-size:10px; color:#6b7280; }
+.on-time { background:#d1fae5; color:#065f46; }
+.late-cl { background:#fef3c7; color:#92400e; }
+.abs-ok  { background:#dbeafe; color:#1e40af; }
+.abs-no  { background:#fee2e2; color:#991b1b; }
+
+.att-day { background:white; margin:5px 14px; border-radius:10px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.07); }
+.att-day-hdr {
+  padding:11px 14px; display:flex; align-items:center; justify-content:space-between;
+  cursor:pointer; font-size:13px; font-weight:600; color:#374151;
+}
+.att-badge { font-size:10.5px; padding:2px 8px; border-radius:8px; font-weight:500; }
+.att-badge.ok { background:#d1fae5; color:#065f46; }
+.att-badge.lt { background:#fef3c7; color:#92400e; }
+.att-row {
+  display:flex; justify-content:space-between; padding:7px 14px;
+  font-size:11.5px; color:#6b7280; border-bottom:1px solid #f9fafb;
+}
+.att-row:last-child { border-bottom:none; }
+.att-ok { color:#22c55e; font-weight:600; }
+.att-lt { color:#f59e0b; font-weight:600; }
+
+/* ════════════ COMMENTS ════════════ */
+.cmt-date-bar {
+  background:white; display:flex; align-items:center; gap:10px;
+  padding:11px 14px; border-bottom:1px solid #f3f4f6; font-size:13px; font-weight:600; color:#374151;
+}
+.cmt-card { background:white; margin:7px 14px; border-radius:12px; padding:13px; box-shadow:0 1px 4px rgba(0,0,0,.08); }
+.cmt-hdr { display:flex; align-items:flex-start; gap:10px; margin-bottom:8px; }
+.cmt-avatar {
+  width:38px; height:38px; border-radius:50%;
+  background:#dbeafe; display:flex; align-items:center; justify-content:center; font-size:17px; flex-shrink:0;
+}
+.cmt-tname { font-size:12.5px; font-weight:700; color:#111827; }
+.cmt-sub   { font-size:11px; color:#6b7280; }
+.cmt-date  { font-size:11px; color:#9ca3af; margin-left:auto; white-space:nowrap; }
+.cmt-text  { font-size:12.5px; color:#374151; line-height:1.5; }
+.cmt-more  { font-size:12px; color:#3b82f6; margin-top:5px; cursor:pointer; }
+.cmt-action { display:flex; gap:16px; margin-top:9px; padding-top:9px; border-top:1px solid #f3f4f6; }
+.cmt-action span { font-size:12px; color:#6b7280; cursor:pointer; }
+
+/* ════════════ MENU ════════════ */
+.meal-section { padding:10px 14px 4px; }
+.meal-lbl {
+  display:inline-flex; align-items:center; gap:6px;
+  padding:4px 12px; border-radius:16px; font-size:12.5px; font-weight:700; margin-bottom:8px;
+}
+.meal-lbl.lunch { background:#fef3c7; color:#92400e; }
+.meal-lbl.snack { background:#fef9c3; color:#713f12; }
+.meal-item {
+  background:white; padding:9px 12px; border-radius:9px;
+  display:flex; justify-content:space-between; align-items:center;
+  margin-bottom:5px; box-shadow:0 1px 2px rgba(0,0,0,.06);
+}
+.meal-name { font-size:12.5px; color:#374151; }
+.meal-cal  { font-size:12px; color:#6b7280; font-weight:600; }
+
+/* ════════════ TUITION ════════════ */
+.tuition-year-nav {
+  background:white; padding:11px 14px;
+  display:flex; align-items:center; justify-content:center; gap:10px;
+  border-bottom:1px solid #f3f4f6;
+}
+.year-badge { background:#f9fafb; border:1px solid #e5e7eb; border-radius:18px; padding:6px 18px; font-size:13px; font-weight:600; color:#374151; }
+.tuition-card-wrap { background:white; margin:12px 14px; border-radius:12px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,.08); }
+.tuition-card-top { padding:14px; display:flex; justify-content:space-between; align-items:center; }
+.tuition-pay-btn { background:#1B4FD8; color:white; border:none; border-radius:8px; padding:8px 18px; font-size:12.5px; font-weight:700; cursor:pointer; }
+.tuition-deadline { background:#fef3c7; padding:9px 14px; display:flex; align-items:center; gap:8px; font-size:12.5px; color:#92400e; font-weight:500; }
+
+.tu-tabs { display:flex; padding:10px 14px; gap:10px; background:white; border-bottom:1px solid #f3f4f6; }
+.tu-tab {
+  flex:1; text-align:center; padding:7px; border:2px solid #e5e7eb; border-radius:18px;
+  font-size:13px; font-weight:600; color:#6b7280; cursor:pointer;
+}
+.tu-tab.active { border-color:#1B4FD8; color:#1B4FD8; }
+.tu-stu { background:white; padding:12px 14px; border-bottom:1px solid #f3f4f6; }
+.tu-stu .sn { font-size:14px; font-weight:700; }
+.tu-stu .si { font-size:12px; color:#6b7280; }
+.fee-row { background:white; padding:10px 14px; display:flex; justify-content:space-between; border-bottom:1px solid #f9fafb; }
+.fee-name { font-size:12.5px; color:#374151; flex:1; padding-right:8px; }
+.fee-amt  { font-size:12.5px; font-weight:600; color:#ef4444; white-space:nowrap; }
+.fee-total { background:#f9fafb; padding:12px 14px; display:flex; justify-content:space-between; font-size:14px; font-weight:700; }
+.fee-discount { background:white; padding:8px 14px; display:flex; justify-content:space-between; font-size:12px; color:#374151; border-bottom:1px solid #f9fafb; }
+.fee-disc-amt { color:#ef4444; font-weight:600; }
+
+/* ════════════ RESULTS ════════════ */
+.result-row { background:white; padding:12px 14px; border-bottom:1px solid #f3f4f6; }
+.result-subj { font-size:13.5px; font-weight:700; color:#111827; margin-bottom:5px; }
+.result-grades { display:flex; flex-wrap:wrap; gap:6px; }
+.gb { padding:3px 9px; border-radius:7px; font-size:11.5px; font-weight:700; }
+.gb-a   { background:#d1fae5; color:#065f46; }
+.gb-b   { background:#dbeafe; color:#1e40af; }
+.gb-htt { background:#ede9fe; color:#5b21b6; }
+.gb-ht  { background:#fef3c7; color:#92400e; }
+.result-cmt { font-size:11.5px; color:#6b7280; margin-top:4px; line-height:1.4; }
+
+/* ════════════ CONTACTS ════════════ */
+.contact-row { background:white; padding:11px 14px; border-bottom:1px solid #f3f4f6; display:flex; align-items:center; gap:11px; }
+.contact-ava { width:42px; height:42px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:17px; flex-shrink:0; }
+.contact-info { flex:1; }
+.contact-name  { font-size:13.5px; font-weight:600; color:#111827; }
+.contact-roles { font-size:11.5px; color:#6b7280; margin-top:2px; }
+.contact-btns  { display:flex; gap:6px; }
+.cta-btn { width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:15px; border:none; cursor:pointer; }
+.cta-btn.call { background:#d1fae5; }
+.cta-btn.chat { background:#dbeafe; }
+.cta-btn.mail { background:#fef3c7; }
+
+/* ════════════ ACCOUNT ════════════ */
+.acc-hdr { background:linear-gradient(160deg,#0F2E96,#1B4FD8); padding:24px 14px 20px; text-align:center; color:white; }
+.acc-ava { width:68px; height:68px; border-radius:50%; background:rgba(255,255,255,.2); border:3px solid rgba(255,255,255,.5); display:flex; align-items:center; justify-content:center; font-size:34px; margin:0 auto 10px; }
+.acc-name { font-size:17px; font-weight:700; }
+.acc-menu-item { background:white; padding:13px 16px; display:flex; align-items:center; gap:11px; border-bottom:1px solid #f3f4f6; cursor:pointer; }
+.acc-menu-ico { width:34px; height:34px; border-radius:9px; display:flex; align-items:center; justify-content:center; font-size:17px; flex-shrink:0; }
+.acc-menu-txt { flex:1; font-size:13.5px; color:#374151; font-weight:500; }
+.acc-menu-arr { color:#d1d5db; font-size:14px; }
+
+/* ════════════ CHAT ════════════ */
+.chat-search { background:white; padding:9px 14px; border-bottom:1px solid #f3f4f6; }
+.chat-search input { width:100%; background:#f3f4f6; border:none; border-radius:18px; padding:7px 14px; font-size:13px; outline:none; }
+.chat-section-lbl { padding:10px 14px 5px; font-size:11px; font-weight:700; color:#6b7280; letter-spacing:.4px; }
+.chat-row { background:white; padding:11px 14px; display:flex; align-items:center; gap:11px; border-bottom:1px solid #f3f4f6; cursor:pointer; }
+.chat-ava { width:42px; height:42px; border-radius:11px; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; color:white; flex-shrink:0; }
+.chat-name    { font-size:13.5px; font-weight:600; color:#111827; }
+.chat-preview { font-size:12px; color:#9ca3af; margin-top:2px; }
+</style>
+</head>
+<body>
+<div class="app">
+
+<!-- STATUS BAR -->
+<div class="status-bar">
+  <span style="font-size:15px;font-weight:700">09:09</span>
+  <span style="font-size:12px">▪▪▪ ≋ 86%</span>
+</div>
+
+<!-- MAIN HEADER -->
+<div class="app-header" id="appHeader">
+  <div class="hdr-logo">VIN<br>SCHOOL</div>
+  <div class="hdr-info">
+    <div class="hdr-name">Nguyễn Hưng</div>
+    <div class="hdr-id">VS108245 ▾</div>
+  </div>
+  <div class="hdr-avatar">👦</div>
+</div>
+
+<!-- SCREEN WRAP -->
+<div class="screen-wrap" id="screenWrap">
+
+<!-- ══════════════════════ HOME ══════════════════════ -->
+<div class="page active" id="page-home">
+  <div class="smart-banner">
+    <div class="lbl">🎓 VIN-ASSISTANT · THỨ 5, 09/04/2026</div>
+    <div class="ttl">Hưng có 3 bài tập chưa làm tuần này</div>
+    <div class="dsc">Hạn nộp gần nhất: Quiz TV Tuần 26 — hôm nay! Nhấn để xem chi tiết.</div>
+  </div>
+  <div class="card" style="margin-top:0;border-radius:0;box-shadow:none;">
+    <div class="notif-row">
+      <div class="notif-ico">🏫</div>
+      <div class="notif-body">
+        <div class="notif-title">Mời Phụ Huynh tham dự thực hiện khảo sát: KHẢO SÁT PHHS VỀ VIỆC THAM GIA HOẠT ĐỘNG TRẢI NGHIỆM XEM PHIM KHỐI 5</div>
+        <div class="notif-desc">Kính gửi các Bố Mẹ, Nhà trường trân trọng kính mời Phụ Huynh tham gia...</div>
+        <div class="notif-date">06/04/2026</div>
+      </div>
+      <div class="notif-dot"></div>
+    </div>
+    <div class="notif-row">
+      <div class="notif-ico">🏫</div>
+      <div class="notif-body">
+        <div class="notif-title">Mời Phụ huynh tham gia hoạt động trải nghiệm và chuyến đi Bảo tàng đường Hồ Chí Minh</div>
+        <div class="notif-desc">NOTICE: INVITES parents to attend and JOIN...</div>
+        <div class="notif-date">31/03/2026</div>
+      </div>
+      <div class="notif-dot"></div>
+    </div>
+    <div class="notif-row">
+      <div class="notif-ico">📝</div>
+      <div class="notif-body">
+        <div class="notif-title">Nguyễn Hưng có một nhận xét/dặn dò ngày 29/03/2026</div>
+        <div class="notif-desc">Cô đã chấm và trả lại các phiếu bài tập tuần này của con, thầy nhận xét rất kỹ...</div>
+        <div class="notif-date">29/03/2026</div>
+      </div>
+    </div>
+    <div class="notif-row">
+      <div class="notif-ico">📝</div>
+      <div class="notif-body">
+        <div class="notif-title">Nguyễn Hưng có một nhận xét/dặn dò ngày 26/03/2026</div>
+        <div class="notif-desc">Hôm nay cô gặp Hưng và chuyền bóng, con đại đội thuần thục...</div>
+        <div class="notif-date">26/03/2026</div>
+      </div>
+    </div>
+    <div class="notif-row">
+      <div class="notif-ico">🏆</div>
+      <div class="notif-body">
+        <div class="notif-title">Nguyễn Hưng đã được chấm/cập nhật điểm bài tập môn CIE ESL, ngày 25/03/2026</div>
+        <div class="notif-desc">Reading Comprehension Task: 9/10 Điểm</div>
+        <div class="notif-date">25/03/2026</div>
+      </div>
+    </div>
+    <div class="notif-row">
+      <div class="notif-ico">🏆</div>
+      <div class="notif-body">
+        <div class="notif-title">Nguyễn Hưng đã được chấm/cập nhật điểm bài tập môn CIE Maths, ngày 25/03/2026</div>
+        <div class="notif-desc">Fraction Practice Worksheet: 10/10 Điểm</div>
+        <div class="notif-date">25/03/2026</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════ STUDENT HUB ══════════════════════ -->
+<div class="page" id="page-student">
+  <div class="hub-top">
+    <div class="hub-top-btn" onclick="goTo('page-results')">Kết quả học tập<br>rèn luyện</div>
+    <div class="hub-top-btn" onclick="goTo('page-student-info')">Thông tin<br>sức khỏe</div>
+  </div>
+  <div class="hub-section">
+    <div class="hub-section-title">Hoạt động hằng ngày</div>
+    <div class="hub-grid">
+      <div class="hub-item" onclick="goTo('page-schedule')">
+        <div class="hub-icon" style="background:#fef3c7">📅</div>
+        <div class="hub-label">Lịch học<br>Sự kiện</div>
+      </div>
+      <div class="hub-item" onclick="goTo('page-homework')">
+        <div class="hub-icon" style="background:#dbeafe">📋</div>
+        <div class="hub-label">Bài tập<br>Kiểm tra</div>
+      </div>
+      <div class="hub-item" onclick="goTo('page-attendance')">
+        <div class="hub-icon" style="background:#ede9fe">🧑‍🏫</div>
+        <div class="hub-label">Chuyên cần</div>
+      </div>
+      <div class="hub-item" onclick="goTo('page-attendance')">
+        <div class="hub-icon" style="background:#fef3c7">🙋</div>
+        <div class="hub-label">Xin nghỉ</div>
+      </div>
+      <div class="hub-item" onclick="goTo('page-comments')">
+        <div class="hub-icon" style="background:#d1fae5">💬</div>
+        <div class="hub-label">Nhận xét</div>
+      </div>
+      <div class="hub-item">
+        <div class="hub-icon" style="background:#fef3c7">⭐</div>
+        <div class="hub-label">Ngoại khóa</div>
+      </div>
+      <div class="hub-item">
+        <div class="hub-icon" style="background:#fee2e2">💊</div>
+        <div class="hub-label">Dặn thuốc</div>
+      </div>
+      <div class="hub-item" onclick="goTo('page-menu')">
+        <div class="hub-icon" style="background:#dbeafe">🍱</div>
+        <div class="hub-label">Thực đơn</div>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="hub-section">
+    <div class="hub-section-title">Dịch vụ học đường</div>
+    <div class="hub-grid">
+      <div class="hub-item"><div class="hub-icon" style="background:#eff6ff">🏫</div><div class="hub-label">SWB</div></div>
+      <div class="hub-item"><div class="hub-icon" style="background:#fef3c7">⏰</div><div class="hub-label">Thời hạn<br>Hoàn phí</div></div>
+      <div class="hub-item" onclick="goTo('page-tuition')"><div class="hub-icon" style="background:#d1fae5">💰</div><div class="hub-label">Học phí</div></div>
+      <div class="hub-item"><div class="hub-icon" style="background:#dbeafe">📊</div><div class="hub-label">Khảo sát</div></div>
+      <div class="hub-item"><div class="hub-icon" style="background:#fef3c7">🚌</div><div class="hub-label">Xe buýt</div></div>
+      <div class="hub-item"><div class="hub-icon" style="background:#ede9fe">👕</div><div class="hub-label">Đồng phục</div></div>
+      <div class="hub-item"><div class="hub-icon" style="background:#fee2e2">📨</div><div class="hub-label">Gửi yêu cầu hỗ trợ</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════ SCHEDULE ══════════════════════ -->
+<div class="page" id="page-schedule">
+  <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title">Lịch học - Sự kiện</span></div>
+  <div class="week-strip">
+    <div class="month-row">‹ &nbsp; Tháng 4 2026 &nbsp; ›</div>
+    <div class="days">
+      <div class="day-cell"><div class="dn">T2</div><div class="dd">6</div></div>
+      <div class="day-cell"><div class="dn">T3</div><div class="dd">7</div></div>
+      <div class="day-cell"><div class="dn">T4</div><div class="dd">8</div></div>
+      <div class="day-cell today"><div class="dn">T5</div><div class="dd">9</div></div>
+      <div class="day-cell"><div class="dn">T6</div><div class="dd">10</div></div>
+      <div class="day-cell"><div class="dn">T7</div><div class="dd">11</div></div>
+      <div class="day-cell"><div class="dn">CN</div><div class="dd">12</div></div>
+    </div>
+  </div>
+  <div class="per-tabs">
+    <div class="per-tab active">📅 Lịch học</div>
+    <div class="per-tab">📌 Sự kiện</div>
+  </div>
+  <div style="padding:4px 0 12px;">
+    <div class="period-card">
+      <div class="top"><span class="per-num">1</span><span class="per-subj">CIE ESL-5B06</span><span class="per-time">08:00-08:35</span></div>
+      <div class="per-details"><div class="per-room">Phòng học: Phòng học lớp CN</div><div class="per-teacher">GV: Gareth Morton</div></div>
+    </div>
+    <div class="period-card">
+      <div class="top"><span class="per-num">2</span><span class="per-subj">Tiếng Việt-5B06</span><span class="per-time">08:35-09:10</span></div>
+      <div class="per-details"><div class="per-room">Phòng học: Phòng học lớp CN</div><div class="per-teacher">GV: Lê Thị Kim Anh</div></div>
+    </div>
+    <div class="break-row">☕ Nghỉ giữa giờ · 09:10 – 09:30</div>
+    <div class="period-card">
+      <div class="top"><span class="per-num">3</span><span class="per-subj">Giáo dục thể chất-5B06</span><span class="per-time">09:30-10:05</span></div>
+      <div class="per-details"><div class="per-room">Phòng học: Sân vận động T36</div><div class="per-teacher">GV: Vũ Trung Hiếu</div></div>
+    </div>
+    <div class="period-card">
+      <div class="top"><span class="per-num">4</span><span class="per-subj">GD Kỹ năng Phẩm chất-5B06</span><span class="per-time">10:05-10:40</span></div>
+      <div class="per-details"><div class="per-room">Phòng học: Phòng học lớp CN</div><div class="per-teacher">GV: Gareth Morton</div></div>
+    </div>
+    <div class="break-row">🍱 Nghỉ trưa · 10:40 – 12:30</div>
+    <div class="period-card">
+      <div class="top"><span class="per-num">5</span><span class="per-subj">CIE Maths-5B06</span><span class="per-time">12:30-13:05</span></div>
+      <div class="per-details"><div class="per-room">Phòng học: Phòng học lớp CN</div><div class="per-teacher">GV: Gareth Morton</div></div>
+    </div>
+    <div class="period-card">
+      <div class="top"><span class="per-num">6</span><span class="per-subj">Việt Nam học-5B06</span><span class="per-time">13:05-13:40</span></div>
+      <div class="per-details"><div class="per-room">Phòng học: Phòng học lớp CN</div><div class="per-teacher">GV: Đinh Thị Ngọc Hồi</div></div>
+    </div>
+    <div class="break-row">☕ Nghỉ giữa giờ · 13:40 – 14:00</div>
+    <div class="period-card">
+      <div class="top"><span class="per-num">7</span><span class="per-subj">CIE ICT-5B06</span><span class="per-time">14:00-14:35</span></div>
+      <div class="per-details"><div class="per-room">Phòng học: Phòng máy tính T36</div><div class="per-teacher">GV: Elanza Jurgens</div></div>
+    </div>
+    <div class="period-card">
+      <div class="top"><span class="per-num">8</span><span class="per-subj">Tự học có hướng dẫn-5B06</span><span class="per-time">14:35-15:10</span></div>
+      <div class="per-details"><div class="per-room">Phòng học: Phòng học lớp CN</div><div class="per-teacher">GV: Gareth Morton</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════ HOMEWORK ══════════════════════ -->
+<div class="page" id="page-homework">
+  <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title">Bài tập - Kiểm tra</span></div>
+  <div class="hw-tabs">
+    <div class="hw-tab active" id="hwtab-todo" onclick="switchHwTab('todo')">To do</div>
+    <div class="hw-tab" id="hwtab-all" onclick="switchHwTab('all')">Bài tập</div>
+  </div>
+  <div class="hw-week-nav">
+    <span class="arr">‹</span>
+    <span id="hwWeekLabel">06/04 – 12/04</span>
+    <span class="arr">›</span>
+  </div>
+  <!-- TO DO -->
+  <div id="hw-todo">
+    <div class="hw-item"><div class="subj-tag">5B06-TIẾNG VIỆT-ANHLTK1-TiH.T36</div><div class="hw-name">Quiz TV Tuần 26</div><div class="hw-meta"><div class="hw-status"><span class="sdot undone"></span>Chưa làm · Hạn 09/04</div><div class="hw-score">-/4 Điểm</div></div></div>
+    <div class="hw-item"><div class="subj-tag">5B06-TIẾNG VIỆT-ANHLTK1-TiH.T36</div><div class="hw-name">Quiz tuần 29</div><div class="hw-meta"><div class="hw-status"><span class="sdot pending"></span>Chưa làm · Hạn 10/04</div><div class="hw-score">-/4 Điểm</div></div></div>
+    <div class="hw-item"><div class="subj-tag">5B06-TIẾNG VIỆT-ANHLTK1-TiH.T36</div><div class="hw-name">Quiz tuần 30</div><div class="hw-meta"><div class="hw-status"><span class="sdot pending"></span>Chưa làm · Hạn 11/04</div><div class="hw-score">-/4 Điểm</div></div></div>
+    <div class="hw-item"><div class="subj-tag blue">CIE ICT</div><div class="hw-name">Unit 5 Project score</div><div class="hw-meta"><div class="hw-status"><span class="sdot pending"></span>Chưa hoàn thành · Hạn 12/04</div><div class="hw-score">-</div></div></div>
+  </div>
+  <!-- ALL -->
+  <div id="hw-all" style="display:none">
+    <div class="hw-item"><div class="subj-tag blue">CIE Maths-5B06</div><div class="hw-name">Fraction Practice Worksheet</div><div class="hw-meta"><div class="hw-status"><span class="sdot done"></span>Đã làm</div><div class="hw-score">10/10 Điểm</div></div></div>
+    <div class="hw-item"><div class="subj-tag blue">CIE Science-5B06</div><div class="hw-name">Plant Life Cycle Quiz</div><div class="hw-meta"><div class="hw-status"><span class="sdot done"></span>Đã làm</div><div class="hw-score">8/10 Điểm</div></div></div>
+    <div class="hw-item"><div class="subj-tag blue">CIE ESL-5B06</div><div class="hw-name">Reading Comprehension Task</div><div class="hw-meta"><div class="hw-status"><span class="sdot done"></span>Đã làm</div><div class="hw-score">9/10 Điểm</div></div></div>
+    <div class="hw-item"><div class="subj-tag">5B06-TIẾNG VIỆT-ANHLTK1-TiH.T36</div><div class="hw-name">Quiz TV Tuần 26</div><div class="hw-meta"><div class="hw-status"><span class="sdot undone"></span>Chưa làm</div><div class="hw-score">-/4 Điểm</div></div></div>
+    <div class="hw-item"><div class="subj-tag">5B06-TIẾNG VIỆT-ANHLTK1-TiH.T36</div><div class="hw-name">Quiz tuần 29</div><div class="hw-meta"><div class="hw-status"><span class="sdot pending"></span>Chưa làm</div><div class="hw-score">-/4 Điểm</div></div></div>
+    <div class="hw-item"><div class="subj-tag">5B06-TIẾNG VIỆT-ANHLTK1-TiH.T36</div><div class="hw-name">Quiz tuần 30</div><div class="hw-meta"><div class="hw-status"><span class="sdot pending"></span>Chưa làm</div><div class="hw-score">-/4 Điểm</div></div></div>
+    <div class="hw-item"><div class="subj-tag blue">CIE ICT</div><div class="hw-name">Unit 5 Project score</div><div class="hw-meta"><div class="hw-status"><span class="sdot pending"></span>Chưa hoàn thành</div><div class="hw-score">-</div></div></div>
+  </div>
+</div>
+
+<!-- ══════════════════════ ATTENDANCE ══════════════════════ -->
+<div class="page" id="page-attendance">
+  <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title">Chuyên cần</span></div>
+  <div class="att-date-bar">📅 09/04/2026 – 09/04/2026</div>
+  <div class="att-summary">
+    <div class="att-stat"><div class="att-num on-time">1</div><div class="att-lbl">Đúng giờ</div></div>
+    <div class="att-stat"><div class="att-num late-cl">0</div><div class="att-lbl">Đến muộn</div></div>
+    <div class="att-stat"><div class="att-num abs-ok">0</div><div class="att-lbl">Vắng có phép</div></div>
+    <div class="att-stat"><div class="att-num abs-no">0</div><div class="att-lbl">Vắng không phép</div></div>
+  </div>
+  <div class="att-day">
+    <div class="att-day-hdr" onclick="toggleAtt('a09')">
+      <span>09/04/2026</span>
+      <span style="display:flex;align-items:center;gap:8px;">
+        <span class="att-badge ok">GV chủ nhiệm điểm danh | 08:00 - Đúng giờ</span>
+        <span id="arr-a09">∧</span>
+      </span>
+    </div>
+    <div id="a09">
+      <div class="att-row"><span>08:00-08:35 · CIE ESL-5B06</span><span class="att-ok">Đúng giờ</span></div>
+      <div class="att-row"><span>08:35-09:10 · Tiếng Việt-5B06</span><span class="att-ok">Đúng giờ</span></div>
+      <div class="att-row"><span>09:30-10:05 · Giáo dục thể chất-5B06</span><span class="att-ok">Đúng giờ</span></div>
+      <div class="att-row"><span>10:05-10:40 · GD Kỹ năng Phẩm chất-5B06</span><span class="att-ok">Đúng giờ</span></div>
+      <div class="att-row"><span>12:30-13:05 · CIE Maths-5B06</span><span class="att-ok">Đúng giờ</span></div>
+      <div class="att-row"><span>13:05-13:40 · Việt Nam học-5B06</span><span class="att-ok">Đúng giờ</span></div>
+      <div class="att-row"><span>14:00-14:35 · CIE ICT-5B06</span><span class="att-ok">Đúng giờ</span></div>
+      <div class="att-row"><span>14:35-15:10 · Tự học có hướng dẫn-5B06</span><span class="att-ok">Đúng giờ</span></div>
+    </div>
+  </div>
+  <div class="att-day">
+    <div class="att-day-hdr" onclick="toggleAtt('a08')"><span>08/04/2026</span><span id="arr-a08">∨</span></div>
+    <div id="a08" style="display:none">
+      <div class="att-row"><span>08:00-08:35 · Tiếng Việt-5B06</span><span class="att-ok">Đúng giờ</span></div>
+      <div class="att-row"><span>08:35-09:10 · CIE Maths-5B06</span><span class="att-ok">Đúng giờ</span></div>
+    </div>
+  </div>
+  <div class="att-day">
+    <div class="att-day-hdr" onclick="toggleAtt('a07')"><span>07/04/2026</span><span id="arr-a07">∨</span></div>
+    <div id="a07" style="display:none">
+      <div class="att-row"><span>08:00-08:35 · CIE ESL-5B06</span><span class="att-ok">Đúng giờ</span></div>
+      <div class="att-row"><span>08:35-09:10 · Tiếng Việt-5B06</span><span class="att-ok">Đúng giờ</span></div>
+    </div>
+  </div>
+  <div class="att-day"><div class="att-day-hdr"><span>06/04/2026</span><span>∨</span></div></div>
+  <div class="att-day"><div class="att-day-hdr"><span>04/04/2026</span><span>∨</span></div></div>
+  <div class="att-day"><div class="att-day-hdr"><span>03/04/2026</span><span>∨</span></div></div>
+  <div class="att-day"><div class="att-day-hdr"><span>02/04/2026</span><span>∨</span></div></div>
+</div>
+
+<!-- ══════════════════════ COMMENTS ══════════════════════ -->
+<div class="page" id="page-comments">
+  <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title">Nhận xét</span></div>
+  <div class="cmt-date-bar">📅 09/04/2026</div>
+  <div style="padding:6px 0 16px;">
+    <div class="cmt-card">
+      <div class="cmt-hdr"><div class="cmt-avatar">👨‍🏫</div><div><div class="cmt-tname">Phạm Ngọc Lợi - GV Câu lạc bộ Bóng đá "CHIẾN BINH SÂN CỎ" 2B K2</div><div class="cmt-sub">Sinh hoạt Chủ nhiệm</div></div><div class="cmt-date">08/04</div></div>
+      <div class="cmt-text">Kỹ năng dẫn bóng và chuyền bóng của con đã đạt độ thuần thục cao, thể hiện sự nỗ lực...</div>
+      <div class="cmt-more">Xem thêm</div>
+      <div class="cmt-action"><span>👍 1</span><span>💬 Bình luận</span></div>
+    </div>
+    <div class="cmt-card">
+      <div class="cmt-hdr"><div class="cmt-avatar">👩‍🏫</div><div><div class="cmt-tname">Lê Thị Kim Anh - GV Tiếng Việt-5B06</div><div class="cmt-sub">Tiếng Việt</div></div><div class="cmt-date">07/04</div></div>
+      <div class="cmt-text">Kính gửi bố mẹ Nguyễn Hưng. Cô ghi nhận con đã hoàn thành đầy đủ phiếu bài tập tuần này. Tuy nhiên, ở một số câu...</div>
+      <div class="cmt-more">Xem thêm</div>
+      <div class="cmt-action"><span>👍 1</span><span>💬 Bình luận</span></div>
+    </div>
+    <div class="cmt-card">
+      <div class="cmt-hdr"><div class="cmt-avatar">👩‍🏫</div><div><div class="cmt-tname">Lê Thị Kim Anh - GV Tiếng Việt-5B06</div><div class="cmt-sub">Tiếng Việt</div></div><div class="cmt-date">07/04</div></div>
+      <div class="cmt-text">Cô khen Hưng hôm nay có bài viết văn miêu tả rất giàu hình ảnh và cảm xúc. Con đã biết cách sử dụng các từ láy để làm bài văn sinh động hơn.</div>
+      <div class="cmt-action"><span>👍 1</span><span>💬 Bình luận</span></div>
+    </div>
+    <div class="cmt-card">
+      <div class="cmt-hdr"><div class="cmt-avatar">👨‍🏫</div><div><div class="cmt-tname">Gareth Morton - GV CIE Maths-5B06</div><div class="cmt-sub">CIE Maths</div></div><div class="cmt-date">07/04</div></div>
+      <div class="cmt-text">Hưng nắm vững kiến thức về diện tích và chu vi hình tròn. Con giải các bài tập nâng cao trong sách bổ trợ rất nhanh và chính xác.</div>
+      <div class="cmt-action"><span>👍 1</span><span>💬 Bình luận</span></div>
+    </div>
+    <div class="cmt-card">
+      <div class="cmt-hdr"><div class="cmt-avatar">🎨</div><div><div class="cmt-tname">Dương Thị Mỹ Hạnh - GV Mỹ thuật</div><div class="cmt-sub">Mỹ thuật</div></div><div class="cmt-date">06/04</div></div>
+      <div class="cmt-text">Con có tư duy màu sắc rất tốt trong bài vẽ chủ đề bảo vệ môi trường. Cô khuyến khích Hưng thử nghiệm thêm các chất liệu mới.</div>
+      <div class="cmt-action"><span>👍 1</span><span>💬 Bình luận</span></div>
+    </div>
+    <div class="cmt-card">
+      <div class="cmt-hdr"><div class="cmt-avatar">👩‍💻</div><div><div class="cmt-tname">Elanza Jurgens - GV CIE ICT</div><div class="cmt-sub">CIE ICT</div></div><div class="cmt-date">03/04</div></div>
+      <div class="cmt-text">Hưng đã hoàn thành dự án thiết kế thiệp trên phần mềm đồ họa. Con biết cách phối hợp các biểu tượng để thông điệp trở nên rõ ràng.</div>
+      <div class="cmt-action"><span>👍 1</span><span>💬 Bình luận</span></div>
+    </div>
+    <div class="cmt-card">
+      <div class="cmt-hdr"><div class="cmt-avatar">⚽</div><div><div class="cmt-tname">Vũ Trung Hiếu - GV GD Thể chất</div><div class="cmt-sub">GD Thể chất</div></div><div class="cmt-date">03/04</div></div>
+      <div class="cmt-text">Thầy khen Hưng có kỹ thuật dẫn bóng tiến bộ rõ rệt. Con luôn nỗ lực hết mình và có tinh thần thi đấu fair-play với đội bạn.</div>
+      <div class="cmt-action"><span>👍 1</span><span>💬 Bình luận</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════ MENU ══════════════════════ -->
+<div class="page" id="page-menu">
+  <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title">Thực đơn</span></div>
+  <div class="week-strip">
+    <div class="month-row">‹ &nbsp; Tháng 4 2026 &nbsp; ›</div>
+    <div class="days">
+      <div class="day-cell"><div class="dn">T2</div><div class="dd">6</div></div>
+      <div class="day-cell"><div class="dn">T3</div><div class="dd">7</div></div>
+      <div class="day-cell"><div class="dn">T4</div><div class="dd">8</div></div>
+      <div class="day-cell today"><div class="dn">T5</div><div class="dd">9</div></div>
+      <div class="day-cell"><div class="dn">T6</div><div class="dd">10</div></div>
+      <div class="day-cell"><div class="dn">T7</div><div class="dd">11</div></div>
+      <div class="day-cell"><div class="dn">CN</div><div class="dd">12</div></div>
+    </div>
+  </div>
+  <div class="meal-section">
+    <div class="meal-lbl lunch">🍽 Ăn trưa</div>
+    <div class="meal-item"><span class="meal-name">Thịt bò chỉ kho tàu</span><span class="meal-cal">231.74 kcal</span></div>
+    <div class="meal-item"><span class="meal-name">Đậu phụ chiên trứng muối</span><span class="meal-cal">69.6 kcal</span></div>
+    <div class="meal-item"><span class="meal-name">Bắp cải xào cà chua</span><span class="meal-cal">24.14 kcal</span></div>
+    <div class="meal-item"><span class="meal-name">Canh mướp mồng tơi nấu tôm</span><span class="meal-cal">9.95 kcal</span></div>
+    <div class="meal-item"><span class="meal-name">Cơm trắng</span><span class="meal-cal">265.93 kcal</span></div>
+    <div class="meal-item"><span class="meal-name">Thanh long trắng</span><span class="meal-cal">33.43 kcal</span></div>
+  </div>
+  <div class="meal-section" style="padding-top:12px;padding-bottom:16px;">
+    <div class="meal-lbl snack">🥤 Ăn phụ</div>
+    <div class="meal-item"><span class="meal-name">Gà chiên kiểu KFC</span><span class="meal-cal">260.46 kcal</span></div>
+  </div>
+</div>
+
+<!-- ══════════════════════ TUITION ══════════════════════ -->
+<div class="page" id="page-tuition">
+  <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title">Học phí</span></div>
+  <div class="tuition-year-nav">
+    <span style="color:#6b7280;cursor:pointer;font-size:18px;">‹</span>
+    <div class="year-badge">Học phí năm học 2026-2027</div>
+    <span style="color:#6b7280;cursor:pointer;font-size:18px;">›</span>
+  </div>
+  <div class="tuition-card-wrap">
+    <div class="tuition-card-top">
+      <span style="font-size:14px;font-weight:600;color:#111827;">Học phí năm học 2026-2027</span>
+      <button class="tuition-pay-btn" onclick="goTo('page-tuition-detail')">NỘP PHÍ</button>
+    </div>
+    <div class="tuition-deadline">⏰ Hạn nộp 01/07/2026</div>
+  </div>
+</div>
+
+<!-- ══════════════════════ TUITION DETAIL ══════════════════════ -->
+<div class="page" id="page-tuition-detail">
+  <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title">Chi tiết học phí</span></div>
+  <div class="tu-stu"><div class="sn">Họ và tên: Nguyễn Hưng</div><div class="si">Mã học sinh: VS108245</div></div>
+  <div style="background:#fef3c7;padding:9px 14px;display:flex;align-items:center;gap:8px;font-size:12.5px;color:#92400e;font-weight:500;">⏰ Hạn nộp 01/07/2026</div>
+  <div class="tu-tabs">
+    <div class="tu-tab active" id="tutab-hk1" onclick="switchTuition('hk1')">Học kỳ I</div>
+    <div class="tu-tab" id="tutab-cn" onclick="switchTuition('cn')">Cả năm</div>
+  </div>
+  <div id="tu-hk1">
+    <div class="fee-row"><span class="fee-name">Học phí chính khóa</span><span class="fee-amt">85.320.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí BHYT bắt buộc</span><span class="fee-amt">1.000.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí dịch vụ bán trú</span><span class="fee-amt">8.550.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí hoạt động trải nghiệm cả năm</span><span class="fee-amt">1.500.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí học phẩm cả năm</span><span class="fee-amt">2.700.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí phát triển trường cả năm</span><span class="fee-amt">4.200.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí DV cổng TTĐT cả năm</span><span class="fee-amt">400.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">✅ Set ĐPTC THCS Miền Bắc - Nam</span><span class="fee-amt">2.530.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">✅ Bộ sách Hệ nâng cao Khối 6 (tạm thu)</span><span class="fee-amt">4.320.000đ</span></div>
+    <div class="fee-total"><span>Số tiền</span><span>110.520.000đ</span></div>
+    <div class="fee-discount"><span>Ưu đãi dịch vụ bán trú nộp theo năm</span><span class="fee-disc-amt">- 0đ</span></div>
+    <div class="fee-discount"><span>Ưu đãi học phí nộp theo năm</span><span class="fee-disc-amt">- 0đ</span></div>
+    <div class="fee-discount"><span>Ưu đãi VINCLUB - Phí hoạt động trải nghiệm</span><span class="fee-disc-amt">- 45.000đ</span></div>
+    <div class="fee-discount"><span>Ưu đãi VINCLUB - Phí học phẩm</span><span class="fee-disc-amt">- 81.000đ</span></div>
+  </div>
+  <div id="tu-cn" style="display:none">
+    <div class="fee-row"><span class="fee-name">Học phí chính khóa</span><span class="fee-amt">180.120.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí BHYT bắt buộc</span><span class="fee-amt">1.000.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí dịch vụ bán trú</span><span class="fee-amt">18.050.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí hoạt động trải nghiệm cả năm</span><span class="fee-amt">1.500.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí học phẩm cả năm</span><span class="fee-amt">2.700.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí phát triển trường cả năm</span><span class="fee-amt">4.200.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">Phí DV cổng TTĐT cả năm</span><span class="fee-amt">400.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">✅ Set ĐPTC THCS Miền Bắc - Nam</span><span class="fee-amt">2.530.000đ</span></div>
+    <div class="fee-row"><span class="fee-name">✅ Bộ sách Hệ nâng cao Khối 6 (tạm thu)</span><span class="fee-amt">4.320.000đ</span></div>
+    <div class="fee-total"><span>Số tiền</span><span>214.820.000đ</span></div>
+    <div class="fee-discount"><span>Ưu đãi dịch vụ bán trú nộp theo năm</span><span class="fee-disc-amt">- 875.425đ</span></div>
+    <div class="fee-discount"><span>Ưu đãi học phí nộp theo năm</span><span class="fee-disc-amt">- 8.735.820đ</span></div>
+    <div class="fee-discount"><span>Ưu đãi VINCLUB - Phí hoạt động trải nghiệm</span><span class="fee-disc-amt">- 45.000đ</span></div>
+    <div class="fee-discount"><span>Ưu đãi VINCLUB - Phí học phẩm</span><span class="fee-disc-amt">- 81.000đ</span></div>
+  </div>
+</div>
+
+<!-- ══════════════════════ RESULTS ══════════════════════ -->
+<div class="page" id="page-results">
+  <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title">Kết quả học tập</span></div>
+  <div style="background:white;padding:10px 14px;border-bottom:1px solid #f3f4f6;font-size:12px;color:#6b7280;">Năm học 2025-2026 · Lớp 5B06</div>
+  <div class="result-row"><div class="result-subj">Tiếng Việt</div><div class="result-grades"><span class="gb gb-a">CK1: 9.0</span><span class="gb gb-a">GK2: 9.2</span></div><div class="result-cmt">Nắm vững kiến thức ngữ pháp, hành văn mạch lạc, giàu cảm xúc.</div></div>
+  <div class="result-row"><div class="result-subj">Lịch sử và Địa lý</div><div class="result-grades"><span class="gb gb-a">CK1: 9.0</span><span class="gb gb-a">GK2: 9.5</span></div><div class="result-cmt">Kỹ năng đọc bản đồ tốt, ghi nhớ các mốc sự kiện lịch sử chính xác.</div></div>
+  <div class="result-row"><div class="result-subj">CIE Maths</div><div class="result-grades"><span class="gb gb-a">CK1: 95% (A*)</span><span class="gb gb-a">GK2: 98% (A*)</span></div><div class="result-cmt">Tư duy logic xuất sắc, giải quyết tốt các bài toán đố phức tạp.</div></div>
+  <div class="result-row"><div class="result-subj">CIE Science</div><div class="result-grades"><span class="gb gb-a">CK1: 92% (A*)</span><span class="gb gb-a">GK2: 94% (A*)</span></div><div class="result-cmt">Quan sát tỉ mỉ trong các giờ thực hành, hiểu rõ các khái niệm khoa học.</div></div>
+  <div class="result-row"><div class="result-subj">CIE ESL</div><div class="result-grades"><span class="gb gb-b">CK1: 85% (A)</span><span class="gb gb-b">GK2: 88% (A)</span></div><div class="result-cmt">Kỹ năng Nghe - Đọc hiểu tiến bộ vượt bậc, tự tin hơn khi nói.</div></div>
+  <div class="result-row"><div class="result-subj">CIE ICT</div><div class="result-grades"><span class="gb gb-a">CK1: 94% (A*)</span><span class="gb gb-a">GK2: 95% (A*)</span></div><div class="result-cmt">Thao tác máy tính nhanh, hoàn thành xuất sắc các dự án thiết kế slide.</div></div>
+  <div class="result-row"><div class="result-subj">Việt Nam học</div><div class="result-grades"><span class="gb gb-htt">CK1: HTT</span><span class="gb gb-htt">GK2: HTT</span></div><div class="result-cmt">Tích cực tìm hiểu văn hóa, có bài thuyết trình sáng tạo về ngày Tết.</div></div>
+  <div class="result-row"><div class="result-subj">Global Perspectives</div><div class="result-grades"><span class="gb gb-b">CK1: Grade A</span><span class="gb gb-a">GK2: Grade A*</span></div><div class="result-cmt">Kỹ năng làm việc nhóm hòa hợp, tư duy phản biện ngày càng sắc bén.</div></div>
+  <div class="result-row"><div class="result-subj">Giáo dục thể chất</div><div class="result-grades"><span class="gb gb-htt">CK1: HTT</span><span class="gb gb-htt">GK2: HTT</span></div><div class="result-cmt">Thể lực tốt, nắm bắt nhanh các kỹ thuật bóng rổ và điền kinh.</div></div>
+  <div class="result-row"><div class="result-subj">Mỹ thuật</div><div class="result-grades"><span class="gb gb-htt">CK1: HTT</span><span class="gb gb-htt">GK2: HTT</span></div><div class="result-cmt">Trí tưởng tượng phong phú, phối màu hài hòa, có ý thức dọn dẹp họa cụ.</div></div>
+  <div class="result-row"><div class="result-subj">Âm nhạc</div><div class="result-grades"><span class="gb gb-ht">CK1: HT</span><span class="gb gb-htt">GK2: HTT</span></div><div class="result-cmt">Thuộc lời bài hát nhanh, bắt nhịp tốt khi gõ đệm. Tự tin hơn khi hát.</div></div>
+  <div class="result-row"><div class="result-subj">GD Kỹ năng Phẩm chất</div><div class="result-grades"><span class="gb gb-htt">CK1: HTT</span><span class="gb gb-htt">GK2: HTT</span></div><div class="result-cmt">Chấp hành tốt nội quy, biết quan tâm và hỗ trợ bạn bè trong lớp.</div></div>
+  <div class="result-row"><div class="result-subj">CLB Kỹ năng</div><div class="result-grades"><span class="gb gb-htt">CK1: HTT</span><span class="gb gb-htt">GK2: HTT</span></div><div class="result-cmt">Thể hiện được vai trò trưởng nhóm trong các hoạt động lắp ráp, tạo hình.</div></div>
+</div>
+
+<!-- ══════════════════════ STUDENT INFO ══════════════════════ -->
+<div class="page" id="page-student-info">
+  <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title">Thông tin học sinh</span></div>
+  <div class="card">
+    <div style="padding:16px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <div style="width:56px;height:56px;border-radius:50%;background:#dbeafe;display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0;">👦</div>
+        <div>
+          <div style="font-size:15px;font-weight:700;">Nguyễn Hưng <span style="color:#22c55e;font-size:13px;">✓</span></div>
+          <div style="font-size:12px;color:#6b7280;margin-top:2px;">Mã học sinh: VS108245</div>
+        </div>
+      </div>
+      <div style="border-top:1px solid #f3f4f6;padding:10px 0;display:flex;justify-content:space-between;"><span style="font-size:13px;color:#6b7280;">Trường</span><span style="font-size:13px;color:#374151;font-weight:500;text-align:right;max-width:210px;">Trường Tiểu học Vinschool Timescity T36</span></div>
+      <div style="border-top:1px solid #f3f4f6;padding:10px 0;display:flex;justify-content:space-between;"><span style="font-size:13px;color:#6b7280;">Lớp</span><span style="font-size:13px;color:#374151;font-weight:500;">5B06</span></div>
+      <div style="border-top:1px solid #f3f4f6;padding:10px 0;display:flex;justify-content:space-between;"><span style="font-size:13px;color:#6b7280;">Hệ</span><span style="font-size:13px;color:#374151;font-weight:500;">Hệ nâng cao</span></div>
+      <div style="border-top:1px solid #f3f4f6;padding:10px 0;display:flex;justify-content:space-between;"><span style="font-size:13px;color:#6b7280;">Khối</span><span style="font-size:13px;color:#374151;font-weight:500;">Khối 5</span></div>
+      <div style="border-top:1px solid #f3f4f6;padding:10px 0;display:flex;justify-content:space-between;"><span style="font-size:13px;color:#6b7280;">Địa chỉ nơi ở</span><span style="font-size:13px;color:#374151;">...</span></div>
+      <div style="border-top:1px solid #f3f4f6;padding-top:12px;text-align:center;">
+        <span style="color:#1B4FD8;font-size:13px;font-weight:600;cursor:pointer;" onclick="goTo('page-parent-info')">Thông tin phụ huynh / giám hộ</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════ PARENT INFO ══════════════════════ -->
+<div class="page" id="page-parent-info">
+  <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title">Thông tin phụ h...</span></div>
+  <div class="card">
+    <div style="padding:16px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;"><div style="width:56px;height:56px;border-radius:50%;background:#d1fae5;display:flex;align-items:center;justify-content:center;font-size:26px;">👨</div><div style="font-size:15px;font-weight:700;">Nguyễn Quốc Thắng</div></div>
+      <div style="border-top:1px solid #f3f4f6;padding:10px 0;display:flex;justify-content:space-between;"><span style="font-size:13px;color:#6b7280;">Số điện thoại</span><span style="font-size:13px;font-weight:500;">0904123456</span></div>
+      <div style="border-top:1px solid #f3f4f6;padding:10px 0;display:flex;justify-content:space-between;"><span style="font-size:13px;color:#6b7280;">Email</span><span style="font-size:13px;font-weight:500;">thang.le77@gmail.com</span></div>
+      <div style="border-top:1px solid #f3f4f6;padding:10px 0;display:flex;justify-content:space-between;"><span style="font-size:13px;color:#6b7280;">Mối quan hệ với học sinh</span><span style="font-size:13px;font-weight:500;">Bố</span></div>
+    </div>
+  </div>
+  <div class="card">
+    <div style="padding:16px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;"><div style="width:56px;height:56px;border-radius:50%;background:#fce7f3;display:flex;align-items:center;justify-content:center;font-size:26px;">👩</div><div style="font-size:15px;font-weight:700;">Vũ Thu Hà</div></div>
+      <div style="border-top:1px solid #f3f4f6;padding:10px 0;display:flex;justify-content:space-between;"><span style="font-size:13px;color:#6b7280;">Số điện thoại</span><span style="font-size:13px;font-weight:500;">0912987654</span></div>
+      <div style="border-top:1px solid #f3f4f6;padding:10px 0;display:flex;justify-content:space-between;"><span style="font-size:13px;color:#6b7280;">Email</span><span style="font-size:13px;font-weight:500;">ha.vuthu@gmail.com</span></div>
+      <div style="border-top:1px solid #f3f4f6;padding:10px 0;display:flex;justify-content:space-between;"><span style="font-size:13px;color:#6b7280;">Mối quan hệ với học sinh</span><span style="font-size:13px;font-weight:500;">Mẹ</span></div>
+    </div>
+  </div>
+  <div style="padding:14px;">
+    <button style="width:100%;padding:13px;background:#1B4FD8;color:white;border:none;border-radius:12px;font-size:14px;font-weight:700;cursor:pointer;">THÊM NGƯỜI GIÁM HỘ</button>
+  </div>
+</div>
+
+<!-- ══════════════════════ CONTACTS ══════════════════════ -->
+<div class="page" id="page-contacts">
+  <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title">Danh bạ</span></div>
+  <div style="background:white;padding:9px 14px;border-bottom:1px solid #f3f4f6;"><input type="text" placeholder="🔍 Tìm kiếm" style="width:100%;background:#f3f4f6;border:none;border-radius:18px;padding:7px 14px;font-size:13px;outline:none;"></div>
+  <div style="background:white;margin-top:8px;">
+    <div class="contact-row">
+      <div class="contact-ava" style="background:#dbeafe;color:#1e40af;font-size:11px;font-weight:800;border-radius:10px;">5B06</div>
+      <div class="contact-info"><div class="contact-name">Gareth Morton</div><div class="contact-roles">CIE ESL · CIE Maths · CIE Science<br><span style="color:#3b82f6;">Giáo viên chủ nhiệm - 5B06</span></div></div>
+      <div class="contact-btns"><button class="cta-btn call">📞</button><button class="cta-btn chat">💬</button><button class="cta-btn mail">✉️</button></div>
+    </div>
+    <div class="contact-row">
+      <div class="contact-ava" style="background:#d1fae5;border-radius:10px;">🎵</div>
+      <div class="contact-info"><div class="contact-name">Lại Thị Thu Thủy</div><div class="contact-roles">Âm nhạc - 5B06</div></div>
+      <div class="contact-btns"><button class="cta-btn call">📞</button><button class="cta-btn chat">💬</button><button class="cta-btn mail">✉️</button></div>
+    </div>
+    <div class="contact-row">
+      <div class="contact-ava" style="background:#fef3c7;border-radius:10px;">💻</div>
+      <div class="contact-info"><div class="contact-name">Elanza Jurgens</div><div class="contact-roles">CIE ICT - 5B06</div></div>
+      <div class="contact-btns"><button class="cta-btn call">📞</button><button class="cta-btn chat">💬</button><button class="cta-btn mail">✉️</button></div>
+    </div>
+    <div class="contact-row">
+      <div class="contact-ava" style="background:#ede9fe;border-radius:10px;">⚽</div>
+      <div class="contact-info"><div class="contact-name">Vũ Trung Hiếu</div><div class="contact-roles">Giáo dục thể chất - 5B06</div></div>
+      <div class="contact-btns"><button class="cta-btn call">📞</button><button class="cta-btn chat">💬</button><button class="cta-btn mail">✉️</button></div>
+    </div>
+    <div class="contact-row">
+      <div class="contact-ava" style="background:#fee2e2;border-radius:10px;">📋</div>
+      <div class="contact-info"><div class="contact-name">Giám Thị</div><div class="contact-roles">Kiểm tra định kì - 5B06</div></div>
+      <div class="contact-btns"><button class="cta-btn call">📞</button><button class="cta-btn chat">💬</button><button class="cta-btn mail">✉️</button></div>
+    </div>
+    <div class="contact-row">
+      <div class="contact-ava" style="background:#fef3c7;border-radius:10px;">👩‍🏫</div>
+      <div class="contact-info"><div class="contact-name">Lê Thị Kim Anh</div><div class="contact-roles">Lịch sử và Địa lý · Tiếng Việt - 5B06</div></div>
+      <div class="contact-btns"><button class="cta-btn call">📞</button><button class="cta-btn chat">💬</button><button class="cta-btn mail">✉️</button></div>
+    </div>
+    <div class="contact-row">
+      <div class="contact-ava" style="background:#fce7f3;border-radius:10px;">🎨</div>
+      <div class="contact-info"><div class="contact-name">Dương Thị Mỹ Hạnh</div><div class="contact-roles">Mỹ thuật - 5B06</div></div>
+      <div class="contact-btns"><button class="cta-btn call">📞</button><button class="cta-btn chat">💬</button><button class="cta-btn mail">✉️</button></div>
+    </div>
+    <div class="contact-row">
+      <div class="contact-ava" style="background:#f3f4f6;border-radius:10px;">🇻🇳</div>
+      <div class="contact-info"><div class="contact-name">Đinh Thị Ngọc Hồi</div><div class="contact-roles">Việt Nam học - 5B06</div></div>
+      <div class="contact-btns"><button class="cta-btn call">📞</button><button class="cta-btn chat">💬</button><button class="cta-btn mail">✉️</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════ NOTIFICATIONS TAB ══════════════════════ -->
+<div class="page" id="page-notifications">
+  <div style="display:flex;background:white;border-bottom:1px solid #e5e7eb;">
+    <div style="padding:11px 20px;font-size:13px;font-weight:600;color:#1B4FD8;border-bottom:2px solid #1B4FD8;">Tất cả</div>
+    <div style="padding:11px 20px;font-size:13px;font-weight:600;color:#6b7280;">Chưa đọc</div>
+  </div>
+  <div style="background:white;">
+    <div class="notif-row"><div class="notif-ico">🏫</div><div class="notif-body"><div class="notif-title">Mời Phụ Huynh tham dự thực hiện khảo sát: KHẢO SÁT PHHS VỀ VIỆC THAM GIA HOẠT ĐỘNG TRẢI NGHIỆM XEM PHIM KHỐI 5</div><div class="notif-desc">Hoạt động tổ chức vào ngày 06/04 tại rạp chiếu phim...</div><div class="notif-date">06/04/2026</div></div><div class="notif-dot"></div></div>
+    <div class="notif-row"><div class="notif-ico">🏫</div><div class="notif-body"><div class="notif-title">Mời Phụ huynh tham gia hoạt động trải nghiệm Bảo tàng đường Hồ Chí Minh</div><div class="notif-desc">NOTICE: INVITES parents to attend and contribute to...</div><div class="notif-date">31/03/2026</div></div><div class="notif-dot"></div></div>
+    <div class="notif-row"><div class="notif-ico">📝</div><div class="notif-body"><div class="notif-title">Nguyễn Hưng có một nhận xét/dặn dò ngày 29/03/2026</div><div class="notif-desc">Cô đã chấm và trả lại các phiếu bài tập tuần này...</div><div class="notif-date">29/03/2026</div></div></div>
+    <div class="notif-row"><div class="notif-ico">📝</div><div class="notif-body"><div class="notif-title">Nguyễn Hưng có một nhận xét/dặn dò ngày 26/03/2026</div><div class="notif-desc">Hôm nay cô gặp Hưng và chuyền bóng, con đại đội...</div><div class="notif-date">26/03/2026</div></div></div>
+    <div class="notif-row"><div class="notif-ico">🏆</div><div class="notif-body"><div class="notif-title">Nguyễn Hưng đã được chấm/cập nhật điểm bài tập môn CIE ESL</div><div class="notif-desc">Reading Comprehension Task: 9/10 Điểm</div><div class="notif-date">25/03/2026</div></div></div>
+    <div class="notif-row"><div class="notif-ico">🏆</div><div class="notif-body"><div class="notif-title">Nguyễn Hưng đã được chấm/cập nhật điểm bài tập môn CIE Maths</div><div class="notif-desc">Fraction Practice Worksheet: 10/10 Điểm</div><div class="notif-date">25/03/2026</div></div></div>
+  </div>
+</div>
+
+<!-- ══════════════════════ CHAT TAB ══════════════════════ -->
+<div class="page" id="page-chat">
+  <div class="chat-search"><input placeholder="Tìm kiếm" type="text"></div>
+  <div class="chat-section-lbl">NHÓM LỚP</div>
+  <div style="background:white;">
+    <div class="chat-row"><div class="chat-ava" style="background:#1B4FD8;">5B06</div><div><div class="chat-name">Lớp 5B06</div><div class="chat-preview">Gareth Morton: Cả lớp nhớ nộp bài tập trước 17h hôm nay!</div></div></div>
+    <div class="chat-row"><div class="chat-ava" style="background:#22c55e;">5B06</div><div><div class="chat-name">Hội phụ huynh lớp 5B06</div><div class="chat-preview">Phụ huynh A: Thứ 6 họp lớp lúc 18h30 nhé mọi người ơi</div></div></div>
+  </div>
+  <div class="chat-section-lbl">GIÁO VIÊN</div>
+  <div style="background:white;">
+    <div class="chat-row"><div class="chat-ava" style="background:#f59e0b;font-size:12px;font-weight:800;">GM</div><div><div class="chat-name">Gareth Morton</div><div class="chat-preview">Hưng hoàn thành bài rất tốt hôm nay!</div></div></div>
+    <div class="chat-row"><div class="chat-ava" style="background:#ec4899;font-size:12px;font-weight:800;">LKA</div><div><div class="chat-name">Lê Thị Kim Anh</div><div class="chat-preview">Nhớ mang vở Tiếng Việt ngày mai nhé Hưng</div></div></div>
+    <div class="chat-row"><div class="chat-ava" style="background:#8b5cf6;font-size:12px;font-weight:800;">EJ</div><div><div class="chat-name">Elanza Jurgens</div><div class="chat-preview">Project deadline is this Friday, please submit on time!</div></div></div>
+  </div>
+</div>
+
+<!-- ══════════════════════ ACCOUNT TAB ══════════════════════ -->
+<div class="page" id="page-account">
+  <div class="acc-hdr"><div class="acc-ava">👩</div><div class="acc-name">Vũ Thu Hà</div></div>
+  <div style="background:white;margin-top:10px;">
+    <div class="acc-menu-item" onclick="goTo('page-student-info')"><div class="acc-menu-ico" style="background:#dbeafe;">👤</div><div class="acc-menu-txt">Thông tin học sinh/ Phụ huynh/ Giám hộ</div><div class="acc-menu-arr">›</div></div>
+    <div class="acc-menu-item"><div class="acc-menu-ico" style="background:#d1fae5;">💳</div><div class="acc-menu-txt">Tài khoản ngân hàng PHHS</div><div class="acc-menu-arr">›</div></div>
+    <div class="acc-menu-item"><div class="acc-menu-ico" style="background:#fef3c7;">📖</div><div class="acc-menu-txt">Hướng dẫn sử dụng</div><div class="acc-menu-arr">›</div></div>
+    <div class="acc-menu-item"><div class="acc-menu-ico" style="background:#ede9fe;">🛟</div><div class="acc-menu-txt">Hỗ trợ</div><div class="acc-menu-arr">›</div></div>
+    <div class="acc-menu-item" onclick="goTo('page-contacts')"><div class="acc-menu-ico" style="background:#fee2e2;">👥</div><div class="acc-menu-txt">Danh bạ</div><div class="acc-menu-arr">›</div></div>
+    <div class="acc-menu-item"><div class="acc-menu-ico" style="background:#f3f4f6;">🌐</div><div class="acc-menu-txt">Ngôn ngữ</div><div class="acc-menu-arr">›</div></div>
+    <div class="acc-menu-item"><div class="acc-menu-ico" style="background:#fee2e2;">🗑️</div><div class="acc-menu-txt">Xoá tài khoản</div><div class="acc-menu-arr">›</div></div>
+    <div class="acc-menu-item"><div class="acc-menu-ico" style="background:#f3f4f6;">🚪</div><div class="acc-menu-txt">Đăng xuất</div><div class="acc-menu-arr">›</div></div>
+  </div>
+  <div style="text-align:center;padding:20px;font-size:12px;color:#9ca3af;">Phiên bản 5.20.0014</div>
+</div>
+
+</div><!-- /screen-wrap -->
+
+<!-- BOTTOM NAV -->
+<div class="bottom-nav">
+  <div class="nav-item active" id="nav-home" onclick="switchTab('home')"><span class="nav-icon">🏠</span><span class="nav-label">Trang chủ</span></div>
+  <div class="nav-item" id="nav-student" onclick="switchTab('student')"><span class="nav-icon">🎓</span><span class="nav-label">Học sinh</span></div>
+  <div class="nav-item" id="nav-chat" onclick="switchTab('chat')"><span class="nav-icon">💬</span><span class="nav-label">Chat</span></div>
+  <div class="nav-item" id="nav-notifications" onclick="switchTab('notifications')"><span class="nav-icon">🔔</span><span class="nav-label">Thông báo</span></div>
+  <div class="nav-item" id="nav-account" onclick="switchTab('account')"><span class="nav-icon">👤</span><span class="nav-label">Tài khoản</span></div>
+</div>
+
+</div><!-- /app -->
+<script>
+const MAIN = ['page-home','page-student','page-chat','page-notifications','page-account'];
+const TAB_MAP = { home:'page-home', student:'page-student', chat:'page-chat', notifications:'page-notifications', account:'page-account' };
+let cur = 'page-home', hist = [];
+
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.getElementById('screenWrap').scrollTop = 0;
+  document.getElementById('appHeader').style.display = MAIN.includes(id) ? 'flex' : 'none';
+}
+function switchTab(tab) {
+  const id = TAB_MAP[tab]; hist = []; cur = id; showPage(id);
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('nav-' + tab).classList.add('active');
+}
+function goTo(id) { hist.push(cur); cur = id; showPage(id); }
+function goBack() { if (hist.length) { cur = hist.pop(); showPage(cur); } }
+
+function switchHwTab(t) {
+  document.getElementById('hwtab-todo').className = 'hw-tab' + (t==='todo'?' active':'');
+  document.getElementById('hwtab-all').className  = 'hw-tab' + (t==='all'?' active':'');
+  document.getElementById('hw-todo').style.display = t==='todo' ? 'block':'none';
+  document.getElementById('hw-all').style.display  = t==='all'  ? 'block':'none';
+}
+function switchTuition(t) {
+  ['hk1','cn'].forEach(k => {
+    const active = k === t;
+    document.getElementById('tutab-'+k).className = 'tu-tab' + (active?' active':'');
+    document.getElementById('tu-'+k).style.display = active ? 'block':'none';
+  });
+}
+function toggleAtt(id) {
+  const el = document.getElementById(id);
+  const arr = document.getElementById('arr-'+id);
+  if (!el) return;
+  const open = el.style.display !== 'none';
+  el.style.display = open ? 'none' : 'block';
+  if (arr) arr.textContent = open ? '∨' : '∧';
+}
+showPage('page-home');
+</script>
+</body>
+</html>
