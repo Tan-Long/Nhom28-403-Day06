@@ -320,6 +320,215 @@ body {
 .chat-ava { width:42px; height:42px; border-radius:11px; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; color:white; flex-shrink:0; }
 .chat-name    { font-size:13.5px; font-weight:600; color:#111827; }
 .chat-preview { font-size:12px; color:#9ca3af; margin-top:2px; }
+
+/* ════════════ AI COMPONENTS ════════════ */
+/* Search bar on home */
+.ai-search-bar {
+  margin:10px 14px 0; background:white; border-radius:24px;
+  display:flex; align-items:center; gap:8px; padding:10px 14px;
+  box-shadow:0 2px 8px rgba(27,79,216,.15); cursor:pointer;
+  border:1.5px solid #dbeafe;
+}
+.ai-search-bar .ai-ico { font-size:18px; }
+.ai-search-bar .ai-placeholder { font-size:13px; color:#9ca3af; flex:1; }
+.ai-search-bar .ai-mic { font-size:18px; color:#6366f1; }
+
+/* AI badge / label */
+.ai-badge {
+  display:inline-flex; align-items:center; gap:4px;
+  background:linear-gradient(135deg,#6366f1,#1B4FD8);
+  color:white; font-size:10px; font-weight:700;
+  padding:2px 8px; border-radius:10px; letter-spacing:.3px;
+}
+
+/* AI sub-header variant */
+.ai-sub-header {
+  background:linear-gradient(135deg,#4f46e5,#1B4FD8);
+  color:white; padding:10px 16px;
+  display:flex; align-items:center; gap:8px; flex-shrink:0;
+}
+
+/* AI Search screen */
+.ai-search-input-wrap {
+  background:linear-gradient(135deg,#4f46e5,#1B4FD8);
+  padding:10px 14px 16px;
+}
+.ai-search-input-box {
+  background:white; border-radius:24px;
+  display:flex; align-items:center; gap:8px; padding:10px 14px;
+}
+.ai-search-input-box input {
+  flex:1; border:none; outline:none; font-size:14px; color:#111827;
+  background:transparent;
+}
+.ai-search-input-box .send-btn {
+  width:30px; height:30px; border-radius:50%;
+  background:linear-gradient(135deg,#4f46e5,#1B4FD8);
+  color:white; border:none; font-size:16px; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+}
+
+/* Suggestion chips */
+.chips-row { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:white; border-bottom:1px solid #f3f4f6; }
+.chip {
+  padding:6px 12px; border-radius:16px; font-size:12px; font-weight:600;
+  border:1.5px solid #dbeafe; color:#1e40af; background:white; cursor:pointer;
+  white-space:nowrap;
+}
+.chip:active { background:#eff6ff; }
+
+/* AI result card */
+.ai-result-card {
+  background:white; margin:8px 14px; border-radius:12px;
+  box-shadow:0 2px 8px rgba(0,0,0,.09); overflow:hidden;
+}
+.ai-result-header {
+  padding:10px 14px; border-bottom:1px solid #f3f4f6;
+  display:flex; align-items:center; gap:8px;
+}
+.ai-result-title { font-size:13px; font-weight:700; color:#111827; flex:1; }
+.ai-result-body { padding:10px 14px; }
+.ai-result-row {
+  display:flex; align-items:flex-start; gap:8px;
+  padding:7px 0; border-bottom:1px solid #f9fafb; font-size:12.5px;
+}
+.ai-result-row:last-child { border-bottom:none; }
+.ai-result-row .ri { flex-shrink:0; font-size:14px; }
+.ai-result-row .rt { flex:1; color:#374151; line-height:1.4; }
+.ai-result-row .rb { color:#9ca3af; font-size:11.5px; white-space:nowrap; }
+.ai-deeplink-btn {
+  display:block; width:100%; margin-top:10px;
+  background:linear-gradient(135deg,#4f46e5,#1B4FD8);
+  color:white; border:none; border-radius:10px;
+  padding:10px; font-size:13px; font-weight:700; cursor:pointer; text-align:center;
+}
+.ai-source-badge {
+  display:inline-flex; align-items:center; gap:4px;
+  font-size:10px; color:#6b7280; background:#f9fafb;
+  border:1px solid #e5e7eb; border-radius:8px; padding:2px 8px; margin-top:8px;
+}
+
+/* AI Chat screen */
+.ai-chat-wrap { flex:1; overflow-y:auto; padding:12px 14px 8px; display:flex; flex-direction:column; gap:12px; }
+.ai-chat-wrap::-webkit-scrollbar { display:none; }
+.bubble-user {
+  align-self:flex-end; max-width:75%;
+  background:linear-gradient(135deg,#4f46e5,#1B4FD8);
+  color:white; padding:10px 14px; border-radius:18px 18px 4px 18px;
+  font-size:13px; line-height:1.4;
+}
+.bubble-ai-wrap { align-self:flex-start; max-width:90%; display:flex; gap:8px; align-items:flex-start; }
+.bubble-ai-avatar {
+  width:30px; height:30px; border-radius:50%; flex-shrink:0;
+  background:linear-gradient(135deg,#4f46e5,#1B4FD8);
+  color:white; display:flex; align-items:center; justify-content:center; font-size:14px;
+}
+.bubble-ai {
+  background:white; border-radius:4px 18px 18px 18px;
+  box-shadow:0 2px 6px rgba(0,0,0,.09); padding:10px 14px;
+  font-size:12.5px; color:#374151; line-height:1.5;
+}
+.bubble-ai .ai-card-mini {
+  background:#f9fafb; border-radius:8px; padding:10px; margin-top:8px; border:1px solid #e5e7eb;
+}
+.bubble-ai .ai-card-row { display:flex; gap:6px; padding:4px 0; font-size:12px; }
+.bubble-ai .ai-card-row .urgency { color:#ef4444; font-weight:700; font-size:11px; }
+.typing-dots { display:flex; gap:4px; align-items:center; padding:4px 0; }
+.typing-dots span { width:8px; height:8px; border-radius:50%; background:#c4b5fd; animation:bounce .8s infinite; }
+.typing-dots span:nth-child(2) { animation-delay:.15s; }
+.typing-dots span:nth-child(3) { animation-delay:.30s; }
+@keyframes bounce { 0%,80%,100%{transform:translateY(0)} 40%{transform:translateY(-6px)} }
+
+.ai-suggestions { padding:10px 14px; display:flex; flex-wrap:wrap; gap:6px; }
+.ai-suggest-chip {
+  padding:6px 12px; border-radius:14px; font-size:12px; font-weight:500;
+  border:1.5px solid #c7d2fe; color:#4f46e5; background:white; cursor:pointer;
+}
+
+/* Chat input bar */
+.ai-chat-input-bar {
+  background:white; border-top:1px solid #e5e7eb;
+  padding:10px 14px; display:flex; gap:8px; align-items:center; flex-shrink:0;
+}
+.ai-chat-input-bar input {
+  flex:1; background:#f3f4f6; border:none; border-radius:20px;
+  padding:9px 14px; font-size:13px; outline:none;
+}
+.ai-chat-send {
+  width:36px; height:36px; border-radius:50%;
+  background:linear-gradient(135deg,#4f46e5,#1B4FD8);
+  color:white; border:none; font-size:18px; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+}
+
+/* Smart Daily Brief */
+.brief-card {
+  margin:10px 14px; border-radius:14px; overflow:hidden;
+  box-shadow:0 2px 10px rgba(99,102,241,.2); cursor:pointer;
+}
+.brief-header {
+  background:linear-gradient(135deg,#4f46e5,#1B4FD8);
+  padding:12px 14px; color:white;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.brief-header .brief-title { font-size:13px; font-weight:700; }
+.brief-header .brief-date  { font-size:11px; opacity:.85; }
+.brief-body { background:white; padding:4px 0; }
+.brief-row {
+  display:flex; align-items:flex-start; gap:10px;
+  padding:10px 14px; border-bottom:1px solid #f9fafb;
+}
+.brief-row:last-child { border-bottom:none; }
+.brief-row .br-ico { font-size:20px; flex-shrink:0; margin-top:1px; }
+.brief-row .br-text { flex:1; }
+.brief-row .br-main { font-size:13px; font-weight:600; color:#111827; }
+.brief-row .br-sub  { font-size:12px; color:#6b7280; margin-top:2px; line-height:1.3; }
+.brief-row .br-link { font-size:11.5px; color:#4f46e5; font-weight:600; cursor:pointer; margin-top:4px; }
+
+/* Brief detail page */
+.brief-detail-hdr {
+  background:linear-gradient(135deg,#4f46e5,#1B4FD8); color:white;
+  padding:18px 14px 20px;
+}
+.brief-event-card {
+  background:white; margin:8px 14px; border-radius:12px;
+  box-shadow:0 1px 4px rgba(0,0,0,.08); overflow:hidden;
+}
+.brief-event-top {
+  padding:12px 14px; display:flex; align-items:center; gap:10px;
+  border-bottom:1px solid #f3f4f6;
+}
+.brief-event-ico { font-size:24px; flex-shrink:0; }
+.brief-event-label { font-size:12px; font-weight:700; color:#4f46e5; }
+.brief-event-title { font-size:14px; font-weight:700; color:#111827; margin-top:2px; }
+.brief-event-body { padding:10px 14px; }
+.brief-event-detail { font-size:12.5px; color:#374151; line-height:1.5; }
+.brief-deeplink {
+  display:block; margin:10px 14px 0; background:#eff6ff;
+  border:1.5px solid #dbeafe; border-radius:10px;
+  padding:9px 14px; font-size:12.5px; font-weight:600; color:#1e40af;
+  cursor:pointer; text-align:center;
+}
+
+/* Actionable notification */
+.action-notif {
+  background:white; padding:12px 14px; border-bottom:1px solid #f9fafb;
+}
+.action-notif-header { display:flex; gap:10px; align-items:flex-start; margin-bottom:8px; }
+.action-notif-ico { width:40px; height:40px; border-radius:50%; background:linear-gradient(135deg,#4f46e5,#1B4FD8); display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; }
+.action-notif-title { font-size:12.5px; font-weight:700; color:#111827; line-height:1.3; }
+.action-notif-date  { font-size:11px; color:#9ca3af; margin-top:2px; }
+.action-bullets { padding-left:4px; display:flex; flex-direction:column; gap:6px; }
+.action-bullet { display:flex; gap:8px; align-items:flex-start; font-size:12px; color:#374151; line-height:1.4; }
+.action-bullet .abico { font-size:14px; flex-shrink:0; margin-top:-1px; }
+.action-notif-footer { display:flex; gap:8px; margin-top:10px; }
+.action-btn-primary {
+  flex:1; background:linear-gradient(135deg,#4f46e5,#1B4FD8);
+  color:white; border:none; border-radius:8px; padding:8px; font-size:12px; font-weight:700; cursor:pointer;
+}
+.action-btn-secondary {
+  background:white; border:1.5px solid #e5e7eb; border-radius:8px; padding:8px 12px; font-size:12px; color:#6b7280; cursor:pointer;
+}
 </style>
 </head>
 <body>
@@ -346,10 +555,17 @@ body {
 
 <!-- ══════════════════════ HOME ══════════════════════ -->
 <div class="page active" id="page-home">
-  <div class="smart-banner">
-    <div class="lbl">🎓 VIN-ASSISTANT · THỨ 5, 09/04/2026</div>
-    <div class="ttl">Hưng có 3 bài tập chưa làm tuần này</div>
-    <div class="dsc">Hạn nộp gần nhất: Quiz TV Tuần 26 — hôm nay! Nhấn để xem chi tiết.</div>
+  <!-- AI Search Bar -->
+  <div class="ai-search-bar" onclick="goTo('page-ai-search')">
+    <span class="ai-ico">🤖</span>
+    <span class="ai-placeholder">Hỏi Vin-Assistant...</span>
+    <span class="ai-badge">AI ✨</span>
+    <span class="ai-mic">🎤</span>
+  </div>
+  <div class="smart-banner" style="cursor:pointer;" onclick="goTo('page-ai-brief')">
+    <div class="lbl">✨ SMART DAILY BRIEF · THỨ 5, 09/04/2026</div>
+    <div class="ttl">Hưng có 3 bài tập chưa làm · Bữa trưa: Bò kho tàu</div>
+    <div class="dsc">Thầy Gareth khen Hưng năng động đầu tuần. Nhấn để xem bản tin đầy đủ →</div>
   </div>
   <div class="card" style="margin-top:0;border-radius:0;box-shadow:none;">
     <div class="notif-row">
@@ -857,9 +1073,67 @@ body {
     <div style="padding:11px 20px;font-size:13px;font-weight:600;color:#1B4FD8;border-bottom:2px solid #1B4FD8;">Tất cả</div>
     <div style="padding:11px 20px;font-size:13px;font-weight:600;color:#6b7280;">Chưa đọc</div>
   </div>
+
+  <!-- ── Smart Daily Brief card ── -->
+  <div class="brief-card" onclick="goTo('page-ai-brief')">
+    <div class="brief-header">
+      <div>
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;">
+          <span class="ai-badge">AI ✨</span>
+          <span class="brief-title">Bản tin hôm nay</span>
+        </div>
+        <div class="brief-date">Thứ 5, 09/04/2026 · Tổng hợp 5 sự kiện</div>
+      </div>
+      <span style="font-size:20px;">›</span>
+    </div>
+    <div class="brief-body">
+      <div class="brief-row">
+        <div class="br-ico">📋</div>
+        <div class="br-text">
+          <div class="br-main">3 bài tập Tiếng Việt chưa nộp</div>
+          <div class="br-sub">Hạn sớm nhất: Quiz TV Tuần 26 — hôm nay!</div>
+        </div>
+      </div>
+      <div class="brief-row">
+        <div class="br-ico">🍱</div>
+        <div class="br-text">
+          <div class="br-main">Bữa trưa: Bò kho tàu + Đậu phụ chiên</div>
+          <div class="br-sub">~579 kcal · Ăn phụ: Gà chiên KFC</div>
+        </div>
+      </div>
+      <div class="brief-row">
+        <div class="br-ico">💬</div>
+        <div class="br-text">
+          <div class="br-main">Thầy Gareth khen Hưng năng động đầu tuần</div>
+          <div class="br-sub">Con chủ động giúp sắp xếp tủ sách lớp</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Actionable notification (AI format) ── -->
+  <div class="action-notif">
+    <div class="action-notif-header">
+      <div class="action-notif-ico">🏫</div>
+      <div>
+        <div class="action-notif-title">Thông báo ngoại khóa: Tham quan Bảo tàng Hà Nội</div>
+        <div class="action-notif-date">06/04/2026 · <span class="ai-badge">AI tóm tắt ✨</span></div>
+      </div>
+    </div>
+    <div class="action-bullets">
+      <div class="action-bullet"><span class="abico">📌</span><span><strong>Sự kiện:</strong> Chuyến tham quan Bảo tàng Hà Nội cho học sinh Khối 5</span></div>
+      <div class="action-bullet"><span class="abico">⏰</span><span><strong>Hạn đăng ký:</strong> 15/04/2026 · Phí tham quan: 150.000đ/học sinh</span></div>
+      <div class="action-bullet"><span class="abico">✅</span><span><strong>Cần làm:</strong> Xác nhận tham gia và nộp phí qua app trước hạn</span></div>
+    </div>
+    <div class="action-notif-footer">
+      <button class="action-btn-primary">Đăng ký ngay</button>
+      <button class="action-btn-secondary">Đọc toàn văn bản</button>
+    </div>
+  </div>
+
+  <!-- ── Regular notifications ── -->
   <div style="background:white;">
     <div class="notif-row"><div class="notif-ico">🏫</div><div class="notif-body"><div class="notif-title">Mời Phụ Huynh tham dự thực hiện khảo sát: KHẢO SÁT PHHS VỀ VIỆC THAM GIA HOẠT ĐỘNG TRẢI NGHIỆM XEM PHIM KHỐI 5</div><div class="notif-desc">Hoạt động tổ chức vào ngày 06/04 tại rạp chiếu phim...</div><div class="notif-date">06/04/2026</div></div><div class="notif-dot"></div></div>
-    <div class="notif-row"><div class="notif-ico">🏫</div><div class="notif-body"><div class="notif-title">Mời Phụ huynh tham gia hoạt động trải nghiệm Bảo tàng đường Hồ Chí Minh</div><div class="notif-desc">NOTICE: INVITES parents to attend and contribute to...</div><div class="notif-date">31/03/2026</div></div><div class="notif-dot"></div></div>
     <div class="notif-row"><div class="notif-ico">📝</div><div class="notif-body"><div class="notif-title">Nguyễn Hưng có một nhận xét/dặn dò ngày 29/03/2026</div><div class="notif-desc">Cô đã chấm và trả lại các phiếu bài tập tuần này...</div><div class="notif-date">29/03/2026</div></div></div>
     <div class="notif-row"><div class="notif-ico">📝</div><div class="notif-body"><div class="notif-title">Nguyễn Hưng có một nhận xét/dặn dò ngày 26/03/2026</div><div class="notif-desc">Hôm nay cô gặp Hưng và chuyền bóng, con đại đội...</div><div class="notif-date">26/03/2026</div></div></div>
     <div class="notif-row"><div class="notif-ico">🏆</div><div class="notif-body"><div class="notif-title">Nguyễn Hưng đã được chấm/cập nhật điểm bài tập môn CIE ESL</div><div class="notif-desc">Reading Comprehension Task: 9/10 Điểm</div><div class="notif-date">25/03/2026</div></div></div>
@@ -870,6 +1144,24 @@ body {
 <!-- ══════════════════════ CHAT TAB ══════════════════════ -->
 <div class="page" id="page-chat">
   <div class="chat-search"><input placeholder="Tìm kiếm" type="text"></div>
+  <!-- Vin-Assistant pinned entry -->
+  <div class="chat-section-lbl">TRỢ LÝ AI</div>
+  <div style="background:white;border-bottom:1px solid #f3f4f6;">
+    <div class="chat-row" onclick="goTo('page-ai-chat')" style="background:linear-gradient(135deg,rgba(99,102,241,.06),rgba(27,79,216,.06));border-left:3px solid #6366f1;">
+      <div class="chat-ava" style="background:linear-gradient(135deg,#4f46e5,#1B4FD8);border-radius:50%;font-size:18px;">🤖</div>
+      <div style="flex:1;">
+        <div style="display:flex;align-items:center;gap:6px;">
+          <span class="chat-name">Vin-Assistant</span>
+          <span class="ai-badge" style="font-size:9px;padding:1px 6px;">AI ✨</span>
+        </div>
+        <div class="chat-preview">Mình tìm thấy 4 bài tập chưa hoàn thành tuần này...</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;">
+        <span style="font-size:10px;color:#9ca3af;">Vừa xong</span>
+        <span style="width:18px;height:18px;border-radius:50%;background:#ef4444;color:white;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;">3</span>
+      </div>
+    </div>
+  </div>
   <div class="chat-section-lbl">NHÓM LỚP</div>
   <div style="background:white;">
     <div class="chat-row"><div class="chat-ava" style="background:#1B4FD8;">5B06</div><div><div class="chat-name">Lớp 5B06</div><div class="chat-preview">Gareth Morton: Cả lớp nhớ nộp bài tập trước 17h hôm nay!</div></div></div>
@@ -899,6 +1191,276 @@ body {
   <div style="text-align:center;padding:20px;font-size:12px;color:#9ca3af;">Phiên bản 5.20.0014</div>
 </div>
 
+
+<!-- ══════════════════════ AI SEARCH ══════════════════════ -->
+<div class="page" id="page-ai-search">
+  <div class="ai-search-input-wrap">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+      <span class="sub-back" onclick="goBack()" style="color:white;font-size:22px;cursor:pointer;">←</span>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <span style="font-size:18px;">🤖</span>
+        <span style="color:white;font-size:15px;font-weight:700;">Vin-Assistant</span>
+        <span class="ai-badge">AI ✨</span>
+      </div>
+    </div>
+    <div class="ai-search-input-box">
+      <span style="font-size:16px;">🔍</span>
+      <input id="aiSearchInput" placeholder="Hỏi bất cứ điều gì về Hưng..." value="Tuần này Hưng có bài tập nào chưa làm?">
+      <button class="send-btn" onclick="goTo('page-ai-chat')">›</button>
+    </div>
+  </div>
+
+  <!-- Suggestion chips -->
+  <div style="padding:10px 14px 4px;font-size:11px;font-weight:700;color:#6b7280;letter-spacing:.3px;">GỢI Ý CÂU HỎI</div>
+  <div class="chips-row">
+    <div class="chip" onclick="goTo('page-ai-chat')">📋 Bài tập chưa làm?</div>
+    <div class="chip" onclick="goTo('page-ai-chat')">🍱 Hôm nay ăn gì?</div>
+    <div class="chip" onclick="goTo('page-ai-chat')">📅 Lịch học hôm nay?</div>
+    <div class="chip" onclick="goTo('page-ai-chat')">💬 Nhận xét mới nhất?</div>
+    <div class="chip" onclick="goTo('page-ai-chat')">💰 Học phí còn thiếu?</div>
+    <div class="chip" onclick="goTo('page-ai-chat')">📊 Điểm các môn?</div>
+  </div>
+
+  <!-- Example result (pre-loaded) -->
+  <div style="padding:8px 14px 4px;font-size:11px;font-weight:700;color:#6b7280;letter-spacing:.3px;">KẾT QUẢ GẦN ĐÂY</div>
+  <div class="ai-result-card">
+    <div class="ai-result-header">
+      <span style="font-size:18px;">📋</span>
+      <span class="ai-result-title">Bài tập chưa làm — Tuần 06/04–12/04</span>
+      <span class="ai-badge">AI ✨</span>
+    </div>
+    <div class="ai-result-body">
+      <div class="ai-result-row">
+        <span class="ri">📝</span>
+        <span class="rt">Quiz TV Tuần 26 · Tiếng Việt</span>
+        <span class="rb" style="color:#ef4444;font-weight:700;">Hôm nay!</span>
+      </div>
+      <div class="ai-result-row">
+        <span class="ri">📝</span>
+        <span class="rt">Quiz tuần 29 · Tiếng Việt</span>
+        <span class="rb">10/04</span>
+      </div>
+      <div class="ai-result-row">
+        <span class="ri">📝</span>
+        <span class="rt">Quiz tuần 30 · Tiếng Việt</span>
+        <span class="rb">11/04</span>
+      </div>
+      <div class="ai-result-row">
+        <span class="ri">💻</span>
+        <span class="rt">Unit 5 Project score · CIE ICT</span>
+        <span class="rb">12/04</span>
+      </div>
+      <button class="ai-deeplink-btn" onclick="goTo('page-homework')">Mở Bài tập - Kiểm tra →</button>
+      <div class="ai-source-badge">📊 Dữ liệu từ Bài tập · Cập nhật hôm nay</div>
+    </div>
+  </div>
+
+  <div class="ai-result-card">
+    <div class="ai-result-header">
+      <span style="font-size:18px;">🍱</span>
+      <span class="ai-result-title">Thực đơn hôm nay — T5, 09/04</span>
+      <span class="ai-badge">AI ✨</span>
+    </div>
+    <div class="ai-result-body">
+      <div class="ai-result-row"><span class="ri">🥩</span><span class="rt">Thịt bò chỉ kho tàu · Đậu phụ chiên</span><span class="rb">301 kcal</span></div>
+      <div class="ai-result-row"><span class="ri">🥦</span><span class="rt">Bắp cải xào · Canh mướp mồng tơi</span><span class="rb">34 kcal</span></div>
+      <div class="ai-result-row"><span class="ri">🍚</span><span class="rt">Cơm trắng · Thanh long trắng</span><span class="rb">299 kcal</span></div>
+      <button class="ai-deeplink-btn" onclick="goTo('page-menu')">Xem thực đơn đầy đủ →</button>
+      <div class="ai-source-badge">📊 Dữ liệu từ Thực đơn · Cập nhật hôm nay</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════ AI CHAT ══════════════════════ -->
+<div class="page" id="page-ai-chat" style="height:100%;">
+  <div class="ai-sub-header">
+    <span class="sub-back" onclick="goBack()">←</span>
+    <span style="font-size:16px;">🤖</span>
+    <div style="flex:1;">
+      <div style="font-size:14px;font-weight:700;">Vin-Assistant</div>
+      <div style="font-size:10px;opacity:.8;">Trả lời dựa trên dữ liệu của Hưng</div>
+    </div>
+    <span class="ai-badge">AI ✨</span>
+  </div>
+
+  <div class="ai-chat-wrap" id="aiChatWrap">
+    <!-- AI greeting -->
+    <div class="bubble-ai-wrap">
+      <div class="bubble-ai-avatar">🤖</div>
+      <div class="bubble-ai">
+        Xin chào! Mình là <strong>Vin-Assistant</strong> — trợ lý AI của VinSchool One. Mình có thể giúp bạn tra cứu thông tin về <strong>Nguyễn Hưng</strong> như bài tập, thực đơn, lịch học, điểm số...
+      </div>
+    </div>
+
+    <!-- User question -->
+    <div class="bubble-user">Tuần này Hưng có bài tập nào chưa làm?</div>
+
+    <!-- AI response -->
+    <div class="bubble-ai-wrap">
+      <div class="bubble-ai-avatar">🤖</div>
+      <div class="bubble-ai">
+        Mình tìm thấy <strong>4 bài tập chưa hoàn thành</strong> tuần 06/04–12/04:
+        <div class="ai-card-mini">
+          <div class="ai-card-row"><span>📝</span><span style="flex:1;">Quiz TV Tuần 26 · Tiếng Việt</span><span class="urgency">Hôm nay!</span></div>
+          <div class="ai-card-row"><span>📝</span><span style="flex:1;">Quiz tuần 29 · Tiếng Việt</span><span style="color:#f59e0b;font-size:11px;font-weight:700;">10/04</span></div>
+          <div class="ai-card-row"><span>📝</span><span style="flex:1;">Quiz tuần 30 · Tiếng Việt</span><span style="color:#f59e0b;font-size:11px;font-weight:700;">11/04</span></div>
+          <div class="ai-card-row"><span>💻</span><span style="flex:1;">Unit 5 Project · CIE ICT</span><span style="color:#6b7280;font-size:11px;">12/04</span></div>
+        </div>
+        <button class="ai-deeplink-btn" style="margin-top:8px;" onclick="goTo('page-homework')">Mở Bài tập →</button>
+        <div class="ai-source-badge" style="margin-top:6px;">📊 Dữ liệu từ Bài tập · Cập nhật hôm nay</div>
+      </div>
+    </div>
+
+    <!-- User follow-up -->
+    <div class="bubble-user">Hôm nay con ăn gì, có tiết thể dục không?</div>
+
+    <!-- AI multi-data response -->
+    <div class="bubble-ai-wrap">
+      <div class="bubble-ai-avatar">🤖</div>
+      <div class="bubble-ai">
+        Mình tra được 2 thông tin cùng lúc cho T5, 09/04:
+        <div class="ai-card-mini" style="margin-bottom:8px;">
+          <div style="font-size:11px;font-weight:700;color:#4f46e5;margin-bottom:4px;">🍱 THỰC ĐƠN TRƯA</div>
+          <div class="ai-card-row"><span>🥩</span><span>Bò kho tàu + Đậu phụ chiên</span></div>
+          <div class="ai-card-row"><span>🍚</span><span>Cơm trắng + Thanh long trắng</span></div>
+          <div class="ai-card-row"><span>🍗</span><span>Ăn phụ: Gà chiên KFC</span></div>
+        </div>
+        <div class="ai-card-mini">
+          <div style="font-size:11px;font-weight:700;color:#4f46e5;margin-bottom:4px;">📅 LỊCH HỌC HÔM NAY</div>
+          <div class="ai-card-row"><span>⚽</span><span>Tiết 3: GD Thể chất · 09:30-10:05</span></div>
+          <div style="font-size:11px;color:#f59e0b;margin-top:2px;padding-left:4px;">⚠️ Nhắc nhở mang giày thể thao!</div>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:8px;">
+          <button class="ai-deeplink-btn" style="flex:1;padding:8px;" onclick="goTo('page-menu')">Xem thực đơn</button>
+          <button class="ai-deeplink-btn" style="flex:1;padding:8px;" onclick="goTo('page-schedule')">Xem lịch học</button>
+        </div>
+        <div class="ai-source-badge" style="margin-top:6px;">📊 Thực đơn + Thời khoá biểu · 2 nguồn</div>
+      </div>
+    </div>
+
+    <!-- Typing indicator placeholder -->
+    <div class="bubble-ai-wrap" id="typingIndicator" style="display:none;">
+      <div class="bubble-ai-avatar">🤖</div>
+      <div class="bubble-ai"><div class="typing-dots"><span></span><span></span><span></span></div></div>
+    </div>
+  </div>
+
+  <!-- Suggested follow-ups -->
+  <div class="ai-suggestions">
+    <div class="ai-suggest-chip" onclick="sendMsg('Điểm các môn của Hưng?')">📊 Điểm các môn?</div>
+    <div class="ai-suggest-chip" onclick="sendMsg('Nhận xét mới nhất của giáo viên?')">💬 Nhận xét mới?</div>
+    <div class="ai-suggest-chip" onclick="sendMsg('Học phí còn thiếu không?')">💰 Học phí?</div>
+  </div>
+
+  <!-- Input bar -->
+  <div class="ai-chat-input-bar">
+    <input id="chatInput" placeholder="Hỏi thêm về Hưng..." type="text"
+      onkeydown="if(event.key==='Enter')sendMsg(this.value)">
+    <button class="ai-chat-send" onclick="sendMsg(document.getElementById('chatInput').value)">›</button>
+  </div>
+</div>
+
+<!-- ══════════════════════ AI BRIEF ══════════════════════ -->
+<div class="page" id="page-ai-brief">
+  <div class="ai-sub-header" style="flex-direction:column;align-items:flex-start;padding:14px 16px 16px;">
+    <div style="display:flex;align-items:center;gap:8px;width:100%;margin-bottom:8px;">
+      <span class="sub-back" onclick="goBack()">←</span>
+      <span style="font-size:15px;font-weight:700;flex:1;">Bản tin hàng ngày</span>
+      <span class="ai-badge">AI ✨</span>
+    </div>
+    <div style="font-size:18px;font-weight:800;">Thứ 5, 09/04/2026</div>
+    <div style="font-size:12px;opacity:.8;margin-top:2px;">Tổng hợp 5 sự kiện nổi bật trong ngày của Nguyễn Hưng</div>
+  </div>
+
+  <div style="padding:8px 0 20px;">
+    <!-- Event 1: Homework alert -->
+    <div class="brief-event-card">
+      <div class="brief-event-top">
+        <div class="brief-event-ico">📋</div>
+        <div>
+          <div class="brief-event-label">BÀI TẬP CHƯA NỘP</div>
+          <div class="brief-event-title">3 bài Tiếng Việt hạn nộp sắp tới</div>
+        </div>
+      </div>
+      <div class="brief-event-body">
+        <div class="brief-event-detail">
+          Hưng còn <strong>4 bài tập chưa hoàn thành</strong> tuần này. Quan trọng nhất: <strong>Quiz TV Tuần 26</strong> hạn nộp hôm nay (09/04). Phụ huynh nhắc con làm sớm!
+        </div>
+        <button class="brief-deeplink" onclick="goTo('page-homework')">📋 Mở Bài tập - Kiểm tra →</button>
+      </div>
+    </div>
+
+    <!-- Event 2: Attendance -->
+    <div class="brief-event-card">
+      <div class="brief-event-top">
+        <div class="brief-event-ico">✅</div>
+        <div>
+          <div class="brief-event-label">CHUYÊN CẦN</div>
+          <div class="brief-event-title">Đi học đúng giờ — 8:00 sáng</div>
+        </div>
+      </div>
+      <div class="brief-event-body">
+        <div class="brief-event-detail">
+          Giáo viên chủ nhiệm điểm danh lúc <strong>08:00</strong>. Hưng đến <strong>đúng giờ</strong>. Tuần này không có tiết vắng nào.
+        </div>
+        <button class="brief-deeplink" onclick="goTo('page-attendance')">🧑‍🏫 Xem chuyên cần →</button>
+      </div>
+    </div>
+
+    <!-- Event 3: Menu -->
+    <div class="brief-event-card">
+      <div class="brief-event-top">
+        <div class="brief-event-ico">🍱</div>
+        <div>
+          <div class="brief-event-label">THỰC ĐƠN TRƯA NAY</div>
+          <div class="brief-event-title">Bò kho tàu + Cơm trắng</div>
+        </div>
+      </div>
+      <div class="brief-event-body">
+        <div class="brief-event-detail">
+          Bữa trưa hôm nay gồm: <strong>Thịt bò chỉ kho tàu</strong>, Đậu phụ chiên trứng muối, Bắp cải xào, Cơm trắng, Thanh long trắng (~579 kcal). Ăn phụ: Gà chiên kiểu KFC.
+        </div>
+        <button class="brief-deeplink" onclick="goTo('page-menu')">🍱 Xem thực đơn đầy đủ →</button>
+      </div>
+    </div>
+
+    <!-- Event 4: Teacher comment -->
+    <div class="brief-event-card">
+      <div class="brief-event-top">
+        <div class="brief-event-ico">💬</div>
+        <div>
+          <div class="brief-event-label">NHẬN XÉT MỚI NHẤT</div>
+          <div class="brief-event-title">Thầy Gareth khen Hưng năng động</div>
+        </div>
+      </div>
+      <div class="brief-event-body">
+        <div class="brief-event-detail">
+          <em>"Hưng bắt đầu tuần mới rất năng động. Con chủ động giúp thầy sắp xếp lại tủ sách của lớp và nhắc nhở các bạn giữ trật tự trong giờ chuyển tiết."</em>
+          <div style="font-size:11.5px;color:#6b7280;margin-top:4px;">— Gareth Morton · Sinh hoạt Chủ nhiệm · 08/04</div>
+        </div>
+        <button class="brief-deeplink" onclick="goTo('page-comments')">💬 Xem tất cả nhận xét →</button>
+      </div>
+    </div>
+
+    <!-- Event 5: Schedule highlight -->
+    <div class="brief-event-card">
+      <div class="brief-event-top">
+        <div class="brief-event-ico">📅</div>
+        <div>
+          <div class="brief-event-label">LỊCH HỌC HÔM NAY</div>
+          <div class="brief-event-title">8 tiết · Có Thể dục (nhớ giày!)</div>
+        </div>
+      </div>
+      <div class="brief-event-body">
+        <div class="brief-event-detail">
+          Tiết 3 (09:30–10:05): <strong>Giáo dục thể chất</strong> — GV: Vũ Trung Hiếu. <span style="color:#f59e0b;font-weight:600;">⚠️ Nhớ mang giày thể thao!</span> Buổi chiều có CIE ICT lúc 14:00.
+        </div>
+        <button class="brief-deeplink" onclick="goTo('page-schedule')">📅 Xem lịch học đầy đủ →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </div><!-- /screen-wrap -->
 
 <!-- BOTTOM NAV -->
@@ -915,6 +1477,30 @@ body {
 const MAIN = ['page-home','page-student','page-chat','page-notifications','page-account'];
 const TAB_MAP = { home:'page-home', student:'page-student', chat:'page-chat', notifications:'page-notifications', account:'page-account' };
 let cur = 'page-home', hist = [];
+
+// AI chat: simulate sending a message
+function sendMsg(text) {
+  if (!text || !text.trim()) return;
+  const wrap = document.getElementById('aiChatWrap');
+  const typing = document.getElementById('typingIndicator');
+  // Add user bubble
+  const ub = document.createElement('div');
+  ub.className = 'bubble-user';
+  ub.textContent = text.trim();
+  wrap.insertBefore(ub, typing);
+  document.getElementById('chatInput').value = '';
+  // Show typing, then AI fallback reply
+  if (typing) typing.style.display = 'flex';
+  wrap.scrollTop = wrap.scrollHeight;
+  setTimeout(() => {
+    if (typing) typing.style.display = 'none';
+    const ab = document.createElement('div');
+    ab.className = 'bubble-ai-wrap';
+    ab.innerHTML = `<div class="bubble-ai-avatar">🤖</div><div class="bubble-ai">Mình đang tra cứu thông tin về <strong>Nguyễn Hưng</strong>... Bạn có thể thử hỏi về bài tập, thực đơn, lịch học, điểm số, hoặc nhận xét giáo viên nhé!<div class="ai-source-badge" style="margin-top:6px;">📊 Dữ liệu từ VinSchool One app</div></div>`;
+    wrap.insertBefore(ab, typing);
+    wrap.scrollTop = wrap.scrollHeight;
+  }, 1200);
+}
 
 function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
