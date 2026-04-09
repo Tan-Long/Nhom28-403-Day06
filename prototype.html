@@ -57,6 +57,14 @@ body {
 }
 .sub-back { font-size: 22px; cursor: pointer; padding: 0 4px; line-height: 1; }
 .sub-title { flex: 1; text-align: center; font-size: 15px; font-weight: 700; margin-right: 30px; }
+/* Màn chi tiết thông báo: bar trên cố định khi cuộn nội dung dài */
+#page-notif-detail .notif-detail-sticky-head {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  flex-shrink: 0;
+  box-shadow: 0 2px 10px rgba(15, 46, 150, 0.12);
+}
 /* ── Screen wrap ── */
 .screen-wrap { flex: 1; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; }
 .screen-wrap::-webkit-scrollbar { display: none; }
@@ -734,56 +742,7 @@ body {
     <div class="dsc">Thầy Gareth khen Hưng năng động đầu tuần. Nhấn để xem bản tin đầy đủ →</div>
   </div>
   <div class="card" style="margin-top:0;border-radius:0;box-shadow:none;">
-    <div class="notif-row">
-      <div class="notif-ico">🏫</div>
-      <div class="notif-body">
-        <div class="notif-title">Mời Phụ Huynh tham dự thực hiện khảo sát: KHẢO SÁT PHHS VỀ VIỆC THAM GIA HOẠT ĐỘNG TRẢI NGHIỆM XEM PHIM KHỐI 5</div>
-        <div class="notif-desc">Kính gửi các Bố Mẹ, Nhà trường trân trọng kính mời Phụ Huynh tham gia...</div>
-        <div class="notif-date">06/04/2026</div>
-      </div>
-      <div class="notif-dot"></div>
-    </div>
-    <div class="notif-row">
-      <div class="notif-ico">🏫</div>
-      <div class="notif-body">
-        <div class="notif-title">Mời Phụ huynh tham gia hoạt động trải nghiệm và chuyến đi Bảo tàng đường Hồ Chí Minh</div>
-        <div class="notif-desc">NOTICE: INVITES parents to attend and JOIN...</div>
-        <div class="notif-date">31/03/2026</div>
-      </div>
-      <div class="notif-dot"></div>
-    </div>
-    <div class="notif-row">
-      <div class="notif-ico">📝</div>
-      <div class="notif-body">
-        <div class="notif-title">Nguyễn Hưng có một nhận xét/dặn dò ngày 29/03/2026</div>
-        <div class="notif-desc">Cô đã chấm và trả lại các phiếu bài tập tuần này của con, thầy nhận xét rất kỹ...</div>
-        <div class="notif-date">29/03/2026</div>
-      </div>
-    </div>
-    <div class="notif-row">
-      <div class="notif-ico">📝</div>
-      <div class="notif-body">
-        <div class="notif-title">Nguyễn Hưng có một nhận xét/dặn dò ngày 26/03/2026</div>
-        <div class="notif-desc">Hôm nay cô gặp Hưng và chuyền bóng, con đại đội thuần thục...</div>
-        <div class="notif-date">26/03/2026</div>
-      </div>
-    </div>
-    <div class="notif-row">
-      <div class="notif-ico">🏆</div>
-      <div class="notif-body">
-        <div class="notif-title">Nguyễn Hưng đã được chấm/cập nhật điểm bài tập môn CIE ESL, ngày 25/03/2026</div>
-        <div class="notif-desc">Reading Comprehension Task: 9/10 Điểm</div>
-        <div class="notif-date">25/03/2026</div>
-      </div>
-    </div>
-    <div class="notif-row">
-      <div class="notif-ico">🏆</div>
-      <div class="notif-body">
-        <div class="notif-title">Nguyễn Hưng đã được chấm/cập nhật điểm bài tập môn CIE Maths, ngày 25/03/2026</div>
-        <div class="notif-desc">Fraction Practice Worksheet: 10/10 Điểm</div>
-        <div class="notif-date">25/03/2026</div>
-      </div>
-    </div>
+    <div id="home-feed-root"></div>
   </div>
 </div>
 
@@ -1089,71 +1048,19 @@ body {
     <div style="padding:11px 20px;font-size:13px;font-weight:600;color:#6b7280;">Chưa đọc</div>
   </div>
 
-  <!-- ── Smart Daily Brief card ── -->
-  <div class="brief-card" onclick="goTo('page-ai-brief')">
-    <div class="brief-header">
-      <div>
-        <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;">
-          <span class="ai-badge">AI ✨</span>
-          <span class="brief-title">Bản tin hôm nay</span>
-        </div>
-        <div class="brief-date">Thứ 5, 09/04/2026 · Tổng hợp 5 sự kiện</div>
-      </div>
-      <span style="font-size:20px;">›</span>
-    </div>
-    <div class="brief-body">
-      <div class="brief-row">
-        <div class="br-ico">📋</div>
-        <div class="br-text">
-          <div class="br-main">3 bài tập Tiếng Việt chưa nộp</div>
-          <div class="br-sub">Hạn sớm nhất: Quiz TV Tuần 26 — hôm nay!</div>
-        </div>
-      </div>
-      <div class="brief-row">
-        <div class="br-ico">🍱</div>
-        <div class="br-text">
-          <div class="br-main">Bữa trưa: Bò kho tàu + Đậu phụ chiên</div>
-          <div class="br-sub">~579 kcal · Ăn phụ: Gà chiên KFC</div>
-        </div>
-      </div>
-      <div class="brief-row">
-        <div class="br-ico">💬</div>
-        <div class="br-text">
-          <div class="br-main">Thầy Gareth khen Hưng năng động đầu tuần</div>
-          <div class="br-sub">Con chủ động giúp sắp xếp tủ sách lớp</div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- Bản tin + thông báo: nội dung từ rag_data.json (bảng Thông báo) — prototype-data.js -->
+  <div id="notif-brief-root"></div>
+  <div id="notif-actionable-root"></div>
+  <div id="notif-regular-list" style="background:white;"></div>
+</div>
 
-  <!-- ── Actionable notification (AI format) ── -->
-  <div class="action-notif">
-    <div class="action-notif-header">
-      <div class="action-notif-ico">🏫</div>
-      <div>
-        <div class="action-notif-title">Thông báo ngoại khóa: Tham quan Bảo tàng Hà Nội</div>
-        <div class="action-notif-date">06/04/2026 · <span class="ai-badge">AI tóm tắt ✨</span></div>
-      </div>
-    </div>
-    <div class="action-bullets">
-      <div class="action-bullet"><span class="abico">📌</span><span><strong>Sự kiện:</strong> Chuyến tham quan Bảo tàng Hà Nội cho học sinh Khối 5</span></div>
-      <div class="action-bullet"><span class="abico">⏰</span><span><strong>Hạn đăng ký:</strong> 15/04/2026 · Phí tham quan: 150.000đ/học sinh</span></div>
-      <div class="action-bullet"><span class="abico">✅</span><span><strong>Cần làm:</strong> Xác nhận tham gia và nộp phí qua app trước hạn</span></div>
-    </div>
-    <div class="action-notif-footer">
-      <button class="action-btn-primary">Đăng ký ngay</button>
-      <button class="action-btn-secondary">Đọc toàn văn bản</button>
-    </div>
+<!-- ══════════════════════ NOTIFICATION DETAIL (full text) ══════════════════════ -->
+<div class="page" id="page-notif-detail">
+  <div class="notif-detail-sticky-head">
+    <div class="sub-header"><span class="sub-back" onclick="goBack()">←</span><span class="sub-title" id="notif-detail-subtitle">Thông báo</span></div>
+    <div id="notif-detail-meta" style="padding:10px 16px;border-bottom:1px solid #e5e7eb;background:#fafafa;font-size:12px;color:#4b5563;line-height:1.45;"></div>
   </div>
-
-  <!-- ── Regular notifications ── -->
-  <div style="background:white;">
-    <div class="notif-row"><div class="notif-ico">🏫</div><div class="notif-body"><div class="notif-title">Mời Phụ Huynh tham dự thực hiện khảo sát: KHẢO SÁT PHHS VỀ VIỆC THAM GIA HOẠT ĐỘNG TRẢI NGHIỆM XEM PHIM KHỐI 5</div><div class="notif-desc">Hoạt động tổ chức vào ngày 06/04 tại rạp chiếu phim...</div><div class="notif-date">06/04/2026</div></div><div class="notif-dot"></div></div>
-    <div class="notif-row"><div class="notif-ico">📝</div><div class="notif-body"><div class="notif-title">Nguyễn Hưng có một nhận xét/dặn dò ngày 29/03/2026</div><div class="notif-desc">Cô đã chấm và trả lại các phiếu bài tập tuần này...</div><div class="notif-date">29/03/2026</div></div></div>
-    <div class="notif-row"><div class="notif-ico">📝</div><div class="notif-body"><div class="notif-title">Nguyễn Hưng có một nhận xét/dặn dò ngày 26/03/2026</div><div class="notif-desc">Hôm nay cô gặp Hưng và chuyền bóng, con đại đội...</div><div class="notif-date">26/03/2026</div></div></div>
-    <div class="notif-row"><div class="notif-ico">🏆</div><div class="notif-body"><div class="notif-title">Nguyễn Hưng đã được chấm/cập nhật điểm bài tập môn CIE ESL</div><div class="notif-desc">Reading Comprehension Task: 9/10 Điểm</div><div class="notif-date">25/03/2026</div></div></div>
-    <div class="notif-row"><div class="notif-ico">🏆</div><div class="notif-body"><div class="notif-title">Nguyễn Hưng đã được chấm/cập nhật điểm bài tập môn CIE Maths</div><div class="notif-desc">Fraction Practice Worksheet: 10/10 Điểm</div><div class="notif-date">25/03/2026</div></div></div>
-  </div>
+  <div id="notif-detail-body" style="padding:16px 16px 28px;background:white;font-size:14px;line-height:1.55;color:#111827;"></div>
 </div>
 
 <!-- ══════════════════════ CHAT TAB ══════════════════════ -->

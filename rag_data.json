@@ -416,646 +416,6 @@
     }
   },
   {
-    "id": "Điểm danh_40",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Ngày: Thứ 2 - 06/04/2026\n- Điểm danh đầu giờ: 8:00 - Đúng giờ\n- Thời gian: 8:00-8:35\n- Môn học: Sinh hoạt chủ nhiệm-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 40
-    }
-  },
-  {
-    "id": "Điểm danh_41",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 8:40-9:15\n- Môn học: Tiếng Việt-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 41
-    }
-  },
-  {
-    "id": "Điểm danh_42",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 9:30-10:05\n- Môn học: CIE Maths-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 42
-    }
-  },
-  {
-    "id": "Điểm danh_43",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 10:10-10:45\n- Môn học: CIE Maths-5B06\n- Trạng thái tiết học: Tiết kép",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 43
-    }
-  },
-  {
-    "id": "Điểm danh_44",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 12:25-13:00\n- Môn học: CIE ESL-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 44
-    }
-  },
-  {
-    "id": "Điểm danh_45",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:05-13:40\n- Môn học: Lịch sử và Địa lý-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 45
-    }
-  },
-  {
-    "id": "Điểm danh_46",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:55-14:30\n- Môn học: Lịch sử và Địa lý-5B06\n- Trạng thái tiết học: Tiết kép",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 46
-    }
-  },
-  {
-    "id": "Điểm danh_47",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 14:35-15:10\n- Môn học: Tự học có hướng dẫn-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 47
-    }
-  },
-  {
-    "id": "Điểm danh_48",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Ngày: Thứ 3 - 07/04/2026\n- Điểm danh đầu giờ: 8:05 - Đi muộn\n- Thời gian: 8:00-8:35\n- Môn học: CIE ESL-5B06\n- Trạng thái tiết học: Đi muộn",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 48
-    }
-  },
-  {
-    "id": "Điểm danh_49",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 8:40-9:15\n- Môn học: Tiếng Việt-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 49
-    }
-  },
-  {
-    "id": "Điểm danh_50",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 9:30-10:05\n- Môn học: CIE ICT-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 50
-    }
-  },
-  {
-    "id": "Điểm danh_51",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 10:10-10:45\n- Môn học: Âm nhạc-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 51
-    }
-  },
-  {
-    "id": "Điểm danh_52",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 12:25-13:00\n- Môn học: CIE Maths-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 52
-    }
-  },
-  {
-    "id": "Điểm danh_53",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:05-13:40\n- Môn học: Việt Nam học-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 53
-    }
-  },
-  {
-    "id": "Điểm danh_54",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:55-14:30\n- Môn học: Tiết Đọc sách-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 54
-    }
-  },
-  {
-    "id": "Điểm danh_55",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 14:35-15:10\n- Môn học: CLB Kỹ năng-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 55
-    }
-  },
-  {
-    "id": "Điểm danh_56",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Ngày: Thứ 4 - 08/04/2026\n- Điểm danh đầu giờ: 8:00 - Đúng giờ\n- Thời gian: 8:00-8:35\n- Môn học: CIE ESL-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 56
-    }
-  },
-  {
-    "id": "Điểm danh_57",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 8:40-9:15\n- Môn học: CIE ESL-5B06\n- Trạng thái tiết học: Tiết kép",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 57
-    }
-  },
-  {
-    "id": "Điểm danh_58",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 9:30-10:05\n- Môn học: CIE Science-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 58
-    }
-  },
-  {
-    "id": "Điểm danh_59",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 10:10-10:45\n- Môn học: CIE Science-5B06\n- Trạng thái tiết học: Tiết kép",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 59
-    }
-  },
-  {
-    "id": "Điểm danh_60",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 12:25-13:00\n- Môn học: CIE Maths-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 60
-    }
-  },
-  {
-    "id": "Điểm danh_61",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:05-13:40\n- Môn học: Tiếng Việt-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 61
-    }
-  },
-  {
-    "id": "Điểm danh_62",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:55-14:30\n- Môn học: Giáo dục thể chất-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 62
-    }
-  },
-  {
-    "id": "Điểm danh_63",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 14:35-15:10\n- Môn học: Giáo dục thể chất-5B06\n- Trạng thái tiết học: Tiết kép",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 63
-    }
-  },
-  {
-    "id": "Điểm danh_64",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Ngày: Thứ 5 - 09/04/2026\n- Điểm danh đầu giờ: 8:00 - Đúng giờ\n- Thời gian: 8:00-8:35\n- Môn học: CIE ESL-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 64
-    }
-  },
-  {
-    "id": "Điểm danh_65",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 8:40-9:15\n- Môn học: Tiếng Việt-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 65
-    }
-  },
-  {
-    "id": "Điểm danh_66",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 9:30-10:05\n- Môn học: Giáo dục thể chất-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 66
-    }
-  },
-  {
-    "id": "Điểm danh_67",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 10:10-10:45\n- Môn học: GD Kỹ năng Phẩm chất-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 67
-    }
-  },
-  {
-    "id": "Điểm danh_68",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 12:25-13:00\n- Môn học: CIE Maths-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 68
-    }
-  },
-  {
-    "id": "Điểm danh_69",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:05-13:40\n- Môn học: Việt Nam học-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 69
-    }
-  },
-  {
-    "id": "Điểm danh_70",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:55-14:30\n- Môn học: CIE ICT-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 70
-    }
-  },
-  {
-    "id": "Điểm danh_71",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 14:35-15:10\n- Môn học: Tự học có hướng dẫn-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 71
-    }
-  },
-  {
-    "id": "Điểm danh_72",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Ngày: Thứ 6 - 10/04/2026\n- Điểm danh đầu giờ: 8:00 - Đúng giờ\n- Thời gian: 8:00-8:35\n- Môn học: Tiếng Việt-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 72
-    }
-  },
-  {
-    "id": "Điểm danh_73",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 8:40-9:15\n- Môn học: CIE ESL-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 73
-    }
-  },
-  {
-    "id": "Điểm danh_74",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 9:30-10:05\n- Môn học: Lịch sử và Địa lý-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 74
-    }
-  },
-  {
-    "id": "Điểm danh_75",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 10:10-10:45\n- Môn học: CIE Science-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 75
-    }
-  },
-  {
-    "id": "Điểm danh_76",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 12:25-13:00\n- Môn học: Global Perspectives-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 76
-    }
-  },
-  {
-    "id": "Điểm danh_77",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:05-13:40\n- Môn học: Tiết Đọc sách-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 77
-    }
-  },
-  {
-    "id": "Điểm danh_78",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:55-14:30\n- Môn học: CLB Kỹ năng-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 78
-    }
-  },
-  {
-    "id": "Điểm danh_79",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 14:35-15:10\n- Môn học: Sinh hoạt chủ nhiệm-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 79
-    }
-  },
-  {
-    "id": "Điểm danh_80",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Ngày: Thứ 2 - 13/04/2026\n- Điểm danh đầu giờ: 8:00 - Đúng giờ\n- Thời gian: 8:00-8:35\n- Môn học: Sinh hoạt chủ nhiệm-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 80
-    }
-  },
-  {
-    "id": "Điểm danh_81",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 8:40-9:15\n- Môn học: Tiếng Việt-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 81
-    }
-  },
-  {
-    "id": "Điểm danh_82",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 9:30-10:05\n- Môn học: CIE Maths-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 82
-    }
-  },
-  {
-    "id": "Điểm danh_83",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 10:10-10:45\n- Môn học: CIE Maths-5B06\n- Trạng thái tiết học: Tiết kép",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 83
-    }
-  },
-  {
-    "id": "Điểm danh_84",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 12:25-13:00\n- Môn học: CIE ESL-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 84
-    }
-  },
-  {
-    "id": "Điểm danh_85",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:05-13:40\n- Môn học: Lịch sử và Địa lý-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 85
-    }
-  },
-  {
-    "id": "Điểm danh_86",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:55-14:30\n- Môn học: Lịch sử và Địa lý-5B06\n- Trạng thái tiết học: Tiết kép",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 86
-    }
-  },
-  {
-    "id": "Điểm danh_87",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 14:35-15:10\n- Môn học: Tự học có hướng dẫn-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 87
-    }
-  },
-  {
-    "id": "Điểm danh_88",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Ngày: Thứ 3 - 14/04/2026\n- Điểm danh đầu giờ: 8:05 - Đi muộn\n- Thời gian: 8:00-8:35\n- Môn học: CIE ESL-5B06\n- Trạng thái tiết học: Đi muộn",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 88
-    }
-  },
-  {
-    "id": "Điểm danh_89",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 8:40-9:15\n- Môn học: Tiếng Việt-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 89
-    }
-  },
-  {
-    "id": "Điểm danh_90",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 9:30-10:05\n- Môn học: CIE ICT-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 90
-    }
-  },
-  {
-    "id": "Điểm danh_91",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 10:10-10:45\n- Môn học: Âm nhạc-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 91
-    }
-  },
-  {
-    "id": "Điểm danh_92",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 12:25-13:00\n- Môn học: CIE Maths-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 92
-    }
-  },
-  {
-    "id": "Điểm danh_93",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:05-13:40\n- Môn học: Việt Nam học-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 93
-    }
-  },
-  {
-    "id": "Điểm danh_94",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:55-14:30\n- Môn học: Tiết Đọc sách-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 94
-    }
-  },
-  {
-    "id": "Điểm danh_95",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 14:35-15:10\n- Môn học: CLB Kỹ năng-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 95
-    }
-  },
-  {
-    "id": "Điểm danh_96",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Ngày: Thứ 4 - 15/04/2026\n- Điểm danh đầu giờ: 8:00 - Đúng giờ\n- Thời gian: 8:00-8:35\n- Môn học: CIE ESL-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 96
-    }
-  },
-  {
-    "id": "Điểm danh_97",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 8:40-9:15\n- Môn học: CIE ESL-5B06\n- Trạng thái tiết học: Tiết kép",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 97
-    }
-  },
-  {
-    "id": "Điểm danh_98",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 9:30-10:05\n- Môn học: CIE Science-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 98
-    }
-  },
-  {
-    "id": "Điểm danh_99",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 10:10-10:45\n- Môn học: CIE Science-5B06\n- Trạng thái tiết học: Tiết kép",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 99
-    }
-  },
-  {
-    "id": "Điểm danh_100",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 12:25-13:00\n- Môn học: CIE Maths-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 100
-    }
-  },
-  {
-    "id": "Điểm danh_101",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:05-13:40\n- Môn học: Tiếng Việt-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 101
-    }
-  },
-  {
-    "id": "Điểm danh_102",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:55-14:30\n- Môn học: Giáo dục thể chất-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 102
-    }
-  },
-  {
-    "id": "Điểm danh_103",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 14:35-15:10\n- Môn học: Giáo dục thể chất-5B06\n- Trạng thái tiết học: Tiết kép",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 103
-    }
-  },
-  {
-    "id": "Điểm danh_104",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Ngày: Thứ 5 - 16/04/2026\n- Điểm danh đầu giờ: 8:00 - Đúng giờ\n- Thời gian: 8:00-8:35\n- Môn học: CIE ESL-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 104
-    }
-  },
-  {
-    "id": "Điểm danh_105",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 8:40-9:15\n- Môn học: Tiếng Việt-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 105
-    }
-  },
-  {
-    "id": "Điểm danh_106",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 9:30-10:05\n- Môn học: Giáo dục thể chất-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 106
-    }
-  },
-  {
-    "id": "Điểm danh_107",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 10:10-10:45\n- Môn học: GD Kỹ năng Phẩm chất-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 107
-    }
-  },
-  {
-    "id": "Điểm danh_108",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 12:25-13:00\n- Môn học: CIE Maths-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 108
-    }
-  },
-  {
-    "id": "Điểm danh_109",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:05-13:40\n- Môn học: Việt Nam học-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 109
-    }
-  },
-  {
-    "id": "Điểm danh_110",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:55-14:30\n- Môn học: CIE ICT-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 110
-    }
-  },
-  {
-    "id": "Điểm danh_111",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 14:35-15:10\n- Môn học: Tự học có hướng dẫn-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 111
-    }
-  },
-  {
-    "id": "Điểm danh_112",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Ngày: Thứ 6 - 17/04/2026\n- Điểm danh đầu giờ: 8:00 - Đúng giờ\n- Thời gian: 8:00-8:35\n- Môn học: Tiếng Việt-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 112
-    }
-  },
-  {
-    "id": "Điểm danh_113",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 8:40-9:15\n- Môn học: CIE ESL-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 113
-    }
-  },
-  {
-    "id": "Điểm danh_114",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 9:30-10:05\n- Môn học: Lịch sử và Địa lý-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 114
-    }
-  },
-  {
-    "id": "Điểm danh_115",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 10:10-10:45\n- Môn học: CIE Science-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 115
-    }
-  },
-  {
-    "id": "Điểm danh_116",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 12:25-13:00\n- Môn học: Global Perspectives-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 116
-    }
-  },
-  {
-    "id": "Điểm danh_117",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:05-13:40\n- Môn học: Tiết Đọc sách-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 117
-    }
-  },
-  {
-    "id": "Điểm danh_118",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 13:55-14:30\n- Môn học: CLB Kỹ năng-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 118
-    }
-  },
-  {
-    "id": "Điểm danh_119",
-    "content": "Dữ liệu từ bảng: Điểm danh\n- Thời gian: 14:35-15:10\n- Môn học: Sinh hoạt chủ nhiệm-5B06\n- Trạng thái tiết học: Đúng giờ",
-    "metadata": {
-      "sheet": "Điểm danh",
-      "row": 119
-    }
-  },
-  {
     "id": "Bài tập_0",
     "content": "Dữ liệu từ bảng: Bài tập\n- Tuần: 30/03 - 05/04\n- Hạn nộp dự kiến: 2026-03-30 00:00:00\n- Mã lớp / Môn học: CIE ESL-5B06\n- Tên bài tập / Kiểm tra: Vocabulary Quiz Unit 7\n- Trạng thái: Đã làm\n- Điểm số: 10/10 Điểm",
     "metadata": {
@@ -1081,7 +441,7 @@
   },
   {
     "id": "Bài tập_3",
-    "content": "Dữ liệu từ bảng: Bài tập\n- Hạn nộp dự kiến: 2026-04-02 00:00:00\n- Mã lớp / Môn học: CIE Science-5B06\n- Tên bài tập / Kiểm tra: Science Lab Report\n- Trạng thái: Đã hoàn thành\n- Điểm số: -",
+    "content": "Dữ liệu từ bảng: Bài tập\n- Hạn nộp dự kiến: 2026-04-02 00:00:00\n- Mã lớp / Môn học: CIE Science-5B06\n- Tên bài tập / Kiểm tra: Science Lab Report\n- Trạng thái: Đã làm\n- Điểm số: -",
     "metadata": {
       "sheet": "Bài tập",
       "row": 3
@@ -1105,7 +465,7 @@
   },
   {
     "id": "Bài tập_6",
-    "content": "Dữ liệu từ bảng: Bài tập\n- Hạn nộp dự kiến: 2026-04-05 00:00:00\n- Mã lớp / Môn học: CIE ICT\n- Tên bài tập / Kiểm tra: Typing Practice Week 28\n- Trạng thái: Đã hoàn thành\n- Điểm số: -",
+    "content": "Dữ liệu từ bảng: Bài tập\n- Hạn nộp dự kiến: 2026-04-05 00:00:00\n- Mã lớp / Môn học: CIE ICT\n- Tên bài tập / Kiểm tra: Typing Practice Week 28\n- Trạng thái: Đã làm\n- Điểm số: -",
     "metadata": {
       "sheet": "Bài tập",
       "row": 6
@@ -1161,7 +521,7 @@
   },
   {
     "id": "Bài tập_13",
-    "content": "Dữ liệu từ bảng: Bài tập\n- Hạn nộp dự kiến: 2026-04-12 00:00:00\n- Mã lớp / Môn học: CIE ICT\n- Tên bài tập / Kiểm tra: Unit 5 Project score\n- Trạng thái: Chưa hoàn thành\n- Điểm số: -",
+    "content": "Dữ liệu từ bảng: Bài tập\n- Hạn nộp dự kiến: 2026-04-12 00:00:00\n- Mã lớp / Môn học: CIE ICT\n- Tên bài tập / Kiểm tra: Unit 5 Project score\n- Trạng thái: Chưa làm\n- Điểm số: -",
     "metadata": {
       "sheet": "Bài tập",
       "row": 13
@@ -2288,14 +1648,6 @@
     }
   },
   {
-    "id": "Nhận xét_09_04_2026",
-    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-04-09 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: Sinh hoạt Chủ nhiệm\n- Nội dung nhận xét: Hưng tham gia tích cực các hoạt động nhóm trong ngày thứ Năm. Con lắng nghe và phối hợp tốt với bạn trong giờ dự án.",
-    "metadata": {
-      "sheet": "Nhận xét",
-      "row": -1
-    }
-  },
-  {
     "id": "Nhận xét_0",
     "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-04-08 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: Sinh hoạt Chủ nhiệm\n- Nội dung nhận xét: Hưng bắt đầu tuần mới rất năng động. Con chủ động giúp thầy sắp xếp lại tủ sách của lớp và nhắc nhở các bạn giữ trật tự trong giờ chuyển tiết.",
     "metadata": {
@@ -2337,7 +1689,7 @@
   },
   {
     "id": "Nhận xét_5",
-    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-04-03 00:00:00\n- Giáo viên: Elanza Jurgens\n- Bộ môn: CIE ICT\n- Nội dung nhận xét: Hưng đã hoàn thành dự án thiết kế thiệp trên phần mềm đồ họa. Con biết cách phối hợp các biểu tượng để thông điệp trở nên rõ ràng.",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-04-03 00:00:00\n- Giáo viên: Elanza Jurgens\n- Bộ môn: CIE ICT\n- Nội dung nhận xét: Hưng Đã làm dự án thiết kế thiệp trên phần mềm đồ họa. Con biết cách phối hợp các biểu tượng để thông điệp trở nên rõ ràng.",
     "metadata": {
       "sheet": "Nhận xét",
       "row": 5
@@ -2553,7 +1905,7 @@
   },
   {
     "id": "Nhận xét_32",
-    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-16 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: Tự học\n- Nội dung nhận xét: Con đã hoàn thành tốt các phiếu bài tập ôn tập cuối tuần. Hưng cũng chủ động hướng dẫn cho bạn ngồi cạnh cùng học.",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-16 00:00:00\n- Giáo viên: Gareth Morton\n- Bộ môn: Tự học\n- Nội dung nhận xét: Con Đã làm tốt các phiếu bài tập ôn tập cuối tuần. Hưng cũng chủ động hướng dẫn cho bạn ngồi cạnh cùng học.",
     "metadata": {
       "sheet": "Nhận xét",
       "row": 32
@@ -2617,7 +1969,7 @@
   },
   {
     "id": "Nhận xét_40",
-    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-10 00:00:00\n- Giáo viên: Elanza Jurgens\n- Bộ môn: CIE ICT\n- Nội dung nhận xét: Con đã hoàn thành bài thực hành tạo bảng biểu. Hưng sử dụng thành thạo các công cụ định dạng và chèn biểu đồ đơn giản.",
+    "content": "Dữ liệu từ bảng: Nhận xét\n- Ngày: 2026-03-10 00:00:00\n- Giáo viên: Elanza Jurgens\n- Bộ môn: CIE ICT\n- Nội dung nhận xét: Con Đã làm bài thực hành tạo bảng biểu. Hưng sử dụng thành thạo các công cụ định dạng và chèn biểu đồ đơn giản.",
     "metadata": {
       "sheet": "Nhận xét",
       "row": 40
@@ -2796,6 +2148,110 @@
     "content": "Dữ liệu từ bảng: Kết quả học tập\n- Môn học: CLB Kỹ năng\n- Cuối Kỳ 1: HTT\n- Giữa Kỳ 2: HTT\n- Đánh giá chung / Nhận xét nổi bật: Thể hiện được vai trò trưởng nhóm trong các hoạt động lắp ráp, tạo hình.",
     "metadata": {
       "sheet": "Kết quả học tập",
+      "row": 12
+    }
+  },
+  {
+    "id": "Thông báo_0",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Khảo sát\n- Tiêu đề: Khảo sát mức độ hài lòng & nhu cầu sử dụng Vinschool One\n- Nội dung tóm tắt: Nhằm nâng cao chất lượng phối hợp dạy – học và dịch vụ số cho học sinh. Khảo sát kéo dài 5-7 phút phục vụ mục đích cải tiến dịch vụ.\n- Đối tượng nhận: PHHS Tiểu học – THCS – THPT\n- Ngày sự kiện: N/A\n- Hạn chót (Deadline): Không ghi rõ\n- Trạng thái: Thực hiện khảo sát",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 0
+    }
+  },
+  {
+    "id": "Thông báo_1",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Hoạt động ngoại khóa\n- Tiêu đề: Khảo sát ý kiến PHHS về việc HS tham gia hoạt động ngoại khóa \"Bảo tàng đường Hồ Chí Minh\"\n- Nội dung tóm tắt: Nhằm mang đến trải nghiệm học tập môn Lịch sử - Địa lí, giúp các con tìm hiểu chặng đường lịch sử hào hùng qua hiện vật và câu chuyện lịch sử.\n- Đối tượng nhận: PHHS Khối 5 (Vinschool Times City)\n- Ngày sự kiện: 08/04/2026\n- Hạn chót (Deadline): Trước 08/04/2026\n- Trạng thái: Xem câu trả lời",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 1
+    }
+  },
+  {
+    "id": "Thông báo_2",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Trải nghiệm học tập\n- Tiêu đề: Khảo sát PHHS về việc tham gia hoạt động trải nghiệm xem phim khối 5\n- Nội dung tóm tắt: Trải nghiệm thực tế môn ESL (Unit 8: Entertainment). Học sinh xem phim \"Super Mario Galaxy\" để tìm hiểu lịch sử rạp chiếu phim và trò chơi điện tử.\n- Đối tượng nhận: PHHS Khối 5 (Vinschool Times City)\n- Ngày sự kiện: 10/04/2026\n- Hạn chót (Deadline): 09/04/2026\n- Trạng thái: Cập nhật khảo sát",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 2
+    }
+  },
+  {
+    "id": "Thông báo_3",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Học vụ\n- Tiêu đề: Thông báo lịch thi Giữa học kỳ 2\n- Nội dung tóm tắt: Lịch thi chi tiết các môn Toán, Tiếng Việt, Tiếng Anh và các môn chuyên biệt. PH vui lòng nhắc con ôn tập theo đề cương.\n- Đối tượng nhận: Toàn học sinh\n- Ngày sự kiện: 19/02/2026\n- Hạn chót (Deadline): 02/03 - 06/03\n- Trạng thái: Xem chi tiết",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 3
+    }
+  },
+  {
+    "id": "Thông báo_4",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Sự kiện\n- Tiêu đề: Ngày hội Thể thao Vinschool (Sports Day)\n- Nội dung tóm tắt: Sự kiện thể thao thường niên nhằm rèn luyện sức khỏe và tinh thần đồng đội. Yêu cầu HS mặc đồng phục thể thao và mang theo nước uống.\n- Đối tượng nhận: Khối Tiểu học\n- Ngày sự kiện: 25/02/2026\n- Hạn chót (Deadline): 07/03/2026\n- Trạng thái: Đăng ký tham gia",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 4
+    }
+  },
+  {
+    "id": "Thông báo_5",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Y tế\n- Tiêu đề: Khám sức khỏe định kỳ đợt 2\n- Nội dung tóm tắt: Nhà trường phối hợp với bệnh viện Vinmec tổ chức khám sức khỏe tổng quát (mắt, răng miệng, chiều cao, cân nặng) cho học sinh.\n- Đối tượng nhận: Toàn học sinh\n- Ngày sự kiện: 02/03/2026\n- Hạn chót (Deadline): 10/03 - 12/03\n- Trạng thái: Xem kết quả",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 5
+    }
+  },
+  {
+    "id": "Thông báo_6",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Sự kiện\n- Tiêu đề: Chào mừng ngày Quốc tế Phụ nữ 8/3\n- Nội dung tóm tắt: Hoạt động làm thiệp và quà handmade dành tặng mẹ và cô giáo trong giờ trải nghiệm sáng tạo.\n- Đối tượng nhận: Khối Tiểu học\n- Ngày sự kiện: 05/03/2026\n- Hạn chót (Deadline): 08/03/2026\n- Trạng thái: Đã đóng",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 6
+    }
+  },
+  {
+    "id": "Thông báo_7",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Hội thảo\n- Tiêu đề: Hội thảo: Định hướng tư duy AI cho trẻ\n- Nội dung tóm tắt: Buổi chia sẻ từ các chuyên gia về cách tiếp cận công nghệ và trí tuệ nhân tạo an toàn, hiệu quả cho học sinh phổ thông.\n- Đối tượng nhận: PHHS toàn trường\n- Ngày sự kiện: 09/03/2026\n- Hạn chót (Deadline): 15/03/2026\n- Trạng thái: Đăng ký ngay",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 7
+    }
+  },
+  {
+    "id": "Thông báo_8",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Học vụ\n- Tiêu đề: Thông báo họp Phụ huynh giữa học kỳ 2\n- Nội dung tóm tắt: Họp tập trung để trao đổi về tình hình học tập, rèn luyện và định hướng các hoạt động trong giai đoạn cuối năm học.\n- Đối tượng nhận: PHHS toàn trường\n- Ngày sự kiện: 12/03/2026\n- Hạn chót (Deadline): 21/03/2026\n- Trạng thái: Xác nhận tham dự",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 8
+    }
+  },
+  {
+    "id": "Thông báo_9",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Tài chính\n- Tiêu đề: Thông báo học phí và các khoản phí tháng 4/2026\n- Nội dung tóm tắt: Nhà trường gửi thông báo thu học phí, tiền ăn và phí xe đưa đón tháng 4. PH vui lòng thanh toán đúng hạn.\n- Đối tượng nhận: PHHS toàn trường\n- Ngày sự kiện: 18/03/2026\n- Hạn chót (Deadline): Hạn 31/03\n- Trạng thái: Thanh toán ngay",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 9
+    }
+  },
+  {
+    "id": "Thông báo_10",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Ngoại khóa\n- Tiêu đề: Đăng ký câu lạc bộ ngoại khóa sau giờ học\n- Nội dung tóm tắt: Mở cổng đăng ký các CLB: Bóng rổ, Lập trình Python, Vẽ sáng tạo và Nhảy hiện đại cho học kỳ mới.\n- Đối tượng nhận: Khối Tiểu học\n- Ngày sự kiện: 23/03/2026\n- Hạn chót (Deadline): 01/04 - 30/05\n- Trạng thái: Đăng ký",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 10
+    }
+  },
+  {
+    "id": "Thông báo_11",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Sự kiện\n- Tiêu đề: Ngày hội Đọc sách (Book Fair 2026)\n- Nội dung tóm tắt: Hoạt động trao đổi sách, kể chuyện theo nhân vật và gian hàng sách ưu đãi từ các nhà xuất bản lớn.\n- Đối tượng nhận: Toàn học sinh\n- Ngày sự kiện: 26/03/2026\n- Hạn chót (Deadline): 04/04/2026\n- Trạng thái: Xem lịch trình",
+    "metadata": {
+      "sheet": "Thông báo",
+      "row": 11
+    }
+  },
+  {
+    "id": "Thông báo_12",
+    "content": "Dữ liệu từ bảng: Thông báo\n- Loại thông báo: Đời sống\n- Tiêu đề: Cập nhật thực đơn tháng 4/2026\n- Nội dung tóm tắt: Danh sách thực đơn bữa sáng, bữa trưa và bữa xế đã được kiểm duyệt bởi chuyên gia dinh dưỡng.\n- Đối tượng nhận: PHHS toàn trường\n- Ngày sự kiện: 30/03/2026\n- Hạn chót (Deadline): 01/04 - 30/04\n- Trạng thái: Xem thực đơn",
+    "metadata": {
+      "sheet": "Thông báo",
       "row": 12
     }
   }
